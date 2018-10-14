@@ -1,25 +1,47 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Route, Switch } from 'react-router-dom';
+
 import './App.css';
+import Home from './Home/Home.js';
+import LesMenus from './Restaurant/LesMenus.js';
+import LaCarte from './Restaurant/LaCarte.js';
+import Footer from './Common/Footer';
+import Video from './Home/Video';
+
+import { injectGlobal } from 'styled-components';
+
+injectGlobal`
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Roboto, Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+`;
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <Switch>
+          <Route
+            path="/restaurant/menus"
+            component={LesMenus}
+          />
+          <Route
+            path="/restaurant/carte"
+            component={LaCarte}
+          />
+          <Route
+            path="/video"
+            component={Video}
+          />
+          <Route
+            path="/"
+            component={Home}
+          />
+        </Switch>
+        <Footer />
       </div>
     );
   }
