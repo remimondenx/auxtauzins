@@ -16,6 +16,22 @@ const styles = {
 }
 
 class MenuRestau extends Component {
+  static propTypes = {
+    content: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      entree: PropTypes.string.isRequired,
+      plat: PropTypes.string.isRequired,
+      dessert: PropTypes.string.isRequired,
+      prix: PropTypes.number.isRequired,
+    }).isRequired,
+    imgs: PropTypes.arrayOf(
+      PropTypes.shape({
+        label: PropTypes.string.isRequired,
+        imgPath: PropTypes.string.isRequired
+      }).isRequired,
+    ).isRequired,
+  }
+  
   render() {
     const {classes, content, imgs} = this.props;
     return(
@@ -37,22 +53,6 @@ class MenuRestau extends Component {
         <TextMobileStepper imgs={imgs} />
       </Paper>
   )}
-}
-
-MenuRestau.propTypes = {
-  content: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    entree: PropTypes.string.isRequired,
-    plat: PropTypes.string.isRequired,
-    dessert: PropTypes.string.isRequired,
-    prix: PropTypes.number.isRequired,
-  }).isRequired,
-  imgs: PropTypes.arrayOf(
-    PropTypes.shape({
-      label: PropTypes.string.isRequired,
-      imgPath: PropTypes.string.isRequired
-    }).isRequired,
-  ).isRequired,
 }
 
 export default withStyles(styles)(MenuRestau);

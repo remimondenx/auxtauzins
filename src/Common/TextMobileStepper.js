@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import MobileStepper from '@material-ui/core/MobileStepper';
@@ -29,7 +29,7 @@ const styles = theme => ({
   },
 });
 
-class TextMobileStepper extends React.Component {
+class TextMobileStepper extends Component {
   state = {
     activeStep: 0,
   };

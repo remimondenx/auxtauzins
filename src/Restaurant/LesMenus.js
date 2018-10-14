@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
-import { withStyles } from '@material-ui/core/styles'
+import { withStyles } from '@material-ui/core/styles';
+import PropTypes from 'prop-types';
 import MenuRestau from './MenuRestau';
 import TopBar from '../Common/TopBar';
 import InfosRestau from './InfosRestau';
@@ -13,6 +14,10 @@ const styles = {
 }
 
 class LesMenus extends Component {
+  static propTypes = {
+    classes: PropTypes.object.isRequired,
+  }
+  
   render() {
     const { classes } = this.props;
     return(

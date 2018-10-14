@@ -7,7 +7,7 @@ import SvgIcon from '@material-ui/core/SvgIcon';
 const styles = theme => ({
 });
 
-function IconLabelButtons(props) {
+const IconLabelButtons = (props) => {
   const { classes, icon, text, link } = props;
   return (
     <a href={link}>
