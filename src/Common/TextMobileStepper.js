@@ -34,16 +34,6 @@ class TextMobileStepper extends Component {
     activeStep: 0,
   };
 
-  static propTypes = {
-    classes: PropTypes.object.isRequired,
-    theme: PropTypes.object.isRequired,
-    imgs: PropTypes.arrayOf(
-      PropTypes.shape({
-        label: PropTypes.string.isRequired,
-        imgPath: PropTypes.string.isRequired,
-      }).isRequired).isRequired,
-  };
-
   handleNext = (length) => {
     this.setState(prevState => ({
       activeStep: prevState.activeStep === length-1 ? 0 : prevState.activeStep+1
@@ -93,5 +83,15 @@ class TextMobileStepper extends Component {
     );
   }
 }
+
+TextMobileStepper.propTypes = {
+  classes: PropTypes.object.isRequired,
+  theme: PropTypes.object.isRequired,
+  imgs: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      imgPath: PropTypes.string.isRequired,
+    }).isRequired).isRequired,
+};
 
 export default withStyles(styles, { withTheme: true })(TextMobileStepper);

@@ -15,16 +15,6 @@ class TopBarList extends Component {
     open: false,
   };
 
-  static propTypes = {
-    name: PropTypes.string.isRequired,
-    list: PropTypes.arrayOf(
-      PropTypes.shape({
-        name: PropTypes.string.isRequired,
-        link: PropTypes.string.isRequired,
-      }).isRequired,
-    ).isRequired
-  }
-
   handleToggle = () => {
     this.setState(state => ({ open: !state.open }));
   };
@@ -78,6 +68,16 @@ class TopBarList extends Component {
       </div>
     )
   }
+}
+
+TopBarList.propTypes = {
+  name: PropTypes.string.isRequired,
+  list: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      link: PropTypes.string.isRequired,
+    }).isRequired,
+  ).isRequired
 }
 
 export default TopBarList;

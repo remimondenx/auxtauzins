@@ -24,8 +24,9 @@ class LesMenus extends Component {
       <div>
         <TopBar />
         <div className={classes.root}>
-          <MenuRestau content={content1} imgs={imgs1} />
-          <MenuRestau content={content1} imgs={imgs2} />
+          <MenuRestau content={terroir} imgs={imgs1} />
+          <MenuRestau content={chalossais} imgs={imgs2} />
+          <MenuRestau content={gourmand} imgs={imgs3} />
         </div>
         <InfosRestau />
       </div>
@@ -65,11 +66,38 @@ const imgs2 = [
   },
 ];
 
-const content1 = {
+const imgs3 = [
+  {
+    label: 'Bird',
+    imgPath:
+      'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
+  },
+  {
+    label: 'Bali, Indonesia',
+    imgPath:
+      'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80',
+  }];
+
+const terroir = {
   name: 'Menu du terroir',
   entree: 'Assiette du terroir / Garbure Landaise',
   plat: 'Coq fermier sauce Madiran / Brochette de coeurs de canard',
   dessert: 'Pâtisserie maison / Glace',
   prix: 26,
+}
 
+const chalossais = {
+  name: 'Menu Chalossais',
+  entree: 'Magret froid fourré au foie gras sur lit de salade',
+  plat: 'Confit de canard Chalossais, pommes-frites',
+  dessert: 'Assiette de sorbets',
+  prix: 32,
+}
+
+const gourmand = {
+  name: 'Menu Gourmand',
+  entree: 'Poisson de la marée / Omelette aux cèpes',
+  plat: 'Civet de gibier façon grand-mère / Magret de canard sauce au poivre',
+  dessert: 'Coupe Melba',
+  prix: 36,
 }

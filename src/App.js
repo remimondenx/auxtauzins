@@ -9,6 +9,7 @@ import Footer from './Common/Footer';
 import Video from './Home/Video';
 
 import { injectGlobal } from 'styled-components';
+import { MuiThemeProvider } from '@material-ui/core/styles';
 
 injectGlobal`
   html,

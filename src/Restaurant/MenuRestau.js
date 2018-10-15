@@ -16,34 +16,15 @@ const styles = {
 }
 
 class MenuRestau extends Component {
-  static propTypes = {
-    content: PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      entree: PropTypes.string.isRequired,
-      plat: PropTypes.string.isRequired,
-      dessert: PropTypes.string.isRequired,
-      prix: PropTypes.number.isRequired,
-    }).isRequired,
-    imgs: PropTypes.arrayOf(
-      PropTypes.shape({
-        label: PropTypes.string.isRequired,
-        imgPath: PropTypes.string.isRequired
-      }).isRequired,
-    ).isRequired,
-  }
-  
   render() {
     const {classes, content, imgs} = this.props;
     return(
       <Paper elevation={1} className={classes.root}>
-        <Typography variant='caption'>
+        <Typography variant='h4' gutterBottom>
           {content.name}
         </Typography>
         <ul>
-          <li>
-            <Typography variant='body2'>
-              {content.entree}
-            </Typography></li>
+          <li>{content.entree}</li>
           <li>{content.plat}</li>
           <li>{content.dessert}</li>
         </ul>
@@ -53,6 +34,22 @@ class MenuRestau extends Component {
         <TextMobileStepper imgs={imgs} />
       </Paper>
   )}
+}
+
+MenuRestau.propTypes = {
+  content: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    entree: PropTypes.string.isRequired,
+    plat: PropTypes.string.isRequired,
+    dessert: PropTypes.string.isRequired,
+    prix: PropTypes.number.isRequired,
+  }).isRequired,
+  imgs: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      imgPath: PropTypes.string.isRequired
+    }).isRequired,
+  ).isRequired,
 }
 
 export default withStyles(styles)(MenuRestau);

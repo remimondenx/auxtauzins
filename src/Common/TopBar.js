@@ -9,7 +9,7 @@ import TopBarList from './TopBarList.js';
 const TopBar = () => (
   <AppBar position="sticky">
     <Toolbar>
-      <Link to="/">
+      <Link to="/" style={{textDecoration: 'none'}}>
         <Typography variant="title" color="inherit">
           Aux Tauzins
         </Typography>
