@@ -1,24 +1,36 @@
-import React from 'react';
+import React, { Component } from 'react';
 
+import { withStyles } from '@material-ui/core/styles';
 import HotelRestau from './HotelRestau.js';
 import Video from './Video';
 import restaurant from '../images/restaurant.jpeg';
 import hotel from '../images/hotel.jpeg';
 
-const Home = () => (
-  <div>
-    <HotelRestau
-      name='Restaurant'
-      link='./restaurant/menus'
-      img={restaurant} />
-    <HotelRestau
-      name='Hôtel'
-      link='./hotel'
-      img={hotel} />
-      <Video>
-        Visionnez la vidéo de l'établissement !
-      </Video>
-  </div>
-)
+const styles = {
+  root: {
+    display: 'flex',
+  }
+}
 
-export default Home
+class Home extends Component {
+  render() {
+    const { classes } = this.props;
+    return (
+      <div className={classes.root}>
+        <HotelRestau
+          name='Restaurant'
+          link='./restaurant/menus'
+          img={restaurant} />
+        <HotelRestau
+          name='Hôtel'
+          link='./hotel'
+          img={hotel} />
+        <Video>
+          Visionnez la vidéo de l'établissement !
+        </Video>
+      </div>
+    )
+  }
+}
+
+export default withStyles(styles)(Home);

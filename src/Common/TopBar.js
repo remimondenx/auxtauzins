@@ -7,24 +7,24 @@ import { Link } from 'react-router-dom'
 import TopBarList from './TopBarList.js';
 
 const TopBar = () => (
-  <AppBar position="sticky">
+  <AppBar position='sticky'>
     <Toolbar>
-      <Link to="/" style={{textDecoration: 'none'}}>
-        <Typography variant="title" color="inherit">
+      <Link to='/' style={{textDecoration: 'none'}}>
+        <Typography variant='title' color='inherit'>
           Aux Tauzins
         </Typography>
       </Link>
       <TopBarList 
-        name="Restaurant" 
-        list={[{name:"Les menus", link:"/restaurant/menus"},
-          {name:"La carte", link:"/restaurant/carte"}]} />
+        name='Restaurant' 
+        list={[{name:'Les menus', link:'/restaurant/menus'},
+          {name:'La carte', link:'/restaurant/carte'}]} />
       <TopBarList 
-        name="Hôtel" 
-        list={[{name:"En saison", link:"#"},
-          {name:"Hors saison", link:"#"},
-          {name:"Les activités", link:"#"},
-          {name:"Histoire du lieu", link:"#"},
-          {name:"Photos & Vidéos", link:"#"}]} />
+        name='Hôtel' 
+        list={[{name:'En saison', link:'#'},
+          {name:'Hors saison', link:'#'},
+          {name:'Les activités', link:'#'},
+          {name:'Histoire du lieu', link:'#'},
+          {name:'Photos & Vidéos', link:'#'}]} />
       
     </Toolbar>
   </AppBar>
