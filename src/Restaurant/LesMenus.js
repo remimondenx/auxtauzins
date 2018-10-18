@@ -6,6 +6,12 @@ import MenuRestau from './MenuRestau';
 import TopBar from '../Common/TopBar';
 import InfosRestau from './InfosRestau';
 
+import dessert_menu_terroir from '../images/menus/dessert_menu_terroir.jpg';
+import salade_landaise from '../images/menus/salade_landaise.jpg';
+import mousse_au_grand_marnier from '../images/menus/mousse_au_grand_marnier.jpg';
+import tournedos_landais from '../images/menus/tournedos_landais.jpg';
+
+
 const styles = {
   root: {
     display: 'flex',
@@ -24,9 +30,10 @@ class LesMenus extends Component {
       <div>
         <TopBar />
         <div className={classes.root}>
-          <MenuRestau content={terroir} imgs={imgs1} />
-          <MenuRestau content={chalossais} imgs={imgs2} />
-          <MenuRestau content={gourmand} imgs={imgs3} />
+          <MenuRestau content={terroir} imgs={imgs_terroir} color='#FFF8E1' />
+          <MenuRestau content={chalossais} imgs={imgs_chalossais} color='#FFE082' />
+          <MenuRestau content={gourmand} imgs={imgs_gourmand} color='#FFCA28' />
+          <MenuRestau content={gastro} imgs={imgs_gastro} color='#FFB300' />
         </div>
         <InfosRestau />
       </div>
@@ -35,48 +42,6 @@ class LesMenus extends Component {
 }
 
 export default withStyles(styles)(LesMenus);
-
-const imgs1 = [
-  {
-    label: 'San Francisco – Oakland Bay Bridge, United States',
-    imgPath:
-      'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
-  },
-  {
-    label: 'Bird',
-    imgPath:
-      'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
-  },
-  {
-    label: 'Bali, Indonesia',
-    imgPath:
-      'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80',
-  }];
-
-const imgs2 = [
-  {
-    label: 'NeONBRAND Digital Marketing, Las Vegas, United States',
-    imgPath:
-      'https://images.unsplash.com/photo-1518732714860-b62714ce0c59?auto=format&fit=crop&w=400&h=250&q=60',
-  },
-  {
-    label: 'Goč, Serbia',
-    imgPath:
-      'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
-  },
-];
-
-const imgs3 = [
-  {
-    label: 'Bird',
-    imgPath:
-      'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
-  },
-  {
-    label: 'Bali, Indonesia',
-    imgPath:
-      'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80',
-  }];
 
 const terroir = {
   name: 'Menu du terroir',
@@ -101,3 +66,43 @@ const gourmand = {
   dessert: 'Coupe Melba',
   prix: 36,
 }
+
+const gastro = {
+  name: 'Menu Gastronomique',
+  entree: 'Salade de gésiers d\'oie',
+  plat: 'Foie gras chaud aux raisins / Tournedos de boeuf',
+  dessert: 'Coupe Melba',
+  prix: 36,
+}
+
+const imgs_terroir = [
+  {
+    label: 'assiette terroir',
+    imgPath:
+      dessert_menu_terroir,
+  },
+];
+
+const imgs_chalossais = [
+  {
+    label: 'salade landaise',
+    imgPath:
+      salade_landaise,
+  }
+];
+
+const imgs_gourmand = [
+  {
+    label: 'coupe Melba',
+    imgPath:
+      mousse_au_grand_marnier,
+  }
+];
+
+const imgs_gastro = [
+  {
+    label: 'tournedos boeuf',
+    imgPath:
+      tournedos_landais
+  },
+];

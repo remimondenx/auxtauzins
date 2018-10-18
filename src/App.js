@@ -17,7 +17,7 @@ injectGlobal`
   body {
     height: 100%;
     width: 100%;
-    font-family: 'Roboto, Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
   }
 `;
 

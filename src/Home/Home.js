@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import HotelRestau from './HotelRestau.js';
 import Video from './Video';
-import restaurant from '../images/restaurant.jpeg';
-import hotel from '../images/hotel.jpeg';
+import restaurant from '../images/home/restaurant.jpg';
+import hotel from '../images/home/hotel.jpg';
 
 const styles = {
   root: {

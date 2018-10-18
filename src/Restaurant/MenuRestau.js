@@ -17,9 +17,12 @@ const styles = {
 
 class MenuRestau extends Component {
   render() {
-    const {classes, content, imgs} = this.props;
+    const {classes, content, imgs, color} = this.props;
     return(
-      <Paper elevation={1} className={classes.root}>
+      <Paper 
+        elevation={1} 
+        className={classes.root} 
+        style={{backgroundColor:color}}>
         <Typography variant='h4' gutterBottom>
           {content.name}
         </Typography>
