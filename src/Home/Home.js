@@ -8,8 +8,21 @@ import hotel from '../images/home/hotel.jpg';
 
 const styles = {
   root: {
+    flex: 1,
     display: 'flex',
-  }
+    flexDirection: 'column',
+  },
+  pictures: {
+    flex: 1,
+    display: 'flex',
+    height: '90%'
+  },
+  pictureElt: {
+    overflow: 'hidden',
+  },
+  video: {
+    height: '35px',
+  },
 }
 
 class Home extends Component {
@@ -17,17 +30,25 @@ class Home extends Component {
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-        <HotelRestau
-          name='Restaurant'
-          link='./restaurant/menus'
-          img={restaurant} />
-        <HotelRestau
-          name='Hôtel'
-          link='./hotel'
-          img={hotel} />
-        <Video>
-          Visionnez la vidéo de l'établissement !
-        </Video>
+        <div className={classes.pictures}>
+          <div className={classes.pictureElt}>
+            <HotelRestau
+              name='Restaurant'
+              link='./restaurant/menus'
+              img={restaurant} />
+          </div>
+          <div className={classes.pictureElt}>
+            <HotelRestau
+              name='Hôtel'
+              link='./hotel'
+              img={hotel} />
+          </div>
+        </div>
+        <div className={classes.video}>
+          <Video>
+            Visionnez la vidéo de l'établissement !
+          </Video>
+        </div>
       </div>
     )
   }

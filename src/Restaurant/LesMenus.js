@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import MenuRestau from './MenuRestau';
-import TopBar from '../Common/TopBar';
+import TopBarRestaurant from './TopBarRestaurant';
 import InfosRestau from './InfosRestau';
 
 import dessert_menu_terroir from '../images/menus/dessert_menu_terroir.jpg';
@@ -28,7 +28,7 @@ class LesMenus extends Component {
     const { classes } = this.props;
     return(
       <div>
-        <TopBar />
+        <TopBarRestaurant />
         <div className={classes.root}>
           <MenuRestau content={terroir} imgs={imgs_terroir} color='#FFF8E1' />
           <MenuRestau content={chalossais} imgs={imgs_chalossais} color='#FFE082' />

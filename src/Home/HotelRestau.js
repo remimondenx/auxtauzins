@@ -14,7 +14,7 @@ class HotelRestau extends Component {
     return(
       <Link to={link} className={classes.root}>
         <img src={img} alt={name} />
-       </Link>
+      </Link>
     )
   }
 }

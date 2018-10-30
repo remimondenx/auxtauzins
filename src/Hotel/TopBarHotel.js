@@ -4,7 +4,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom'
 
-import TopBarList from './TopBarList.js';
+import { Button } from '@material-ui/core';
 
 const TopBar = () => (
   <AppBar position='sticky'>
@@ -14,18 +14,21 @@ const TopBar = () => (
           Aux Tauzins
         </Typography>
       </Link>
-      <TopBarList 
-        name='Restaurant' 
-        list={[{name:'Les menus', link:'/restaurant/menus'},
-          {name:'La carte', link:'/restaurant/carte'}]} />
-      <TopBarList 
-        name='Hôtel' 
-        list={[{name:'En saison', link:'#'},
-          {name:'Hors saison', link:'#'},
-          {name:'Les activités', link:'#'},
-          {name:'Histoire du lieu', link:'#'},
-          {name:'Photos & Vidéos', link:'#'}]} />
-      
+      <Button href='#'>
+        En saison
+      </Button>
+      <Button href='#'>
+        Hors saison
+      </Button>
+      <Button href='#'>
+        Les activités
+      </Button>
+      <Button href='#'>
+        Histoire du lieu
+      </Button>
+      <Button href='#'>
+        Photos & Vidéos
+      </Button>
     </Toolbar>
   </AppBar>
 )

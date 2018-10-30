@@ -1,12 +1,12 @@
 import React from 'react';
 
-import TopBar from '../Common/TopBar';
+import TopBarRestaurant from './TopBarRestaurant';
 import InfosRestau from './InfosRestau';
 
 
 const LaCarte = () => (
   <div>
-    <TopBar />
+    <TopBarRestaurant />
     <InfosRestau />
     <div>Voici la caaaaaaaaaaaaaa</div>
     <div>aaaaaaaaaaaaaaaaaaaaaaaa</div>

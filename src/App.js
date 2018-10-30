@@ -8,6 +8,7 @@ import LaCarte from './Restaurant/LaCarte.js';
 import Footer from './Common/Footer';
 import Video from './Home/Video';
 
+import { withStyles } from '@material-ui/core'
 import { injectGlobal } from 'styled-components';
 import { MuiThemeProvider } from '@material-ui/core/styles';
 import theme from './theme.js'
@@ -21,10 +22,22 @@ injectGlobal`
   }
 `;
 
+const styles = {
+  root: {
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  footer: {
+    margin: '10px'
+  }
+}
+
 class App extends Component {
   render() {
+    const { classes } = this.props;
     return (
-      <div>
+      <div className={classes.root}>
         <MuiThemeProvider theme={theme}>
           <Switch>
             <Route
@@ -44,11 +57,13 @@ class App extends Component {
               component={Home}
             />
           </Switch>
-          <Footer />
+          <div className={classes.footer}>
+            <Footer />
+          </div>
         </MuiThemeProvider>
       </div>
     );
   }
 }
 
-export default App;
+export default withStyles(styles)(App);
