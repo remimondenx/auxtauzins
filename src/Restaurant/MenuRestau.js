@@ -11,13 +11,20 @@ const styles = {
   root: {
     padding: '10px',
   },
+  container: {
+    display: 'flex',
+    justifyContent: 'flex-end'
+  },
   flexElt: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    fontAlign: 'center'
+    fontAlign: 'center',
   },
+  prix: {
+    marginTop: '10px',
+  }
 }
 
 class MenuRestau extends Component {
@@ -28,7 +35,7 @@ class MenuRestau extends Component {
         elevation={1} 
         className={classes.root} 
         style={{backgroundColor:color}}>
-        <Grid container>
+        <Grid container className={classes.container}>
           {!pair &&
           <Grid className={classes.flexElt} item xs={12} sm={6}>
             <TextMobileStepper imgs={imgs} />
@@ -38,11 +45,11 @@ class MenuRestau extends Component {
               {content.name}
             </Typography>
             <ul>
-              <li>{content.entree}</li>
+              <li><Typography>{content.entree}</Typography></li>
               <li>{content.plat}</li>
               <li>{content.dessert}</li>
             </ul>
-            <div>
+            <div className={classes.prix}>
               - {content.prix} euros -
             </div>
           </Grid>

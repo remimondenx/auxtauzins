@@ -23,12 +23,12 @@ const styles = theme => ({
     backgroundColor: theme.palette.background.default,
   },
   img: {
-    height: 255,
+    height: 'auto',
+    maxHeight: 300,
     maxWidth: 400,
     overflow: 'hidden',
     display: 'block',
     width: '100%',
-    minWidth: 300
   },
 });
 

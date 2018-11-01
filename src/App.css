@@ -2,6 +2,13 @@
     margin: 0;
 }
 
+@media screen and (min-width: 800px)
+{
+    * {
+        font-size: 1.03em;
+    }
+}
+
 #root {
     height: 100%;
 }
@@ -9,4 +16,8 @@
 img {
     width: auto;
     height: 100%;
+}
+
+ul {
+    list-style-type: circle;
 }

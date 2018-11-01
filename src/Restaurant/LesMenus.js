@@ -30,10 +30,10 @@ class LesMenus extends Component {
       <div>
         <TopBarRestaurant />
         <div className={classes.root}>
-          <MenuRestau content={terroir} imgs={imgs_terroir} color='#FFF8E1' pair />
-          <MenuRestau content={chalossais} imgs={imgs_chalossais} color='#FFE082' pair />
-          <MenuRestau content={gourmand} imgs={imgs_gourmand} color='#FFCA28' pair />
-          <MenuRestau content={gastro} imgs={imgs_gastro} color='#FFB300' pair/>
+          <MenuRestau content={terroir} imgs={imgs_terroir} color='#FFFDE7' pair />
+          <MenuRestau content={chalossais} imgs={imgs_chalossais} color='#FFD54F' pair />
+          <MenuRestau content={gourmand} imgs={imgs_gourmand} color='#FFFDE7' pair />
+          <MenuRestau content={gastro} imgs={imgs_gastro} color='#FFD54F' pair/>
         </div>
         <InfosRestau />
       </div>
