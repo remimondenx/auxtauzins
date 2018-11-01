@@ -5,36 +5,51 @@ import { withStyles } from '@material-ui/core/styles'
 import TextMobileStepper from '../Common/TextMobileStepper';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid'
 
 const styles = {
   root: {
     padding: '10px',
+  },
+  flexElt: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-  }
+    justifyContent: 'center',
+  },
 }
 
 class MenuRestau extends Component {
   render() {
-    const {classes, content, imgs, color} = this.props;
+    const {classes, content, imgs, color, pair} = this.props;
     return(
       <Paper 
         elevation={1} 
         className={classes.root} 
         style={{backgroundColor:color}}>
-        <Typography variant='h4' gutterBottom>
-          {content.name}
-        </Typography>
-        <ul>
-          <li>{content.entree}</li>
-          <li>{content.plat}</li>
-          <li>{content.dessert}</li>
-        </ul>
-        <div>
-          - {content.prix} euros -
-        </div>
-        <TextMobileStepper imgs={imgs} />
+        <Grid container>
+          {!pair &&
+          <Grid className={classes.flexElt} item xs={12} sm={6}>
+            <TextMobileStepper imgs={imgs} />
+          </Grid>}
+          <Grid className={classes.flexElt} item xs={12} sm={6}>
+            <Typography variant='h4' gutterBottom>
+              {content.name}
+            </Typography>
+            <ul>
+              <li>{content.entree}</li>
+              <li>{content.plat}</li>
+              <li>{content.dessert}</li>
+            </ul>
+            <div>
+              - {content.prix} euros -
+            </div>
+          </Grid>
+          {pair &&
+          <Grid className={classes.flexElt} item xs={12} sm={6}>
+            <TextMobileStepper imgs={imgs} />
+          </Grid>}
+        </Grid>
       </Paper>
   )}
 }
