@@ -1,36 +1,18 @@
 import React from 'react';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import { Link } from 'react-router-dom'
 
-import { Button } from '@material-ui/core';
+import TopBar from '../Common/TopBar';
 
-const TopBar = () => (
-  <AppBar position='sticky'>
-    <Toolbar>
-      <Link to='/' style={{textDecoration: 'none'}}>
-        <Typography variant='title' color='inherit'>
-          Aux Tauzins
-        </Typography>
-      </Link>
-      <Button href='#'>
-        En saison
-      </Button>
-      <Button href='#'>
-        Hors saison
-      </Button>
-      <Button href='#'>
-        Les activités
-      </Button>
-      <Button href='#'>
-        Histoire du lieu
-      </Button>
-      <Button href='#'>
-        Photos & Vidéos
-      </Button>
-    </Toolbar>
-  </AppBar>
+const items = [
+  {title: 'En saison', href:'#'},
+  {title: 'Hors saison', href:'#'},
+  {title: 'Les activités', href:'#'},
+  {title: 'Histoire du lieu', href:'#'},
+  {title: 'Photos & Vidéos', href:'#'},
+]
+
+const TopBarHotel = () => (
+  <TopBar items={items}>
+  </TopBar>
 )
 
-export default TopBar;
+export default TopBarHotel;

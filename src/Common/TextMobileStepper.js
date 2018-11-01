@@ -28,6 +28,7 @@ const styles = theme => ({
     overflow: 'hidden',
     display: 'block',
     width: '100%',
+    minWidth: 300
   },
 });
 
