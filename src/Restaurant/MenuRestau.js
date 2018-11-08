@@ -41,16 +41,16 @@ class MenuRestau extends Component {
             <TextMobileStepper imgs={imgs} />
           </Grid>}
           <Grid className={classes.flexElt} item xs={12} sm={6}>
-            <Typography variant='h4' gutterBottom>
+            <Typography variant='h4' color='secondary' gutterBottom>
               {content.name}
             </Typography>
             <ul>
-              <li><Typography>{content.entree}</Typography></li>
-              <li>{content.plat}</li>
-              <li>{content.dessert}</li>
+              <li><Typography color='secondary'>{content.entree}</Typography></li>
+              <li><Typography color='secondary'>{content.plat}</Typography></li>
+              <li><Typography color='secondary'>{content.dessert}</Typography></li>
             </ul>
             <div className={classes.prix}>
-              - {content.prix} euros -
+              <Typography color='secondary'>- {content.prix} euros -</Typography>
             </div>
           </Grid>
           {pair &&

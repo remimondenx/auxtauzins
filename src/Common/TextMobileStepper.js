@@ -13,7 +13,8 @@ const styles = theme => ({
     margin: '20px',
     borderRadius: '8px',
     border: '1px grey solid',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    boxShadow: '0px 4px 8px grey',
   },
   header: {
     display: 'flex',

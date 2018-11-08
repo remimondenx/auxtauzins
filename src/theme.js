@@ -6,14 +6,13 @@ const theme = createMuiTheme({
           main: '#FFEB3B',
       },
       secondary: {
-          main: '#f44336'
+          main: '#424242'
       },
     },
     typography: {
       body1: {
-          color: '00ff00',
-          fontFamily: 'Source Sans Pro',
-          fontSize: '1em'
+        fontFamily: 'Source Sans Pro',
+        fontSize: '1em'
       },
     },
 })
