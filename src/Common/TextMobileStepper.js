@@ -62,24 +62,7 @@ class TextMobileStepper extends Component {
           src={imgs[activeStep].imgPath}
           alt={imgs[activeStep].label}
         />
-        <MobileStepper
-          steps={maxSteps}
-          position="static"
-          activeStep={activeStep}
-          className={classes.mobileStepper}
-          nextButton={
-            <Button size="small" onClick={() => this.handleNext(maxSteps)} >
-              Next
-              {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
-            </Button>
-          }
-          backButton={
-            <Button size="small" onClick={() => this.handleBack(maxSteps)} >
-              {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
-              Back
-            </Button>
-          }
-        />
+        
       </div>
     );
   }

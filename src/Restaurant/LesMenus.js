@@ -30,10 +30,10 @@ class LesMenus extends Component {
       <div>
         <TopBarRestaurant />
         <div className={classes.root}>
-          <MenuRestau content={terroir} imgs={imgs_terroir} color='#FFFDE7' pair />
-          <MenuRestau content={chalossais} imgs={imgs_chalossais} color='#FFD54F' pair />
-          <MenuRestau content={gourmand} imgs={imgs_gourmand} color='#FFFDE7' pair />
-          <MenuRestau content={gastro} imgs={imgs_gastro} color='#FFD54F' pair/>
+          <MenuRestau content={terroir} imgs={imgs_terroir} color='0' pair />
+          <MenuRestau content={chalossais} imgs={imgs_chalossais} color='#FAFAFA' pair />
+          <MenuRestau content={gourmand} imgs={imgs_gourmand} color='0' pair />
+          <MenuRestau content={gastro} imgs={imgs_gastro} color='#FAFAFA' pair/>
         </div>
         <InfosRestau />
       </div>
@@ -79,7 +79,7 @@ const imgs_terroir = [
   {
     label: 'assiette terroir',
     imgPath:
-      dessert_menu_terroir,
+    'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
   },
 ];
 
@@ -87,7 +87,7 @@ const imgs_chalossais = [
   {
     label: 'salade landaise',
     imgPath:
-      salade_landaise,
+    'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
   }
 ];
 
@@ -95,7 +95,7 @@ const imgs_gourmand = [
   {
     label: 'coupe Melba',
     imgPath:
-      mousse_au_grand_marnier,
+    'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80',
   }
 ];
 

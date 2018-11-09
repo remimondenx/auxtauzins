@@ -11,10 +11,22 @@ const theme = createMuiTheme({
     },
     typography: {
       body1: {
-        fontFamily: 'Source Sans Pro',
+        fontFamily: 'Nunito',
         fontSize: '1em'
       },
+      h4: {
+        fontFamily: 'Nunito',
+      }
     },
+    overrides: {
+      MuiButton: {
+        root: {
+          fontFamily: 'Nunito',
+          fontStyle: 'italic',
+          fontWeight: 'bold'
+        }
+      }
+    }
 })
 
 export default theme;

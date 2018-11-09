@@ -10,6 +10,7 @@ import Grid from '@material-ui/core/Grid'
 const styles = {
   root: {
     padding: '10px',
+    textAlign: 'center',
   },
   container: {
     display: 'flex',
@@ -20,10 +21,18 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    fontAlign: 'center',
+    fontAlign: 'justify',
+  },
+  flexMenu: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontAlign: 'justify',
+    padding: '10px',
   },
   prix: {
-    marginTop: '10px',
+    marginTop: '20px',
   }
 }
 
@@ -37,18 +46,18 @@ class MenuRestau extends Component {
         style={{backgroundColor:color}}>
         <Grid container className={classes.container}>
           {!pair &&
-          <Grid className={classes.flexElt} item xs={12} sm={6}>
+          <Grid className={classes.flexImg} item xs={12} sm={6}>
             <TextMobileStepper imgs={imgs} />
           </Grid>}
-          <Grid className={classes.flexElt} item xs={12} sm={6}>
+          <Grid className={classes.flexMenu} item xs={12} sm={6}>
             <Typography variant='h4' color='secondary' gutterBottom>
               {content.name}
             </Typography>
-            <ul>
-              <li><Typography color='secondary'>{content.entree}</Typography></li>
-              <li><Typography color='secondary'>{content.plat}</Typography></li>
-              <li><Typography color='secondary'>{content.dessert}</Typography></li>
-            </ul>
+              <Typography color='secondary'>{content.entree}</Typography>
+              <Typography color='secondary'>~</Typography>
+              <Typography color='secondary'>{content.plat}</Typography>
+              <Typography color='secondary'>~</Typography>
+              <Typography color='secondary'>{content.dessert}</Typography>
             <div className={classes.prix}>
               <Typography color='secondary'>- {content.prix} euros -</Typography>
             </div>
