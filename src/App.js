@@ -2,16 +2,14 @@ import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import './App.css';
-import Home from './Home/Home.js';
-import LesMenus from './Restaurant/LesMenus.js';
-import LaCarte from './Restaurant/LaCarte.js';
-import Footer from './Common/Footer';
-import Video from './Home/Video';
+import theme from './theme.js'
+import HotelPage from './Hotel/HotelPage';
+import RestaurantPage from './Restaurant/RestaurantPage';
 
 import { withStyles } from '@material-ui/core'
 import { injectGlobal } from 'styled-components';
 import { MuiThemeProvider } from '@material-ui/core/styles';
-import theme from './theme.js'
+
 
 injectGlobal`
   html,
@@ -28,9 +26,6 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
   },
-  footer: {
-    margin: '10px'
-  }
 }
 
 class App extends Component {
@@ -41,25 +36,14 @@ class App extends Component {
         <MuiThemeProvider theme={theme}>
           <Switch>
             <Route
-              path="/restaurant/menus"
-              component={LesMenus}
-            />
-            <Route
-              path="/restaurant/carte"
-              component={LaCarte}
-            />
-            <Route
-              path="/video"
-              component={Video}
+              path="/hotel"
+              component={HotelPage}
             />
             <Route
               path="/"
-              component={Home}
+              component={RestaurantPage}
             />
           </Switch>
-          <div className={classes.footer}>
-            <Footer />
-          </div>
         </MuiThemeProvider>
       </div>
     );

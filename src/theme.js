@@ -6,7 +6,7 @@ const theme = createMuiTheme({
           main: '#FFEB3B',
       },
       secondary: {
-          main: '#424242'
+          main: '#FFFFFF'
       },
     },
     typography: {
@@ -14,8 +14,9 @@ const theme = createMuiTheme({
         fontFamily: 'Nunito',
         fontSize: '1em'
       },
-      h4: {
+      h3: {
         fontFamily: 'Nunito',
+        textShadow: '2px 1px #444444',
       }
     },
     overrides: {
