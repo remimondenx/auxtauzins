@@ -2,16 +2,21 @@ import React, { Component } from 'react';
 
 import image from '../images/main/hotel.jpg';
 import FirstLayer from '../Common/FirstLayer';
+import Contact from '../Common/Contact';
 
 class HotelPage extends Component {
   render() {
     return(
-      <FirstLayer 
-        title='Hotel Aux Tauzins' 
-        checked={true} 
-        link='/'
-        image={image}
-      />
+      <div style={{height:'100%'}}>
+        <FirstLayer 
+          title='Hôtel Aux Tauzins' 
+          checked={true} 
+          link='/'
+          image={image}
+        />
+        <Contact />
+      </div>
+
     );
   }
 }

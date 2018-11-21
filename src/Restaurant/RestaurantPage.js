@@ -1,19 +1,41 @@
 import React, { Component } from 'react';
 
-import image from '../images/main/restaurant.jpg';
+import restaurant from '../images/main/restaurant.jpg';
 import FirstLayer from '../Common/FirstLayer';
+import Contact from '../Common/Contact';
+
+import { withStyles } from '@material-ui/core';
+import PropTypes from 'prop-types';
+
+
+const styles = {
+	root: {
+		display: 'flex',
+		flexDirection: 'column',
+		height: '100%'
+	},
+}
 
 class RestaurantPage extends Component {
   render() {
+		const { classes } = this.props;
     return(
-			<FirstLayer 
-				title="Restaurant Aux Tauzins" 
-				checked={false}
-				link='/hotel'
-				image={image}
-			/>
+			<div className={classes.root}>
+				<FirstLayer
+					className={classes.elt}
+					title="Restaurant Aux Tauzins" 
+					checked={false}
+					link='/hotel'
+					image={restaurant}
+				/>
+				<Contact />
+			</div>
     );
   }
 }
 
-export default RestaurantPage;
+RestaurantPage.propTypes = {
+	classes: PropTypes.object.isRequired,
+}
+
+export default withStyles(styles)(RestaurantPage);
