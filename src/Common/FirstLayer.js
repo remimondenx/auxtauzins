@@ -1,23 +1,24 @@
 import React, { Component } from 'react';
 
 import united_kingdom from '../images/logos/united_kingdom.png';
-import logo from '../images/logos/chene.png';
+import chene from '../images/logos/chene.png';
+import facebook from '../images/logos/facebook.png';
+import instagram from '../images/logos/instagram.png';
+import tripadvisor from '../images/logos/tripadvisor.png';
 
 import { withStyles, Typography, Switch, Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const styles = {
-	dark: {
+	hundred: {
 		height: '100%',
-		backgroundColor: 'black',
 	},
 	root: {
 		height: '100%',
 		backgroundSize: 'cover',
 		backgroundPosition: 'center',
 		overflow: 'hidden',
-		opacity: 1, // change the opacity to get the image darker,
 		display: 'flex',
 		flexDirection: 'column',
 		justifyContent: 'space-between'
@@ -46,6 +47,11 @@ const styles = {
 		display: 'flex',
 		justifyContent: 'center',
 		alignItems: 'center'
+	},
+	socialMedia: {
+		padding: '10px',
+		display: 'flex',
+		justifyContent: 'flex-start',
 	}
 }
 
@@ -53,13 +59,13 @@ class FirstLayer extends Component {
   render() {
 		const { classes, title, checked, link, image } = this.props;
     return(
-    	<div className={classes.dark}>
+    	<div className={classes.hundred}>
 				<div className={classes.root} style={{backgroundImage:`url(${image})`}}>
 					<div className={classes.contactElt}>
 						<Link to='/' style={{textDecoration: 'none'}}>
-							<img className={classes.chene} src={logo} alt='logo' />
+							<img className={classes.chene} src={chene} alt='logo' />
 						</Link>
-						<Button className={classes.contact} color='secondary' href='test'>
+						<Button className={classes.contact} color='secondary' href='#contact'>
 							Nous contacter
 						</Button>
 						<Button>
@@ -76,12 +82,22 @@ class FirstLayer extends Component {
 							<Link to={link}>
 								<Switch
 									checked={checked}
-								/>    
+								/>   
 							</Link>
 							<Typography color='secondary' variant='h5'>Hôtel</Typography>
 						</div>
 					</div>
-					<div id='test'>coucou</div>
+					<div className={classes.socialMedia}>
+						<a href='https://wwww.facebook.com'>
+							<img style={{height:'50px', paddingRight:'10px'}} src={facebook} alt='Logo Facebook' />
+						</a>
+						<a href='https://wwww.facebook.com'>
+							<img style={{height:'50px', paddingRight:'10px'}} src={instagram} alt='Logo Instagram' />
+						</a>
+						<a href='https://wwww.facebook.com'>
+							<img style={{height:'50px'}} src={tripadvisor} alt='Logo Instagram' />
+						</a>
+					</div>
 				</div>
 			</div>
     );

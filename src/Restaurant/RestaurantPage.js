@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import restaurant from '../images/main/restaurant.jpg';
+import restaurant from '../images/main/restaurant_dark.jpg';
 import FirstLayer from '../Common/FirstLayer';
 import Contact from '../Common/Contact';
 

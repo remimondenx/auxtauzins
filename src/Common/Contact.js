@@ -24,7 +24,7 @@ class Contact extends Component {
   render() {
     const { classes } = this.props;
     return(
-			<div className={classes.root}>
+			<div className={classes.root} id='contact'>
         <Grid container spacing={32}>
           <Grid item xs={12} sm={6} md={4}>
             <Typography 
