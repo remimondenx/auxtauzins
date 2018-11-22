@@ -1,47 +1,44 @@
 import React, { Component } from 'react';
 
-import { withStyles } from '@material-ui/core/styles';
-import PropTypes from 'prop-types';
-import MenuRestau from './MenuRestau';
-import TopBarRestaurant from '../Restaurant/TopBarRestaurant';
-import InfosRestau from './InfosRestau';
-
-import dessert_menu_terroir from '../images/menus/dessert_menu_terroir.jpg';
-import salade_landaise from '../images/menus/salade_landaise.jpg';
-import mousse_au_grand_marnier from '../images/menus/mousse_au_grand_marnier.jpg';
+import RestaurantMenu from './RestaurantMenu';
 import tournedos_landais from '../images/menus/tournedos_landais.jpg';
 
+import { withStyles, Grid } from '@material-ui/core';
+import PropTypes from 'prop-types';
 
 const styles = {
-  root: {
-    display: 'flex',
-    flexDirection: 'column',
+  root: {
+    backgroundColor: '#FFCA28',
   }
 }
 
-class LesMenus extends Component {
-  static propTypes = {
-    classes: PropTypes.object.isRequired,
-  }
-  
+class MenusLayer extends Component {
   render() {
-    const { classes } = this.props;
+    const { classes } = this.props;
     return(
-      <div>
-        <TopBarRestaurant />
-        <div className={classes.root}>
-          <MenuRestau content={terroir} imgs={imgs_terroir} color='0' pair />
-          <MenuRestau content={chalossais} imgs={imgs_chalossais} color='#FAFAFA' pair />
-          <MenuRestau content={gourmand} imgs={imgs_gourmand} color='0' pair />
-          <MenuRestau content={gastro} imgs={imgs_gastro} color='#FAFAFA' pair/>
-        </div>
-        <InfosRestau />
-      </div>
-    )
+			<Grid className={classes.root} container>
+        <Grid item xs={12} sm={6} md={3}>
+          <RestaurantMenu content={terroir} imgs={imgs_terroir} />
+        </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <RestaurantMenu content={chalossais} imgs={imgs_chalossais} />
+        </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <RestaurantMenu content={gourmand} imgs={imgs_gourmand} />
+        </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <RestaurantMenu content={gastro} imgs={imgs_gastro} />
+        </Grid>
+      </Grid>
+    );
   }
 }
 
-export default withStyles(styles)(LesMenus);
+MenusLayer.propTypes = {
+	classes: PropTypes.object.isRequired,
+}
+
+export default withStyles(styles)(MenusLayer);
 
 const terroir = {
   name: 'Menu du terroir',

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import restaurant from '../images/main/restaurant_dark.jpg';
 import FirstLayer from '../Common/FirstLayer';
+import MenusLayer from './MenusLayer';
 import Contact from '../Common/Contact';
 
 import { withStyles } from '@material-ui/core';
@@ -12,8 +13,11 @@ const styles = {
 	root: {
 		display: 'flex',
 		flexDirection: 'column',
-		height: '100%'
+		height: '200%'
 	},
+	firstLayer: {
+		height: '100%'
+	}
 }
 
 class RestaurantPage extends Component {
@@ -21,6 +25,7 @@ class RestaurantPage extends Component {
 		const { classes } = this.props;
     return(
 			<div className={classes.root}>
+				<div className={classes.firstLayer}>
 				<FirstLayer
 					className={classes.elt}
 					title="Restaurant Aux Tauzins" 
@@ -28,7 +33,11 @@ class RestaurantPage extends Component {
 					link='/hotel'
 					image={restaurant}
 				/>
+				</div>
+				<div className={classes.following} >
+				<MenusLayer />
 				<Contact />
+				</div>
 			</div>
     );
   }
