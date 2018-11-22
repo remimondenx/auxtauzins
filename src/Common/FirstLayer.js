@@ -78,13 +78,25 @@ class FirstLayer extends Component {
 					<div className={classes.titleElt}>
 						<Typography color='secondary' variant='h3'>{title}</Typography>
 						<div className={classes.switchContainer}>
-							<Typography color='secondary' variant='h5'>Restaurant</Typography>
+							<Typography 
+								color='secondary'
+								variant='h5'
+								style={{width:'120px'}}
+							>
+								Restaurant
+							</Typography>
 							<Link to={link}>
 								<Switch
 									checked={checked}
 								/>   
 							</Link>
-							<Typography color='secondary' variant='h5'>Hôtel</Typography>
+							<Typography
+								color='secondary'
+								variant='h5'
+								style={{width:'120px', textAlign:'justify'}}
+							>
+								Hôtel
+							</Typography>
 						</div>
 					</div>
 					<div className={classes.socialMedia}>
