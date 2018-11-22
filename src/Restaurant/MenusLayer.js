@@ -9,6 +9,7 @@ import PropTypes from 'prop-types';
 const styles = {
   root: {
     backgroundColor: '#FFCA28',
+    padding: '10px'
   }
 }
 
@@ -17,16 +18,16 @@ class MenusLayer extends Component {
     const { classes } = this.props;
     return(
 			<Grid className={classes.root} container>
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid item xs={12} sm={6} lg={3}>
           <RestaurantMenu content={terroir} imgs={imgs_terroir} />
         </Grid>
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid item xs={12} sm={6} lg={3}>
           <RestaurantMenu content={chalossais} imgs={imgs_chalossais} />
         </Grid>
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid item xs={12} sm={6} lg={3}>
           <RestaurantMenu content={gourmand} imgs={imgs_gourmand} />
         </Grid>
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid item xs={12} sm={6} lg={3}>
           <RestaurantMenu content={gastro} imgs={imgs_gastro} />
         </Grid>
       </Grid>

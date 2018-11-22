@@ -6,37 +6,63 @@ import PropTypes from 'prop-types';
 const styles = {
   root: {
     margin: '20px',
-    padding: '10px',
-    height: '250px',
+    height: '450px',
     backgroundColor: 'white',
     border: '1px grey solid',
-    borderRadius: '10px',
-    boxShadow: '0 0 4px #000000',
+    borderRadius: '20px',
+    boxShadow: '0 2px 4px #000000',
     textAlign: 'center',
+    overflow: 'hidden',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  imgElt: {
+    height: '40%',
+    width: '100%',
+    backgroundSize: 'cover',
+		backgroundPosition: 'center',
+		overflow: 'hidden',
+  },
+  text: {
+    height: '60%',
+    padding: '10px',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
     alignItems: 'center',
-  }
+  },
+  menuName: {
+    fontWeight: 'bold',
+  },
 }
 
 class RestaurantMenu extends Component {
   render() {
     const { classes, content, imgs } = this.props;
+    const image = imgs[0]['imgPath'];
     return(
 			<div className={classes.root}>
-        <Typography variant='h5' gutterBottom>
-          {content.name}
-        </Typography>
-        <div className={classes.food}>
-          <Typography variant='body1'>{content.entree}</Typography>
-          <Typography variant='body1'>~</Typography>
-          <Typography variant='body1'>{content.plat}</Typography>
-          <Typography variant='body1'>~</Typography>
-          <Typography variant='body1'>{content.dessert}</Typography>
-        </div>
-        <div className={classes.prix}>
-          <Typography variant='body1'>- {content.prix} euros -</Typography>
+        <div className={classes.imgElt} style={{backgroundImage:`url(${image})`}}></div>
+        <div className={classes.text}>
+          <Typography 
+            className={classes.menuName}
+            variant='h5'
+            color='primary'
+            gutterBottom
+          >
+            {content.name}
+          </Typography>
+          <div className={classes.food}>
+            <Typography variant='body1'>{content.entree}</Typography>
+            <Typography variant='body1'>~</Typography>
+            <Typography variant='body1'>{content.plat}</Typography>
+            <Typography variant='body1'>~</Typography>
+            <Typography variant='body1' gutterBottom>{content.dessert}</Typography>
+          </div>
+          <div className={classes.prix}>
+            <Typography variant='body1'>- {content.prix} euros -</Typography>
+          </div>
         </div>
       </div>
     );

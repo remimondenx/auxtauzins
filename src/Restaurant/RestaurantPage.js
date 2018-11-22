@@ -13,7 +13,7 @@ const styles = {
 	root: {
 		display: 'flex',
 		flexDirection: 'column',
-		height: '200%'
+		height: '100%',
 	},
 	firstLayer: {
 		height: '100%'
@@ -26,17 +26,17 @@ class RestaurantPage extends Component {
     return(
 			<div className={classes.root}>
 				<div className={classes.firstLayer}>
-				<FirstLayer
-					className={classes.elt}
-					title="Restaurant Aux Tauzins" 
-					checked={false}
-					link='/hotel'
-					image={restaurant}
-				/>
+					<FirstLayer
+						className={classes.elt}
+						title="Restaurant Aux Tauzins" 
+						checked={false}
+						link='/hotel'
+						image={restaurant}
+					/>
 				</div>
 				<div className={classes.following} >
-				<MenusLayer />
-				<Contact />
+					<MenusLayer />
+					<Contact />
 				</div>
 			</div>
     );
