@@ -3,10 +3,9 @@ import React, { Component } from 'react';
 import st_jacques from '../images/menus/st_jacques.jpg';
 import st_jacques_cepes from '../images/menus/st_jacques_aux_cepes.jpg';
 
-import { withStyles, Typography, GridList, GridListTile, GridListTileBar, IconButton, ListSubheader } from '@material-ui/core';
+import { withStyles, Typography, GridList, GridListTile, GridListTileBar, IconButton, ListSubheader, Grid } from '@material-ui/core';
 import InfoIcon from '@material-ui/icons/Info';
 import PropTypes from 'prop-types';
-import LaCarteElement from './LaCarteElement';
 
 const styles = {
   root: {
@@ -19,13 +18,34 @@ const styles = {
     textAlign: 'center',
   },
   gridList: {
-    maxWidth: '800px',
     padding: '20px',
   },
-  tile: {
-    width: 'auto',
-    cornerRadius: '10px',
-  }
+  carteElt: {
+    height: '200px',
+  },
+  backgroundImage: {
+    height: '100%',
+    backgroundSize: 'cover',
+		backgroundPosition: 'center',
+    overflow: 'hidden',
+    border: '1px grey solid',
+    borderRadius: '20px',
+    boxShadow: '0 2px 4px #000000',
+    display: 'flex',
+    alignItems: 'flex-end'
+  },
+  dark: {
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    height: '40px',
+    width: '100%',
+    display: 'flex',
+    alignItems: 'center',
+  },
+  titleCarteElt: {
+    padding: '10px',
+    fontWeight: 'bold',
+    fontSize: '1.1em',
+  },
 }
 
 class LaCarteLayer extends Component {
@@ -36,22 +56,17 @@ class LaCarteLayer extends Component {
         <Typography className={classes.title} variant='h2'>
           La carte
         </Typography>
-        <GridList className={classes.gridList} cellHeight={180}>
-          {listLaCarte.map(it => 
-            <GridListTile className={classes.tile} key={it.title}>
-              <img src={it.img} alt={it.title} />
-              <GridListTileBar
-                title={it.title}
-                actionIcon={
-                  <IconButton className={classes.icon}>
-                    <InfoIcon />
-                  </IconButton>
-                }
-              />
-            </GridListTile>
+        <Grid className={classes.gridList} spacing={16} container>
+          {listLaCarte.map(it =>
+            <Grid className={classes.carteElt} item xs={12} sm={6}>
+              <div className={classes.backgroundImage} style={{backgroundImage:`url(${it.img})`}}>
+                {true && <div className={classes.dark}>
+                  <Typography className={classes.titleCarteElt} color='secondary'>{it.title}</Typography>
+                </div>}
+              </div>
+            </Grid>     
           )}
-          <LaCarteElement title='Entrées' img={st_jacques} content='BLABLA' />
-        </GridList>
+        </Grid>
       </div>
     );
   }
@@ -95,3 +110,19 @@ const sauces = {
 }
 
 const listLaCarte = [entrees, canard, poisson, sauces]
+
+
+
+/*
+<GridListTile className={classes.tile} key={it.title}>
+              <img src={it.img} alt={it.title} />
+              <GridListTileBar
+                title={it.title}
+                actionIcon={
+                  <IconButton className={classes.icon}>
+                    <InfoIcon />
+                  </IconButton>
+                }
+              />
+            </GridListTile>
+*/
