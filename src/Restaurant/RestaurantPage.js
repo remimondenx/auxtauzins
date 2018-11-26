@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import restaurant from '../images/main/restaurant_dark.jpg';
 import FirstLayer from '../Common/FirstLayer';
 import MenusLayer from './MenusLayer';
+import LaCarteLayer from './LaCarteLayer';
 import Contact from '../Common/Contact';
 
 import { withStyles } from '@material-ui/core';
@@ -36,6 +37,7 @@ class RestaurantPage extends Component {
 				</div>
 				<div className={classes.following} >
 					<MenusLayer />
+					<LaCarteLayer />
 					<Contact />
 				</div>
 			</div>

@@ -5,6 +5,7 @@ import * as serviceWorker from './serviceWorker';
 import {BrowserRouter as Router} from 'react-router-dom';
 
 import 'typeface-nunito';
+import 'typeface-dancing-script';
 
 ReactDOM.render(
   (<Router>

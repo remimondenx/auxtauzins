@@ -14,6 +14,9 @@ const theme = createMuiTheme({
       body1: {
         fontFamily: 'Nunito',
       },
+      h2: {
+        fontFamily: 'Dancing Script',
+      },
       h3: {
         fontFamily: 'Nunito',
       },
@@ -21,7 +24,8 @@ const theme = createMuiTheme({
         fontFamily: 'Nunito',
       },
       h5: {
-        fontFamily: 'Nunito',
+        fontFamily: 'Dancing Script',
+        fontSize: '1.8em',
       }
     },
     overrides: {

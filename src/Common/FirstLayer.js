@@ -5,8 +5,9 @@ import chene from '../images/logos/chene.png';
 import facebook from '../images/logos/facebook.png';
 import instagram from '../images/logos/instagram.png';
 import tripadvisor from '../images/logos/tripadvisor.png';
+import logo_video from '../images/logos/video.png';
 
-import { withStyles, Typography, Switch, Button } from '@material-ui/core';
+import { withStyles, Typography, Switch, Button, Dialog, Tooltip } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
@@ -48,14 +49,29 @@ const styles = {
 		justifyContent: 'center',
 		alignItems: 'center'
 	},
+	reserver: {
+
+	},
 	socialMedia: {
 		padding: '10px',
 		display: 'flex',
 		justifyContent: 'flex-start',
-	}
+	},
 }
 
 class FirstLayer extends Component {
+	state = {
+    open: false,
+  }
+
+  handleOpen = () => {
+      this.setState({open: true})
+  }
+
+  handleClose = () => {
+      this.setState({open: false})
+	}
+	
   render() {
 		const { classes, title, checked, link, image } = this.props;
     return(
@@ -98,6 +114,14 @@ class FirstLayer extends Component {
 								Hôtel
 							</Typography>
 						</div>
+						<Button 
+							className={classes.reserver}
+							href='https://www.logishotels.com/fr/tarifs-et-disponibilites-chambre?id=1516'
+							color='secondary'
+						>
+							Réserver
+						</Button>
+
 					</div>
 					<div className={classes.socialMedia}>
 						<a href='https://wwww.facebook.com'>
@@ -107,8 +131,22 @@ class FirstLayer extends Component {
 							<img style={{height:'50px', paddingRight:'10px'}} src={instagram} alt='Logo Instagram' />
 						</a>
 						<a href='https://wwww.facebook.com'>
-							<img style={{height:'50px'}} src={tripadvisor} alt='Logo Instagram' />
+							<img style={{height:'50px', paddingRight: '10px'}} src={tripadvisor} alt='Logo Instagram' />
 						</a>
+						<div>
+							<Tooltip title="Visionnez la vidéo de l'établissement">
+								<img 
+									src={logo_video}
+									alt='logo video'
+									onClick={this.handleOpen}
+									style={{height:'50px'}}
+								/>
+							</Tooltip>
+           		<Dialog open={this.state.open} onClose={this.handleClose}>
+              	<iframe title="presentation" src="https://player.vimeo.com/video/138057164?title=0&byline=0&portrait=0" width="600" height="338" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                </iframe>
+            	</Dialog>
+        		</div>
 					</div>
 				</div>
 			</div>

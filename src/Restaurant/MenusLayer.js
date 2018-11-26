@@ -3,13 +3,14 @@ import React, { Component } from 'react';
 import RestaurantMenu from './RestaurantMenu';
 import tournedos_landais from '../images/menus/tournedos_landais.jpg';
 
-import { withStyles, Grid } from '@material-ui/core';
+import { withStyles, Grid, Typography } from '@material-ui/core';
 import PropTypes from 'prop-types';
 
 const styles = {
   root: {
     backgroundColor: '#FFCA28',
-    padding: '10px'
+    padding: '10px',
+    textAlign: 'center',
   }
 }
 
@@ -17,20 +18,17 @@ class MenusLayer extends Component {
   render() {
     const { classes } = this.props;
     return(
-			<Grid className={classes.root} container>
-        <Grid item xs={12} sm={6} lg={3}>
-          <RestaurantMenu content={terroir} imgs={imgs_terroir} />
+      <div className={classes.root}>
+        <Typography variant='h2' gutterBottom>Nos menus</Typography>
+        <Grid className={classes.menus} container>
+          {listMenus.map(it =>
+            <Grid item xs={12} sm={6} lg={3} key={it.content.name}>
+             <RestaurantMenu content={it.content} imgs={it.imgs} />
+            </Grid> 
+            )}
         </Grid>
-        <Grid item xs={12} sm={6} lg={3}>
-          <RestaurantMenu content={chalossais} imgs={imgs_chalossais} />
-        </Grid>
-        <Grid item xs={12} sm={6} lg={3}>
-          <RestaurantMenu content={gourmand} imgs={imgs_gourmand} />
-        </Grid>
-        <Grid item xs={12} sm={6} lg={3}>
-          <RestaurantMenu content={gastro} imgs={imgs_gastro} />
-        </Grid>
-      </Grid>
+      </div>
+
     );
   }
 }
@@ -104,3 +102,22 @@ const imgs_gastro = [
       tournedos_landais
   },
 ];
+
+const listMenus = [
+  {
+    content: terroir,
+    imgs: imgs_terroir
+  },
+  {
+    content: chalossais,
+    imgs: imgs_chalossais,
+  },
+  {
+    content: gourmand,
+    imgs: imgs_gourmand,
+  },
+  {
+    content: gastro,
+    imgs: imgs_gastro,
+  }
+]
