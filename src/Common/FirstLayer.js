@@ -36,8 +36,7 @@ const styles = {
 	},
 	contact: {
 		textShadow: '0 0 2px #000000',
-		paddingRight: 5,
-		paddingLeft: 5,
+		padding: 5,
 		border: '2px solid white',
 		borderRadius: '10px',
 		textTransform: 'none',
@@ -139,13 +138,13 @@ class FirstLayer extends Component {
 
 					</div>
 					<div className={classes.socialMedia}>
-						<a href='https://wwww.facebook.com'>
+						<a href='https://www.facebook.com/auxtauzins'>
 							<img style={{height:'50px', paddingRight:'10px'}} src={facebook} alt='Logo Facebook' />
 						</a>
-						<a href='https://wwww.facebook.com'>
+						<a href='https://www.instagram.com/auxtauzins/'>
 							<img style={{height:'50px', paddingRight:'10px'}} src={instagram} alt='Logo Instagram' />
 						</a>
-						<a href='https://wwww.facebook.com'>
+						<a href='https://www.tripadvisor.fr/Restaurant_Review-g2068609-d3978484-Reviews-Aux_Tauzins-Montfort_en_Chalosse_Landes_Nouvelle_Aquitaine.html'>
 							<img style={{height:'50px', paddingRight: '10px'}} src={tripadvisor} alt='Logo Instagram' />
 						</a>
 						<div>
