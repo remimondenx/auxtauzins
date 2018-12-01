@@ -22,13 +22,13 @@ const styles = {
 		overflow: 'hidden',
 		display: 'flex',
 		flexDirection: 'column',
-		justifyContent: 'space-between'
+		justifyContent: 'space-between',
 	},
 	contactElt: {
 		display: 'flex',
 		justifyContent: 'flex-end',
 		alignItems: 'center',
-		paddingTop: '10px'
+		paddingTop: '10px',
 	},
 	titleElt: {
 		textAlign: 'center',
@@ -37,6 +37,10 @@ const styles = {
 	contact: {
 		textShadow: '0 0 2px #000000',
 		paddingRight: 5,
+		paddingLeft: 5,
+		border: '2px solid white',
+		borderRadius: '10px',
+		textTransform: 'none',
 	},
 	chene: {
 		position: 'absolute',
@@ -44,10 +48,16 @@ const styles = {
 		left: '10px',
 		height: '75px',
 	},
+	link: {
+		textDecoration: 'none',
+	},
+	cliquable: {
+		textDecoration: 'underline',
+	},
 	switchContainer: {
 		display: 'flex',
 		justifyContent: 'center',
-		alignItems: 'center'
+		alignItems: 'center',
 	},
 	reserver: {
 
@@ -93,25 +103,31 @@ class FirstLayer extends Component {
 					</div>
 					<div className={classes.titleElt}>
 						<div className={classes.switchContainer}>
-							<Typography 
-								color='secondary'
-								variant='h5'
-								style={{width:'120px'}}
-							>
-								Restaurant
-							</Typography>
+							<Link className={classes.link} to='/'>
+								<Typography 
+									className={classes.cliquable}
+									color='secondary'
+									variant='h5'
+									style={{width:'120px'}}
+								>
+									Restaurant
+								</Typography>
+							</Link>
 							<Link to={link}>
 								<Switch
 									checked={checked}
 								/>   
 							</Link>
-							<Typography
-								color='secondary'
-								variant='h5'
-								style={{width:'120px', textAlign:'justify'}}
-							>
-								Hôtel
-							</Typography>
+							<Link className={classes.link} to='/hotel'>
+								<Typography
+									className={classes.cliquable}
+									color='secondary'
+									variant='h5'
+									style={{width:'120px', textAlign:'justify'}}
+								>
+									Hôtel
+								</Typography>
+							</Link>
 						</div>
 						<Button 
 							className={classes.reserver}
