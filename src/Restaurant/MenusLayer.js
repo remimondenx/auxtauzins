@@ -3,6 +3,11 @@ import React, { Component } from 'react';
 import RestaurantMenu from './RestaurantMenu';
 import tournedos_landais from '../images/menus/tournedos_landais.jpg';
 
+import img_terroir from '../images/food/assiette_du_terroir_menu1_V3.JPG';
+import img_chalossais from '../images/food/confit_de_canard_menu2_V2.JPG';
+import img_gourmand from '../images/food/magret_de_canard_menu3_V1.JPG';
+import img_gastro from '../images/food/foie_gras_chaud_aux_raisins_menu4.JPG';
+
 import { withStyles, Grid, Typography } from '@material-ui/core';
 import PropTypes from 'prop-types';
 
@@ -72,33 +77,29 @@ const gastro = {
 
 const imgs_terroir = [
   {
-    label: 'assiette terroir',
-    imgPath:
-    'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
+    label: 'assiette_terroir',
+    imgPath: img_terroir,
   },
 ];
 
 const imgs_chalossais = [
   {
     label: 'salade landaise',
-    imgPath:
-    'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
+    imgPath: img_chalossais,
   }
 ];
 
 const imgs_gourmand = [
   {
     label: 'coupe Melba',
-    imgPath:
-    'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80',
+    imgPath: img_gourmand,
   }
 ];
 
 const imgs_gastro = [
   {
     label: 'tournedos boeuf',
-    imgPath:
-      tournedos_landais
+    imgPath: img_gastro,
   },
 ];
 
