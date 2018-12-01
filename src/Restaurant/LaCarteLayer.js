@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 
-import st_jacques from '../images/menus/st_jacques.jpg';
-import st_jacques_cepes from '../images/menus/st_jacques_aux_cepes.jpg';
+import img_entrees from '../images/food/pate_de_chevreuil.JPG';
+import img_poissons from '../images/food/saint_jacques.JPG';
+import img_canard from '../images/food/coeurs_de_canard_menu1_V2.JPG';
+import img_sauces from '../images/food/ris_agneau_aux_cepes_V1.JPG';
+import img_viandes from '../images/food/tournedos_landais_V4.JPG';
+import img_desserts from '../images/food/salade_de_fruits_V2.JPG';
 
-import { withStyles, Typography, GridList, GridListTile, GridListTileBar, IconButton, ListSubheader, Grid } from '@material-ui/core';
+import { withStyles, Typography, Grid } from '@material-ui/core';
 import PropTypes from 'prop-types';
 
 const styles = {
@@ -53,7 +57,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    overflow: 'auto'
+    overflow: 'auto',
   },
 }
 
@@ -122,8 +126,8 @@ export default withStyles(styles)(LaCarteLayer);
 
 const entrees = {
   id: 1,
-  title: 'Entrées',
-  img: st_jacques,
+  title: 'Nos entrées',
+  img: img_entrees,
   content: [
     {food: 'Salade verte', price: 6},
     {food: 'Salade composée (Salade verte, tomates, oignons, pointes d\'asperges)', price: 12},
@@ -139,31 +143,95 @@ const entrees = {
   ]
 }
 
-const canard = {
+const poissons = {
   id: 2,
-  title: 'Le canard passion',
-  img: st_jacques_cepes,
+  title: 'Nos poissons',
+  img: img_poissons,
   content: [
-    {food: 'Pâté de foie de canard maison', price: 15},
-    {food: 'Magret froid fourré au canard', price: 24}
+    {food: 'Beignets de lotte aux petits légumes', price: 25},
+    {food: 'Coquilles Saint-Jacques à la Provinçale', price: 26},
+    {food: 'Feuilleté de Saint-Jacques sur lit de poireaux', price: 26},
+    {food: 'Sole meunière', price: 28},
+    {food: 'Fricassée de lotte de Saint-Jacques aux cèpes', price: 30},
   ]
 }
 
-const poisson = {
+const canard = {
   id: 3,
-  title: 'Les poissons',
-  img: 'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
-  content: []
+  title: 'Les produits du canard',
+  img: img_canard,
+  content: [
+    {food: 'Pâté de foie de canard maison', price: 15},
+    {food: 'Magret froid fourré au foie gras', price: 24},
+    {food: 'Salade Landaise (salade verte, pointes d\'asperges, gésiers, magret fumé, foie gras)', price: 25},
+    {food: 'Tranche de foie gras de canard', price: 24},
+    {food: 'Foie gras chaud aux pommes ou aux raisins', price: 25},
+    {food: 'Escalopes de foie poêlées aux cèpes', price: 30},
+  ]
 }
 
 const sauces = {
   id: 4,
-  title: 'Les sauces',
-  img: 'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
-  content: []
+  title: 'Nos plats en sauce',
+  img: img_sauces,
+  content: [
+    {food: 'Civet de gibier façon grand-mère', price: 18},
+    {food: 'Sauce de cèpes', price: 24},
+    {food: 'Salmis de palombe', price: 24},
+    {food: 'Lamproie de l\'Adour à la Bordelaise', price: 24},
+    {food: 'Ris de veau sauce financière', price: 25},
+    {food: 'Tête de veau sauce gribiche', price: 18},
+  ]
 }
 
-const listLaCarte = [entrees, canard, poisson, sauces]
+const viandes = {
+  id: 5,
+  title: 'Nos viandes',
+  img: img_viandes,
+  content: [
+    {food: 'Confit de porc', price: 16},
+    {food: 'Confit de canard "la cuisse"', price: 18},
+    {food: 'Confit de canard "l\'aile"', price: 24},
+    {food: 'Confit d\'oie "la cuisse"', price: 20},
+    {food: 'Confit d\'oie "l\'aile"', price: 26},
+    {food: 'Brochette de coeurs de canard', price: 19},
+    {food: 'Magret de canard grillé ou sauce au poivre vert', price: 20},
+    {food: 'Escalope de veau grillée ou à la crème', price: 20},
+    {food: 'Ris d\'agneau aux cèpes', price: 30},
+    {food: 'Tournedos au poivre', price: 24},
+    {food: 'Faux-filet de boeuf blonde d\'Aquitaine', price: 28},
+    {food: 'Tournedos Landais (avec foie et cèpes)', price: 30},
+    {food: 'Portion de légumes supplémentaire', price: 5},
+  ]
+}
+
+const desserts = {
+  id: 6,
+  title: 'Nos desserts',
+  img: img_desserts,
+  content: [
+    {food: 'Les pâtisseries maison', price: 8},
+    {food: 'L\'assiette de fromage', price: 9},
+    {food: 'Le pot de crème', price: 8},
+    {food: 'La mousse glâcée au Grand Marnier et son petit verre de liqueur', price: 9},
+    {food: 'Les profiteroles Maison', price: 9},
+    {food: 'Les sorbets au choix (2 boules : poire, cassis, citron, mandarine)', price: 8},
+    {food: 'La coupe melba', price: 8},
+    {food: 'Le café liégeois', price: 8},
+    {food: 'Le chocolat liégeois', price: 8},
+    {food: 'Les glaces 2 boules au choix (vanille, café, chocolat, pistache, fraise, rhums raisins, pruneaux)', price: 8},
+    {food: 'La coupe cardinale (sorbet cassis, crème de cassis)', price: 8},
+    {food: 'La coupe colonel (sorbet citron, vodka)', price: 9},
+    {food: 'La coupe williamine (sorbet poire, alcool de poire)', price: 9},
+    {food: 'La coupe d\'Artagnan (glace pruneaux, pruneaux, armagnac et chantilly)', price: 9},
+    {food: 'Le cappuccino', price: 6},
+    {food: 'Le café gourmand', price: 9},
+    {food: 'Le café et ses friandises', price: 2.80},
+    {food: 'Infusions ou thé', price: 4},
+  ]
+}
+
+const listLaCarte = [entrees, poissons, canard, sauces, viandes, desserts]
 
 
 

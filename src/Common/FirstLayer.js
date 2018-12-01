@@ -6,6 +6,7 @@ import facebook from '../images/logos/facebook.png';
 import instagram from '../images/logos/instagram.png';
 import tripadvisor from '../images/logos/tripadvisor.png';
 import logo_video from '../images/logos/video.png';
+import scroll from '../images/other/scroll.gif';
 
 import { withStyles, Typography, Switch, Button, Dialog, Tooltip } from '@material-ui/core';
 import { Link } from 'react-router-dom';
@@ -65,6 +66,16 @@ const styles = {
 		padding: '10px',
 		display: 'flex',
 		justifyContent: 'flex-start',
+	},
+	scrollContainer: {
+		position: 'absolute',
+		bottom: '-30px',
+		left: '50%'
+	},
+	scroll: {
+		height: '100px',
+		position: 'relative',
+		left: '-50%',
 	},
 }
 
@@ -135,31 +146,33 @@ class FirstLayer extends Component {
 						>
 							Réserver
 						</Button>
-
-					</div>
-					<div className={classes.socialMedia}>
-						<a href='https://www.facebook.com/auxtauzins'>
-							<img style={{height:'50px', paddingRight:'10px'}} src={facebook} alt='Logo Facebook' />
-						</a>
-						<a href='https://www.instagram.com/auxtauzins/'>
-							<img style={{height:'50px', paddingRight:'10px'}} src={instagram} alt='Logo Instagram' />
-						</a>
-						<a href='https://www.tripadvisor.fr/Restaurant_Review-g2068609-d3978484-Reviews-Aux_Tauzins-Montfort_en_Chalosse_Landes_Nouvelle_Aquitaine.html'>
-							<img style={{height:'50px', paddingRight: '10px'}} src={tripadvisor} alt='Logo Instagram' />
-						</a>
+						</div>
+						<div className={classes.socialMedia}>
+							<a href='https://www.facebook.com/auxtauzins'>
+								<img style={{height:'50px', paddingRight:'10px'}} src={facebook} alt='Logo Facebook' />
+							</a>
+							<a href='https://www.instagram.com/auxtauzins/'>
+								<img style={{height:'50px', paddingRight:'10px'}} src={instagram} alt='Logo Instagram' />
+							</a>
+							<a href='https://www.tripadvisor.fr/Restaurant_Review-g2068609-d3978484-Reviews-Aux_Tauzins-Montfort_en_Chalosse_Landes_Nouvelle_Aquitaine.html'>
+								<img style={{height:'50px', paddingRight: '10px'}} src={tripadvisor} alt='Logo Instagram' />
+							</a>
 						<div>
-							<Tooltip title="Visionnez la vidéo de l'établissement">
-								<img 
-									src={logo_video}
-									alt='logo video'
-									onClick={this.handleOpen}
-									style={{height:'50px'}}
-								/>
+						<Tooltip title="Visionnez la vidéo de l'établissement">
+							<img 
+								src={logo_video}
+								alt='logo video'
+								onClick={this.handleOpen}
+								style={{height:'50px'}}
+							/>
 							</Tooltip>
            		<Dialog open={this.state.open} onClose={this.handleClose}>
               	<iframe title="presentation" src="https://player.vimeo.com/video/138057164?title=0&byline=0&portrait=0" width="600" height="338" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
                 </iframe>
             	</Dialog>
+							<div className={classes.scrollContainer}>
+								<img className={classes.scroll} src={scroll} alt='scroll' />
+							</div>
         		</div>
 					</div>
 				</div>
