@@ -8,8 +8,7 @@ class HotelPage extends Component {
   render() {
     return(
       <div style={{height:'100%'}}>
-        <FirstLayer 
-          title='Hôtel Aux Tauzins' 
+        <FirstLayer
           checked={true} 
           link='/'
           image={image}

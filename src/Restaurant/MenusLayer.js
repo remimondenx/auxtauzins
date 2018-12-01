@@ -9,9 +9,9 @@ import PropTypes from 'prop-types';
 const styles = {
   root: {
     backgroundColor: '#FFCA28',
-    padding: '10px',
+    padding: '30px',
     textAlign: 'center',
-  }
+  },
 }
 
 class MenusLayer extends Component {
@@ -28,7 +28,6 @@ class MenusLayer extends Component {
             )}
         </Grid>
       </div>
-
     );
   }
 }

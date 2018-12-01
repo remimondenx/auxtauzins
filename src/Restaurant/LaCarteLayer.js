@@ -91,7 +91,6 @@ class LaCarteLayer extends Component {
                     <Typography variant='h5' color='primary' style={{fontWeight:'bold'}} gutterBottom>
                       {it.title}
                     </Typography>
-
                     <table>
                       {it.content.map(course =>
                         <tr>

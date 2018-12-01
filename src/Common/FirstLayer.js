@@ -73,7 +73,7 @@ class FirstLayer extends Component {
 	}
 	
   render() {
-		const { classes, title, checked, link, image } = this.props;
+		const { classes, checked, link, image } = this.props;
     return(
     	<div className={classes.hundred}>
 				<div className={classes.root} style={{backgroundImage:`url(${image})`}}>
@@ -92,7 +92,6 @@ class FirstLayer extends Component {
 						</Button>
 					</div>
 					<div className={classes.titleElt}>
-						<Typography color='secondary' variant='h3'>{title}</Typography>
 						<div className={classes.switchContainer}>
 							<Typography 
 								color='secondary'
@@ -156,7 +155,6 @@ class FirstLayer extends Component {
 
 FirstLayer.propTypes = {
   classes: PropTypes.object.isRequired,
-	title: PropTypes.string.isRequired,
 	checked: PropTypes.bool.isRequired,
 	link: PropTypes.string.isRequired,
 	image: PropTypes.string.isRequired,
