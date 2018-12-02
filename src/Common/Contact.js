@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 
-import logis from '../images/logos/logis.png';
-
 import { withStyles, Typography, Grid, Button } from '@material-ui/core';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const styles = {
@@ -20,9 +17,6 @@ const styles = {
   },
   mail: {
     textTransform: 'none',
-  },
-  logis: { 
-    padding: '30px',
   },
 }
 
@@ -82,11 +76,6 @@ class Contact extends Component {
             <Typography>486 route Raphael Lonné, 40380, Montfort-en-Chalosse</Typography>
           </Grid>
         </Grid>
-        <div className={classes.logis}>
-          <a href='https://www.logishotels.com/fr'>
-            <img src={logis} alt='logis hotel' style={{height: '100px'}} />
-          </a>
-        </div>
 			</div>
     );
   }

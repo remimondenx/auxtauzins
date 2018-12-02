@@ -7,6 +7,7 @@ import instagram from '../images/logos/instagram.png';
 import tripadvisor from '../images/logos/tripadvisor.png';
 import logo_video from '../images/logos/video.png';
 import scroll from '../images/other/scroll.gif';
+import logis from '../images/logos/logis.png';
 
 import { withStyles, Typography, Switch, Button, Dialog, Tooltip } from '@material-ui/core';
 import { Link } from 'react-router-dom';
@@ -76,6 +77,14 @@ const styles = {
 		height: '100px',
 		position: 'relative',
 		left: '-50%',
+	},
+	logis: {
+		position: 'absolute',
+		bottom: '10px',
+		right: '10px',
+	},
+	imgLogis: {
+		height: '80px',
 	},
 }
 
@@ -173,6 +182,11 @@ class FirstLayer extends Component {
 							<div className={classes.scrollContainer}>
 								<img className={classes.scroll} src={scroll} alt='scroll' />
 							</div>
+							<div className={classes.logis}>
+          			<a href='https://www.logishotels.com/fr'>
+           		 		<img className={classes.imgLogis} src={logis} alt='logis hotel' />
+         				</a>
+       				</div>
         		</div>
 					</div>
 				</div>
