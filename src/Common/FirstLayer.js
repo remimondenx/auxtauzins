@@ -63,7 +63,7 @@ const styles = {
 	colorSwitchBase: {
 		color: '#2196f3',
     '&$colorChecked': {
-      color: '#ff9800',
+      color: '#ffeb3b',
       '& + $colorBar': {
         backgroundColor: 'white',
       },
@@ -71,8 +71,15 @@ const styles = {
 	},
 	colorBar: {},
   colorChecked: {},
-	reserver: {
-
+	reserverChecked: {
+		marginTop: '10px',
+		borderRadius: '10px',
+		backgroundColor: '#ffeb3b',
+	},
+	reserverNoChecked: {
+		marginTop: '10px',
+		borderRadius: '10px',
+		backgroundColor: '#2196f3',
 	},
 	socialMedia: {
 		padding: '10px',
@@ -164,25 +171,35 @@ class FirstLayer extends Component {
 								</Typography>
 							</Link>
 						</div>
-						<Button 
-							className={classes.reserver}
-							href='https://www.logishotels.com/fr/tarifs-et-disponibilites-chambre?id=1516'
-							color='secondary'
-						>
-							Réserver
-						</Button>
-						</div>
-						<div className={classes.socialMedia}>
-							<a href='https://www.facebook.com/auxtauzins'>
-								<img style={{height:'50px', paddingRight:'10px'}} src={facebook} alt='Logo Facebook' />
-							</a>
-							<a href='https://www.instagram.com/auxtauzins/'>
-								<img style={{height:'50px', paddingRight:'10px'}} src={instagram} alt='Logo Instagram' />
-							</a>
-							<a href='https://www.tripadvisor.fr/Restaurant_Review-g2068609-d3978484-Reviews-Aux_Tauzins-Montfort_en_Chalosse_Landes_Nouvelle_Aquitaine.html'>
-								<img style={{height:'50px', paddingRight: '10px'}} src={tripadvisor} alt='Logo Instagram' />
-							</a>
-						<div>
+						{checked &&
+							<Button 
+								className={classes.reserverChecked}
+								href='https://www.logishotels.com/fr/tarifs-et-disponibilites-chambre?id=1516'
+								color='secondary'
+							>
+								Réserver
+							</Button>
+						}
+						{!checked && 
+							<Button 
+								className={classes.reserverNoChecked}
+								href='https://www.logishotels.com/fr/tarifs-et-disponibilites-chambre?id=1516'
+								color='secondary'
+							>
+								Réserver
+							</Button>
+						}
+					</div>
+					<div className={classes.socialMedia}>
+						<a href='https://www.facebook.com/auxtauzins'>
+							<img style={{height:'50px', paddingRight:'10px'}} src={facebook} alt='Logo Facebook' />
+						</a>
+						<a href='https://www.instagram.com/auxtauzins/'>
+							<img style={{height:'50px', paddingRight:'10px'}} src={instagram} alt='Logo Instagram' />
+						</a>
+						<a href='https://www.tripadvisor.fr/Restaurant_Review-g2068609-d3978484-Reviews-Aux_Tauzins-Montfort_en_Chalosse_Landes_Nouvelle_Aquitaine.html'>
+							<img style={{height:'50px', paddingRight: '10px'}} src={tripadvisor} alt='Logo Instagram' />
+						</a>
 						<Tooltip title="Visionnez la vidéo de l'établissement">
 							<img 
 								src={logo_video}
@@ -190,20 +207,19 @@ class FirstLayer extends Component {
 								onClick={this.handleOpen}
 								style={{height:'50px'}}
 							/>
-							</Tooltip>
-           		<Dialog open={this.state.open} onClose={this.handleClose}>
-              	<iframe title="presentation" src="https://player.vimeo.com/video/138057164?title=0&byline=0&portrait=0" width="600" height="338" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                </iframe>
-            	</Dialog>
-							<div className={classes.scrollContainer}>
-								<img className={classes.scroll} src={scroll} alt='scroll' />
-							</div>
-							<div className={classes.logis}>
-          			<a href='https://www.logishotels.com/fr'>
-           		 		<img className={classes.imgLogis} src={logis} alt='logis hotel' />
-         				</a>
-       				</div>
-        		</div>
+						</Tooltip>
+						<Dialog open={this.state.open} onClose={this.handleClose}>
+							<iframe title="presentation" src="https://player.vimeo.com/video/138057164?title=0&byline=0&portrait=0" width="600" height="338" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+							</iframe>
+						</Dialog>
+					</div>
+					<div className={classes.scrollContainer}>
+						<img className={classes.scroll} src={scroll} alt='scroll' />
+					</div>
+					<div className={classes.logis}>
+						<a href='https://www.logishotels.com/fr'>
+							<img className={classes.imgLogis} src={logis} alt='logis hotel' />
+						</a>
 					</div>
 				</div>
 			</div>
