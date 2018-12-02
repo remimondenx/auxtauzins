@@ -60,6 +60,17 @@ const styles = {
 		justifyContent: 'center',
 		alignItems: 'center',
 	},
+	colorSwitchBase: {
+		color: '#2196f3',
+    '&$colorChecked': {
+      color: '#ff9800',
+      '& + $colorBar': {
+        backgroundColor: 'white',
+      },
+		},
+	},
+	colorBar: {},
+  colorChecked: {},
 	reserver: {
 
 	},
@@ -135,6 +146,11 @@ class FirstLayer extends Component {
 							<Link to={link}>
 								<Switch
 									checked={checked}
+									classes={{
+										switchBase: classes.colorSwitchBase,
+										checked: classes.colorChecked,
+										bar: classes.colorBar,
+									}}
 								/>   
 							</Link>
 							<Link className={classes.link} to='/hotel'>

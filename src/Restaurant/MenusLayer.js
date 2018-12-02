@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import RestaurantMenu from './RestaurantMenu';
-import tournedos_landais from '../images/menus/tournedos_landais.jpg';
 
 import img_terroir from '../images/food/assiette_du_terroir_menu1_V3.JPG';
 import img_chalossais from '../images/food/confit_de_canard_menu2_V2.JPG';

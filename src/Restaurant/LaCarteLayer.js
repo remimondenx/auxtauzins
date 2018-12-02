@@ -25,6 +25,7 @@ const styles = {
   },
   carteElt: {
     height: '300px',
+    padding: '20px',
   },
   backgroundImage: {
     height: '100%',
@@ -78,11 +79,12 @@ class LaCarteLayer extends Component {
         <Typography className={classes.title} variant='h2'>
           La carte
         </Typography>
-        <Grid className={classes.gridList} spacing={16} container>
+        <Grid className={classes.gridList} container>
           {listLaCarte.map(it =>
-            <Grid onClick={() => this.handleEvent(it.id)}
+            <Grid
               className={classes.carteElt}
               key={it.id}
+              onClick={() => this.handleEvent(it.id)}
               item xs={12} sm={6}>
               <div className={classes.backgroundImage} style={{backgroundImage:`url(${it.img})`}}>
                 {!(this.state.open===it.id) && 
