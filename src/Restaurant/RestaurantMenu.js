@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 const styles = {
   root: {
     margin: '20px',
-    height: '450px',
+    height: '500px',
     backgroundColor: 'white',
     border: '1px grey solid',
     borderRadius: '20px',
@@ -18,14 +18,14 @@ const styles = {
     alignItems: 'center',
   },
   imgElt: {
-    height: '40%',
+    height: '35%',
     width: '100%',
     backgroundSize: 'cover',
 		backgroundPosition: 'center',
 		overflow: 'hidden',
   },
   text: {
-    height: '60%',
+    height: '65%',
     padding: '10px',
     display: 'flex',
     flexDirection: 'column',
@@ -33,6 +33,15 @@ const styles = {
     alignItems: 'center',
   },
   menuName: {
+    fontWeight: 'bold',
+  },
+  or: {
+    fontSize: '0.8em',
+    fontWeight: 'bold',
+    fontStyle: 'italic',
+    lineHeight: '8px',
+  },
+  prix: {
     fontWeight: 'bold',
   },
 }
@@ -55,14 +64,39 @@ class RestaurantMenu extends Component {
           </Typography>
           <div className={classes.food}>
             <Typography variant='body1'>{content.entree}</Typography>
+            {content.entree2 && (
+              <div>
+                <Typography className={classes.or}>ou</Typography>
+                <Typography variant='body1'>{content.entree2}</Typography>
+              </div>
+            )}
             <Typography variant='body1'>~</Typography>
+
             <Typography variant='body1'>{content.plat}</Typography>
+            {content.plat2 && (
+              <div>
+                <Typography className={classes.or}>ou</Typography>
+                <Typography variant='body1'>{content.plat2}</Typography>
+              </div>
+            )}
             <Typography variant='body1'>~</Typography>
-            <Typography variant='body1' gutterBottom>{content.dessert}</Typography>
+            {content.apresPlat && (
+              <div>
+                <Typography variant='body1'>{content.apresPlat}</Typography>
+                <Typography variant='body1'>~</Typography>
+              </div>
+            )}
+            {(content.dessert2 && (
+              <div>
+                <Typography variant='body1'>{content.dessert}</Typography>
+                <Typography className={classes.or}>ou</Typography>
+                <Typography variant='body1' gutterBottom>{content.dessert2}</Typography>
+              </div>
+            )) ||
+              <Typography variant='body1' gutterBottom>{content.dessert}</Typography>
+            }
           </div>
-          <div className={classes.prix}>
-            <Typography variant='body1'>- {content.prix} euros -</Typography>
-          </div>
+          <Typography className={classes.prix} variant='body1'>- {content.prix} euros -</Typography>
         </div>
       </div>
     );

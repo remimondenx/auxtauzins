@@ -44,24 +44,29 @@ export default withStyles(styles)(MenusLayer);
 
 const terroir = {
   name: 'Menu du terroir',
-  entree: 'Assiette du terroir / Garbure Landaise',
-  plat: 'Coq fermier sauce Madiran / Brochette de coeurs de canard',
-  dessert: 'Pâtisserie maison / Glace',
+  entree: 'Assiette du terroir',
+  entree2: 'Garbure Landaise',
+  plat: 'Coq fermier sauce Madiran',
+  plat2: 'Brochette de coeurs de canard',
+  dessert: 'Pâtisserie maison',
+  dessert2: 'Glace',
   prix: 26,
 }
 
 const chalossais = {
   name: 'Menu Chalossais',
   entree: 'Magret froid fourré au foie gras sur lit de salade',
-  plat: 'Confit de canard Chalossais, pommes-frites',
+  plat: 'Confit de canard Chalossais, pommes frites',
   dessert: 'Assiette de sorbets',
   prix: 32,
 }
 
 const gourmand = {
   name: 'Menu Gourmand',
-  entree: 'Poisson de la marée / Omelette aux cèpes',
-  plat: 'Civet de gibier façon grand-mère / Magret de canard sauce au poivre',
+  entree: 'Poisson de la marée',
+  entree2: 'Omelette aux cèpes',
+  plat: 'Civet de gibier',
+  plat2: 'Magret de canard sauce au poivre',
   dessert: 'Coupe Melba',
   prix: 36,
 }
@@ -69,9 +74,10 @@ const gourmand = {
 const gastro = {
   name: 'Menu Gastronomique',
   entree: 'Salade de gésiers d\'oie',
-  plat: 'Foie gras chaud aux raisins / Tournedos de boeuf',
-  dessert: 'Coupe Melba',
-  prix: 36,
+  plat: 'Foie gras chaud aux raisins',
+  apresPlat: 'Tournedos de boeuf',
+  dessert: 'Coupe d\'Artagnan',
+  prix: 45,
 }
 
 const imgs_terroir = [

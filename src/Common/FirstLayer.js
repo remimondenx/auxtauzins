@@ -71,12 +71,12 @@ const styles = {
 	},
 	colorBar: {},
   colorChecked: {},
-	reserverChecked: {
+	reserverHotel: {
 		marginTop: '10px',
 		borderRadius: '10px',
 		backgroundColor: '#ffeb3b',
 	},
-	reserverNoChecked: {
+	reserverRestaurant: {
 		marginTop: '10px',
 		borderRadius: '10px',
 		backgroundColor: '#2196f3',
@@ -120,7 +120,7 @@ class FirstLayer extends Component {
 	}
 	
   render() {
-		const { classes, checked, link, image } = this.props;
+		const { classes, hotel, link, image } = this.props;
     return(
     	<div className={classes.hundred}>
 				<div className={classes.root} style={{backgroundImage:`url(${image})`}}>
@@ -152,7 +152,7 @@ class FirstLayer extends Component {
 							</Link>
 							<Link to={link}>
 								<Switch
-									checked={checked}
+									checked={hotel}
 									classes={{
 										switchBase: classes.colorSwitchBase,
 										checked: classes.colorChecked,
@@ -171,18 +171,9 @@ class FirstLayer extends Component {
 								</Typography>
 							</Link>
 						</div>
-						{checked &&
+						{hotel &&
 							<Button 
-								className={classes.reserverChecked}
-								href='https://www.logishotels.com/fr/tarifs-et-disponibilites-chambre?id=1516'
-								color='secondary'
-							>
-								Réserver
-							</Button>
-						}
-						{!checked && 
-							<Button 
-								className={classes.reserverNoChecked}
+								className={classes.reserverHotel}
 								href='https://www.logishotels.com/fr/tarifs-et-disponibilites-chambre?id=1516'
 								color='secondary'
 							>
@@ -229,7 +220,7 @@ class FirstLayer extends Component {
 
 FirstLayer.propTypes = {
   classes: PropTypes.object.isRequired,
-	checked: PropTypes.bool.isRequired,
+	hotel: PropTypes.bool.isRequired,
 	link: PropTypes.string.isRequired,
 	image: PropTypes.string.isRequired,
 }

@@ -9,7 +9,7 @@ class HotelPage extends Component {
     return(
       <div style={{height:'100%'}}>
         <FirstLayer
-          checked={true} 
+          hotel={true} 
           link='/'
           image={image}
         />

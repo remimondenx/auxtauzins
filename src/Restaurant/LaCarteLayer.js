@@ -60,6 +60,24 @@ const styles = {
     alignItems: 'center',
     overflow: 'auto',
   },
+  food: {
+    textAlign: 'left'
+  },
+  description: {
+    fontSize: '0.7em',
+    textAlign: 'left'
+  },
+  price: {
+    fontFamily:'Nunito',
+    color:'#4CAF50',
+    fontWeight: 'bold',
+    fontSize: '0.9em',
+  },
+  separator: {
+    textAlign: 'center',
+    color: 'white',
+    tewtWeight: 'bold',
+  },
 }
 
 class LaCarteLayer extends Component {
@@ -99,14 +117,24 @@ class LaCarteLayer extends Component {
                     </Typography>
                     <table>
                       {it.content.map(course =>
-                        <tr>
-                          <th><Typography className={classes.food} color='secondary'>{course.food}</Typography></th>
-                          <th>
-                            <div style={{fontFamily:'Nunito', color:'#4CAF50', fontSize:'0.7em'}}>
-                              {course.price}€
-                            </div>
-                          </th>
-                        </tr>
+                        (course && (
+                          <tr>
+                            <th>
+                              <Typography className={classes.food} color='secondary'>{course.food}</Typography>
+                              {course.description && 
+                                <Typography className={classes.description} color='secondary'>{course.description}</Typography>
+                              }
+                            </th>
+                            <th>
+                              <div className={classes.price}>
+                                {course.price}€
+                              </div>
+                            </th>
+                          </tr>
+                        )) || (
+                          <div className={classes.separator}>~</div>
+                        )
+
                       )}
                     </table>
                   </div>
@@ -131,14 +159,18 @@ const entrees = {
   title: 'Nos entrées',
   img: img_entrees,
   content: [
-    {food: 'Salade verte', price: 6},
-    {food: 'Salade composée (Salade verte, tomates, oignons, pointes d\'asperges)', price: 12},
+    {food: 'Salade composée', description: '(Salade verte, tomates, oignons, pointes d\'asperges)', price: 12},
+    {food: 'Salade landaise', description: '(Salade verte, pointes d\'asperges, gésiers, magret fumé, foie gras', price: 25},
+    false,
     {food: 'Garbure landaise', price: 13},
     {food: 'Soupe de poissons', price: 13},
+    false,
     {food: 'Pâté de porc maison', price: 10},
     {food: 'Pâté de chevreuil maison', price: 10},
+    false,
     {food: 'Jambon du pays', price: 15},
     {food: 'Assiette de charcuterie maison', price: 15},
+    false,
     {food: 'Omelette au jambon', price: 14},
     {food: 'Omelette au fromage', price: 14},
     {food: 'Omelette aux cèpes', price: 18},

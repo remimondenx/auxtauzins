@@ -29,7 +29,7 @@ class RestaurantPage extends Component {
 				<div className={classes.firstLayer}>
 					<FirstLayer
 						className={classes.elt}
-						checked={false}
+						hotel={false}
 						link='/hotel'
 						image={restaurant}
 					/>
