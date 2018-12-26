@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import image from '../images/main/hotel.jpg';
 import FirstLayer from '../Common/FirstLayer';
-import Contact from '../Common/Contact';
+import FooterHotel from './FooterHotel';
 
 class HotelPage extends Component {
   render() {
@@ -13,7 +13,7 @@ class HotelPage extends Component {
           link='/'
           image={image}
         />
-        <Contact />
+        <FooterHotel />
       </div>
 
     );

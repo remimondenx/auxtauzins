@@ -4,10 +4,10 @@ import restaurant from '../images/main/restaurant_dark.jpg';
 import FirstLayer from '../Common/FirstLayer';
 import MenusLayer from './MenusLayer';
 import LaCarteLayer from './LaCarteLayer';
-import Contact from '../Common/Contact';
 
 import { withStyles } from '@material-ui/core';
 import PropTypes from 'prop-types';
+import FooterRestaurant from './FooterRestaurant';
 
 
 const styles = {
@@ -37,7 +37,7 @@ class RestaurantPage extends Component {
 				<div className={classes.following} >
 					<MenusLayer />
 					<LaCarteLayer />
-					<Contact />
+					<FooterRestaurant />
 				</div>
 			</div>
     );

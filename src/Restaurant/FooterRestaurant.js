@@ -20,7 +20,7 @@ const styles = {
   },
 }
 
-class Contact extends Component {
+class FooterRestaurant extends Component {
   render() {
     const { classes } = this.props;
     return(
@@ -81,8 +81,8 @@ class Contact extends Component {
   }
 }
 
-Contact.propTypes = {
+FooterRestaurant.propTypes = {
   classes: PropTypes.object.isRequired,
 }
 
-export default withStyles(styles)(Contact);
+export default withStyles(styles)(FooterRestaurant);

@@ -63,6 +63,18 @@ const styles = {
   food: {
     textAlign: 'left'
   },
+  titleMenu: {
+    padding: '10px',
+    textAlign: 'center',
+    fontWeight: 'bold',
+    lineHeight: '30px',
+  },
+  titleDescription: {
+    textAlign: 'left',
+    fontStyle: 'normal',
+    fontWeight: 'normal',
+    fontSize: '0.9em',
+  },
   description: {
     fontSize: '0.7em',
     textAlign: 'left'
@@ -89,7 +101,6 @@ class LaCarteLayer extends Component {
     this.setState({open: id});
   }
 
-
   render() {
     const { classes } = this.props;
     return(
@@ -112,9 +123,20 @@ class LaCarteLayer extends Component {
                 }
                 {this.state.open===it.id &&
                   <div className={classes.darkImage}>
-                    <Typography variant='h5' color='primary' style={{fontWeight:'bold'}} gutterBottom>
-                      {it.title}
-                    </Typography>
+                    {(it.titleDescription && (
+                      <div>
+                        <Typography className={classes.titleMenu} variant='h5' color='primary'>
+                          {it.title}
+                        </Typography>
+                        <Typography className={classes.titleDescription} variant='h5' color='secondary' gutterBottom>
+                          {it.titleDescription}
+                        </Typography>
+                      </div>
+                    )) || (
+                      <Typography className={classes.titleMenu} variant='h5' color='primary' gutterBottom>
+                        {it.title}
+                      </Typography>
+                    )}
                     <table>
                       {it.content.map(course =>
                         (course && (
@@ -134,7 +156,6 @@ class LaCarteLayer extends Component {
                         )) || (
                           <div className={classes.separator}>~</div>
                         )
-
                       )}
                     </table>
                   </div>
@@ -159,10 +180,10 @@ const entrees = {
   title: 'Nos entrées',
   img: img_entrees,
   content: [
-    {food: 'Salade composée', description: '(Salade verte, tomates, oignons, pointes d\'asperges)', price: 12},
-    {food: 'Salade landaise', description: '(Salade verte, pointes d\'asperges, gésiers, magret fumé, foie gras', price: 25},
+    {food: 'Salade composée', description: 'Salade verte, tomates, oignons, pointes d\'asperges', price: 12},
+    {food: 'Salade Landaise', description: 'Salade verte, pointes d\'asperges, gésiers, magret fumé, foie gras', price: 25},
     false,
-    {food: 'Garbure landaise', price: 13},
+    {food: 'Garbure Landaise', price: 13},
     {food: 'Soupe de poissons', price: 13},
     false,
     {food: 'Pâté de porc maison', price: 10},
@@ -180,26 +201,34 @@ const entrees = {
 const poissons = {
   id: 2,
   title: 'Nos poissons',
+  titleDescription: 'du port',
   img: img_poissons,
   content: [
     {food: 'Beignets de lotte aux petits légumes', price: 25},
-    {food: 'Coquilles Saint-Jacques à la Provinçale', price: 26},
+    {food: 'Coquilles Saint-Jacques à la Provençale', price: 26},
     {food: 'Feuilleté de Saint-Jacques sur lit de poireaux', price: 26},
     {food: 'Sole meunière', price: 28},
-    {food: 'Fricassée de lotte de Saint-Jacques aux cèpes', price: 30},
+    {food: 'Fricassée de lotte et Saint-Jacques aux cèpes', price: 30},
   ]
 }
 
 const canard = {
   id: 3,
   title: 'Les produits du canard',
+  titleDescription: 'accompagnés de frites maisons et légumes de saison',
   img: img_canard,
   content: [
-    {food: 'Pâté de foie de canard maison', price: 15},
+    {food: 'Brochette de coeurs de canard', price: 19},
     {food: 'Magret froid fourré au foie gras', price: 24},
-    {food: 'Salade Landaise (salade verte, pointes d\'asperges, gésiers, magret fumé, foie gras)', price: 25},
+    false,
+    {food: 'Confit de canard "la cuisse"', price: 18},
+    {food: 'Confit de canard "l\'aile"', price: 24},
+    {food: 'Confit d\'oie "la cuisse"', price: 20},
+    {food: 'Confit d\'oie "l\'aile"', price: 26},
+    false,
+    {food: 'Magret de canard', description: 'grillé ou sauce au poivre vert', price: 20},
     {food: 'Tranche de foie gras de canard', price: 24},
-    {food: 'Foie gras chaud aux pommes ou aux raisins', price: 25},
+    {food: 'Foie gras chaud', description: 'aux pommes ou aux raisins', price: 25},
     {food: 'Escalopes de foie poêlées aux cèpes', price: 30},
   ]
 }
@@ -210,31 +239,27 @@ const sauces = {
   img: img_sauces,
   content: [
     {food: 'Civet de gibier façon grand-mère', price: 18},
+    {food: 'Tête de veau sauce gribiche', price: 18},
     {food: 'Sauce de cèpes', price: 24},
     {food: 'Salmis de palombe', price: 24},
     {food: 'Lamproie de l\'Adour à la Bordelaise', price: 24},
     {food: 'Ris de veau sauce financière', price: 25},
-    {food: 'Tête de veau sauce gribiche', price: 18},
   ]
 }
 
 const viandes = {
   id: 5,
   title: 'Nos viandes',
+  titleDescription: 'accompagnées de frites maison et de légumes de saison',
   img: img_viandes,
   content: [
     {food: 'Confit de porc', price: 16},
-    {food: 'Confit de canard "la cuisse"', price: 18},
-    {food: 'Confit de canard "l\'aile"', price: 24},
-    {food: 'Confit d\'oie "la cuisse"', price: 20},
-    {food: 'Confit d\'oie "l\'aile"', price: 26},
-    {food: 'Brochette de coeurs de canard', price: 19},
-    {food: 'Magret de canard grillé ou sauce au poivre vert', price: 20},
-    {food: 'Escalope de veau grillée ou à la crème', price: 20},
-    {food: 'Ris d\'agneau aux cèpes', price: 30},
+    {food: 'Escalope de veau', description: 'grillée ou à la crème', price: 20},
     {food: 'Tournedos au poivre', price: 24},
     {food: 'Faux-filet de boeuf blonde d\'Aquitaine', price: 28},
-    {food: 'Tournedos Landais (avec foie et cèpes)', price: 30},
+    {food: 'Ris d\'agneau aux cèpes', price: 30},
+    {food: 'Tournedos Landais', description: 'foie gras et cèpes', price: 30},
+    false,
     {food: 'Portion de légumes supplémentaire', price: 5},
   ]
 }
@@ -244,24 +269,27 @@ const desserts = {
   title: 'Nos desserts',
   img: img_desserts,
   content: [
-    {food: 'Les pâtisseries maison', price: 8},
-    {food: 'L\'assiette de fromage', price: 9},
+    {food: 'Pâtisseries maison', price: 8},
     {food: 'Le pot de crème', price: 8},
-    {food: 'La mousse glâcée au Grand Marnier et son petit verre de liqueur', price: 9},
-    {food: 'Les profiteroles Maison', price: 9},
-    {food: 'Les sorbets au choix (2 boules : poire, cassis, citron, mandarine)', price: 8},
-    {food: 'La coupe melba', price: 8},
-    {food: 'Le café liégeois', price: 8},
-    {food: 'Le chocolat liégeois', price: 8},
-    {food: 'Les glaces 2 boules au choix (vanille, café, chocolat, pistache, fraise, rhums raisins, pruneaux)', price: 8},
-    {food: 'La coupe cardinale (sorbet cassis, crème de cassis)', price: 8},
-    {food: 'La coupe colonel (sorbet citron, vodka)', price: 9},
-    {food: 'La coupe williamine (sorbet poire, alcool de poire)', price: 9},
-    {food: 'La coupe d\'Artagnan (glace pruneaux, pruneaux, armagnac et chantilly)', price: 9},
-    {food: 'Le cappuccino', price: 6},
-    {food: 'Le café gourmand', price: 9},
-    {food: 'Le café et ses friandises', price: 2.80},
+    {food: 'Assiette de fromage', price: 9},
+    {food: 'Mousse glâcée au Grand Marnier', description:'petit verre de liqueur', price: 9},
+    {food: 'Profiteroles Maison', price: 9},
+    false,
+    {food: 'Sorbet au choix, 2 boules', description: 'poire, cassis, citron, mandarine', price: 8},
+    {food: 'Glace au choix, 2 boules', description: 'vanille, café, chocolat, pistache, fraise, rhums raisins, pruneaux', price: 8},
+    false,
+    {food: 'Coupe melba', price: 8},
+    {food: 'Café liégeois', price: 8},
+    {food: 'Chocolat liégeois', price: 8},
+    {food: 'Coupe cardinale', description: 'sorbet cassis, crème de cassis', price: 8},
+    {food: 'Coupe colonel', description: 'sorbet citron, vodka', price: 9},
+    {food: 'Coupe williamine', description: 'sorbet poire, alcool de poire', price: 9},
+    {food: 'Coupe d\'Artagnan', description: 'glace pruneaux, pruneaux, armagnac et chantilly', price: 9},
+    false,
+    {food: 'Café', price: 2.80},
     {food: 'Infusions ou thé', price: 4},
+    {food: 'Cappuccino', price: 6},
+    {food: 'Café gourmand', price: 9},
   ]
 }
 
