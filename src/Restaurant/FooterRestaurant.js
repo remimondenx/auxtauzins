@@ -11,6 +11,9 @@ const styles = {
   title: {
     fontWeight: 'bold',
   },
+  content: {
+    textAlign: 'justify',
+  },
   contact: {
     display: 'flex',
     flexDirection: 'column'
@@ -33,17 +36,17 @@ class FooterRestaurant extends Component {
               gutterBottom>
               A propos
             </Typography>
-            <Typography>
-              Le restaurant vous accueille de 12H00 à 13H45 ainsi que de 19H30 à 21H00.
-            </Typography>
-            <Typography>
-            Le restaurant est fermé le dimanche soir et le lundi toute la journée.
-            </Typography>
-            <Typography>
-            En saison, du 11 juillet au 20 août, le restaurant est ouvert tous les jours.
+            <Typography className={classes.content}>
+              <ul>
+                <li>Le restaurant vous accueille de 12h00 à 13h45 ainsi que de 19h30 à 21h00.</li>
+                <li>Le restaurant est fermé le dimanche soir et le lundi toute la journée.</li>
+                <li>En saison, du 11 juillet au 20 août, le restaurant est ouvert tous les jours.</li>
+                <li>Le restaurant est entièrement accessible aux personnes à mobilité réduite.</li>
+                <li>Chèque vacances acceptés</li>
+              </ul>
             </Typography>
           </Grid>
-          
+
           <Grid item xs={12} sm={6} md={4}>
             <Typography 
               className={classes.title} 
@@ -51,12 +54,12 @@ class FooterRestaurant extends Component {
               gutterBottom>
               Nos services
             </Typography>
-            <Typography>Connexion wifi dans tout l'établissement</Typography>
-            <Typography>Chambre climatisée | TV Ecran plat | Sèche cheveux | Mini golf | 
-              Babyfoot | Billard | Piscine | Parc pour balade | Parking privé sous surveillance |
-              Garage à vélo
+            <Typography className={classes.content}>
+              <ul>
+                <li>Connexion wifi disponible.</li>
+                <li>Possibilité de privatiser salle de réunion ou salon.</li>
+              </ul>
             </Typography>
-            <Typography>Nous acceptons les chèques vacances.</Typography>
           </Grid>
 
           <Grid className={classes.contact} item xs={12} sm={12} md={4}>
