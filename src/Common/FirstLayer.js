@@ -183,20 +183,20 @@ class FirstLayer extends Component {
 					</div>
 					<div className={classes.socialMedia}>
 						<a href='https://www.facebook.com/auxtauzins'>
-							<img style={{height:'50px', paddingRight:'10px'}} src={facebook} alt='Logo Facebook' />
+							<img style={{height:'40px', paddingRight:'10px'}} src={facebook} alt='Logo Facebook' />
 						</a>
 						<a href='https://www.instagram.com/auxtauzins/'>
-							<img style={{height:'50px', paddingRight:'10px'}} src={instagram} alt='Logo Instagram' />
+							<img style={{height:'40px', paddingRight:'10px'}} src={instagram} alt='Logo Instagram' />
 						</a>
 						<a href='https://www.tripadvisor.fr/Restaurant_Review-g2068609-d3978484-Reviews-Aux_Tauzins-Montfort_en_Chalosse_Landes_Nouvelle_Aquitaine.html'>
-							<img style={{height:'50px', paddingRight: '10px'}} src={tripadvisor} alt='Logo Instagram' />
+							<img style={{height:'40px', paddingRight: '10px'}} src={tripadvisor} alt='Logo Instagram' />
 						</a>
 						<Tooltip title="Visionnez la vidéo de l'établissement">
 							<img 
 								src={logo_video}
 								alt='logo video'
 								onClick={this.handleOpen}
-								style={{height:'50px'}}
+								style={{height:'40px'}}
 							/>
 						</Tooltip>
 						<Dialog open={this.state.open} onClose={this.handleClose}>
