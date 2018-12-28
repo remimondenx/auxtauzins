@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import image from '../images/main/hotel.jpg';
 import FirstLayer from '../Common/FirstLayer';
+import RoomsLayer from './RoomsLayer';
 import FooterHotel from './FooterHotel';
 
 class HotelPage extends Component {
@@ -13,6 +14,7 @@ class HotelPage extends Component {
           link='/'
           image={image}
         />
+        <RoomsLayer />
         <FooterHotel />
       </div>
 
