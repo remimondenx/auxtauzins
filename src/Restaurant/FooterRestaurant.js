@@ -39,9 +39,9 @@ class FooterRestaurant extends Component {
             <Typography className={classes.content}>
               <ul>
                 <li>Le restaurant vous accueille de 12h00 à 13h45 ainsi que de 19h30 à 21h00.</li>
-                <li>Le restaurant est fermé le dimanche soir et le lundi toute la journée.</li>
-                <li>En saison, du 11 juillet au 20 août, le restaurant est ouvert tous les jours.</li>
-                <li>Le restaurant est entièrement accessible aux personnes à mobilité réduite.</li>
+                <li>Le restaurant est fermé le <strong>dimanche soir</strong> et le <strong>lundi toute la journée</strong>.</li>
+                <li>En saison, <strong>du 11 juillet au 20 août</strong>, le restaurant est ouvert tous les jours.</li>
+                <li>Le restaurant est <strong>entièrement accessible aux personnes à mobilité réduite</strong>.</li>
                 <li>Chèque vacances acceptés</li>
               </ul>
             </Typography>
@@ -56,8 +56,8 @@ class FooterRestaurant extends Component {
             </Typography>
             <Typography className={classes.content}>
               <ul>
-                <li>Connexion wifi disponible.</li>
-                <li>Possibilité de privatiser salle de réunion ou salon.</li>
+                <li>Connexion <strong>wifi</strong> disponible.</li>
+                <li>Possibilité de <strong>privatiser</strong> salle de réunion ou salon.</li>
               </ul>
             </Typography>
           </Grid>
