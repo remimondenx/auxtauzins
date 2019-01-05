@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 import Room from './Room';
-import imgSaisonHaute from '../images/rooms/saison_haute.jpeg';
-import imgHorsSaison from '../images/rooms/hors_saison.jpeg';
+import imgSaisonHaute from '../images/rooms/chambre_1.jpg';
+import imgHorsSaison from '../images/rooms/chambre_2.jpg';
 
 import { withStyles, Grid, Typography } from '@material-ui/core';
 import PropTypes from 'prop-types';

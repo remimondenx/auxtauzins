@@ -11,6 +11,9 @@ const styles = {
   title: {
     fontWeight: 'bold',
   },
+  content: {
+    textAlign: 'justify',
+  },
   contact: {
     display: 'flex',
     flexDirection: 'column'
@@ -33,14 +36,15 @@ class FooterHotel extends Component {
               gutterBottom>
               A propos
             </Typography>
-            <Typography>
-              Le restaurant vous accueille de 12H00 à 13H45 ainsi que de 19H30 à 21H00.
-            </Typography>
-            <Typography>
-            Le restaurant est fermé le dimanche soir et le lundi toute la journée.
-            </Typography>
-            <Typography>
-            En saison, du 11 juillet au 20 août, le restaurant est ouvert tous les jours.
+            <Typography className={classes.content}>
+              <ul>
+                <li>Petit-déjeuner 9€</li>
+                <li>Animal domestique accepté 8€</li>
+                <li><strong>Demi-pension</strong> 39€ (par personne et par jour en supplément de la chambre)</li>
+                <li>Compter 20€ par personne et nuitée supplémentaire</li>
+                <li>L'hôtel est fermé le <strong>dimanche soir</strong> et le <strong>lundi toute la journée</strong></li>
+                <li>En saison, <strong>du 11 juillet au 20 août</strong>, le restaurant est ouvert tous les jours</li>
+              </ul>
             </Typography>
           </Grid>
           
@@ -51,12 +55,16 @@ class FooterHotel extends Component {
               gutterBottom>
               Nos services
             </Typography>
-            <Typography>Connexion wifi dans tout l'établissement</Typography>
-            <Typography>Chambre climatisée | TV Ecran plat | Sèche cheveux | Mini golf | 
-              Babyfoot | Billard | Piscine | Parc pour balade | Parking privé sous surveillance |
-              Garage à vélo
+            <Typography className={classes.content}>
+              <ul>
+                <li>Connexion <strong>wifi</strong> dans tout l'hôtel</li>
+                <li>Chambre <strong>climatisée</strong> | TV Ecran plat | Sèche-cheveux</li>
+                <li><strong>Piscine</strong> | Mini-golf</li>
+                <li>Babyfoot | Ping Pong | Billard</li>
+                <li>Parc pour balade</li>
+                <li><strong>Parking privé</strong> sous surveillance | Garage à vélo</li>
+              </ul>
             </Typography>
-            <Typography>Nous acceptons les chèques vacances.</Typography>
           </Grid>
 
           <Grid className={classes.contact} item xs={12} sm={12} md={4}>

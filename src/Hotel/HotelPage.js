@@ -4,6 +4,7 @@ import image from '../images/main/hotel.jpg';
 import FirstLayer from '../Common/FirstLayer';
 import RoomsLayer from './RoomsLayer';
 import FooterHotel from './FooterHotel';
+import ActivitesLayer from './ActivitesLayer';
 
 class HotelPage extends Component {
   render() {
@@ -15,6 +16,7 @@ class HotelPage extends Component {
           image={image}
         />
         <RoomsLayer />
+        <ActivitesLayer />
         <FooterHotel />
       </div>
 
