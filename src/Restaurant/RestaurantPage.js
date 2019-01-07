@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import restaurant from '../images/main/restaurant_dark.jpg';
+import restaurant from '../images/main/restaurant.jpg';
 import FirstLayer from '../Common/FirstLayer';
 import MenusLayer from './MenusLayer';
 import LaCarteLayer from './LaCarteLayer';
