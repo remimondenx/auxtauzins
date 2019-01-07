@@ -23,7 +23,7 @@ class RoomsLayer extends Component {
         <Typography variant='h2' gutterBottom>Nos chambres</Typography>
         <Grid className={classes.menus} container>
           {listRooms.map(it =>
-            <Grid item xs={12} sm={6} lg={3} key={it.content.name}>
+            <Grid item xs={12} sm={6} key={it.content.name}>
              <Room content={it.content} imgs={it.imgs} />
             </Grid> 
             )}

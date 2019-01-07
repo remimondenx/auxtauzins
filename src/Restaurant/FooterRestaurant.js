@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 
+import tel_img from '../images/logos/tel.png';
+import mail_img from '../images/logos/mail.png';
+import position_img from '../images/logos/position.png';
+
 import { withStyles, Typography, Grid, Button } from '@material-ui/core';
 import PropTypes from 'prop-types';
 
@@ -18,8 +22,13 @@ const styles = {
     display: 'flex',
     flexDirection: 'column'
   },
-  mail: {
+  noCap: {
     textTransform: 'none',
+    textAlign: 'justify'
+  },
+  picto: {
+    height: '15px',
+    paddingRight: '10px'
   },
 }
 
@@ -58,6 +67,7 @@ class FooterRestaurant extends Component {
               <ul>
                 <li>Connexion <strong>wifi</strong> disponible.</li>
                 <li>Possibilité de <strong>privatiser</strong> salle de réunion ou salon.</li>
+                <li>Organisation de baptêmes, communions, anniversaires.</li>
               </ul>
             </Typography>
           </Grid>
@@ -69,14 +79,15 @@ class FooterRestaurant extends Component {
               gutterBottom>
               Nous contacter
             </Typography>
-            <Typography>Pour tout évènement :</Typography>
-            <Typography>- Réservation de salle</Typography>
-            <Typography>- Communion</Typography>
-            <Typography>- Baptême</Typography>
-            <Typography gutterBottom>- Anniveraire</Typography>
-            <Button href="tel:0558986022">05 58 98 60 22</Button>
-            <Button className={classes.mail} href="mailto:auxtauzins@wanadoo.fr">auxtauzins@wanadoo.fr</Button>
-            <Typography>486 route Raphael Lonné, 40380, Montfort-en-Chalosse</Typography>
+            <Button href="tel:0558986022">
+              <img className={classes.picto} src={tel_img} alt='tel' />05 58 98 60 22
+            </Button>
+            <Button className={classes.noCap} href="mailto:auxtauzins@wanadoo.fr">
+              <img className={classes.picto} src={mail_img} alt='mail' />auxtauzins@wanadoo.fr
+            </Button>
+            <Button className={classes.noCap} href="https://www.google.com/maps/place/hotel+restaurant+AUX+TAUZINS/@43.709234,-0.8244906,18z/data=!3m1!4b1!4m5!3m4!1s0xd569bf8e0c594bf:0xdf3569df98d76aa8!8m2!3d43.709234!4d-0.8233963">
+              <img className={classes.picto} src={position_img} alt='position' />486 route Raphael Lonné 40380, Montfort-en-Chalosse
+            </Button>
           </Grid>
         </Grid>
 			</div>
