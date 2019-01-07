@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-import piscine_img from '../images/activites/piscine.jpg';
-import golf_img from '../images/activites/golf.jpg';
-import lecture_img from '../images/activites/lecture.jpg';
-import domaine_img from '../images/activites/domaine.jpg';
-import ocean_img from '../images/activites/ocean.jpg';
-import ferme_img from '../images/activites/ferme.jpg';
-import musee_img from '../images/activites/musee.jpg';
-import chateau_img from '../images/activites/chateau.jpg';
+import piscine_img from '../images/activities/piscine.jpg';
+import golf_img from '../images/activities/golf.jpg';
+import lecture_img from '../images/activities/lecture.jpg';
+import domaine_img from '../images/activities/domaine.jpg';
+import ocean_img from '../images/activities/ocean.jpg';
+import ferme_img from '../images/activities/ferme.jpg';
+import musee_img from '../images/activities/musee.jpg';
+import chateau_img from '../images/activities/chateau.jpg';
 
 import { withStyles, Typography, Grid } from '@material-ui/core';
 import PropTypes from 'prop-types';
