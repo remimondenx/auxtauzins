@@ -43,7 +43,7 @@ class FooterHotel extends Component {
                 <li><strong>Demi-pension</strong> 39€ (par personne et par jour en supplément de la chambre)</li>
                 <li>Compter 20€ par personne et nuitée supplémentaire</li>
                 <li>L'hôtel est fermé le <strong>dimanche soir</strong> et le <strong>lundi toute la journée</strong></li>
-                <li>En saison, <strong>du 11 juillet au 20 août</strong>, le restaurant est ouvert tous les jours</li>
+                <li>En saison, <strong>du 11 juillet au 20 août</strong>, l'hôtel est ouvert tous les jours</li>
               </ul>
             </Typography>
           </Grid>
