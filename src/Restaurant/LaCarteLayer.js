@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import img_entrees from '../images/carte/nos_entrees.JPG';
 import img_poissons from '../images/carte/nos_poissons.JPG';
-import img_canard from '../images/food/coeurs_de_canard_menu1_V2.JPG'; // TODO
+import img_canard from '../images/carte/canard.jpg';
 import img_sauces from '../images/carte/plats_en_sauce.JPG';
 import img_viandes from '../images/carte/nos_viandes.JPG';
 import img_desserts from '../images/carte/nos_desserts_V1.JPG';

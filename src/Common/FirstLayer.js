@@ -8,6 +8,7 @@ import tripadvisor from '../images/logos/tripadvisor.png';
 import logo_video from '../images/logos/video.png';
 import scroll from '../images/other/scroll.gif';
 import logis from '../images/logos/logis.png';
+import booking from '../images/logos/booking.png';
 
 import { withStyles, Typography, Switch, Button, Dialog, Tooltip } from '@material-ui/core';
 import { Link } from 'react-router-dom';
@@ -174,6 +175,7 @@ class FirstLayer extends Component {
 						{hotel &&
 							<Button 
 								className={classes.reserverHotel}
+								target='_blank'
 								href='https://www.logishotels.com/fr/tarifs-et-disponibilites-chambre?id=1516'
 								color='secondary'
 							>
@@ -182,15 +184,21 @@ class FirstLayer extends Component {
 						}
 					</div>
 					<div className={classes.socialMedia}>
-						<a href='https://www.facebook.com/auxtauzins'>
+						<a href='https://www.facebook.com/auxtauzins' target='_blank'>
 							<img style={{height:'40px', paddingRight:'10px'}} src={facebook} alt='Logo Facebook' />
 						</a>
-						<a href='https://www.instagram.com/auxtauzins/'>
+						<a href='https://www.instagram.com/auxtauzins/' target='_blank'>
 							<img style={{height:'40px', paddingRight:'10px'}} src={instagram} alt='Logo Instagram' />
 						</a>
-						<a href='https://www.tripadvisor.fr/Restaurant_Review-g2068609-d3978484-Reviews-Aux_Tauzins-Montfort_en_Chalosse_Landes_Nouvelle_Aquitaine.html'>
-							<img style={{height:'40px', paddingRight: '10px'}} src={tripadvisor} alt='Logo Instagram' />
-						</a>
+						{(hotel && (
+							<a href='https://www.booking.com/hotel/fr/aux-tauzins-montfort.fr.html' target='_blank'>
+								<img style={{height:'40px', paddingRight: '10px'}} src={booking} alt='Logo Booking' />
+							</a>
+						)) || (
+							<a href='https://www.tripadvisor.fr/Restaurant_Review-g2068609-d3978484-Reviews-Aux_Tauzins-Montfort_en_Chalosse_Landes_Nouvelle_Aquitaine.html' target='_blank'>
+								<img style={{height:'40px', paddingRight: '10px'}} src={tripadvisor} alt='Logo Tripadvisor' />
+							</a>
+						)}
 						<Tooltip title="Visionnez la vidéo de l'établissement">
 							<img 
 								src={logo_video}
@@ -208,7 +216,7 @@ class FirstLayer extends Component {
 						<img className={classes.scroll} src={scroll} alt='scroll' />
 					</div>
 					<div className={classes.logis}>
-						<a href='https://www.logishotels.com/fr'>
+						<a href='https://www.logishotels.com/fr' target='_blank'>
 							<img className={classes.imgLogis} src={logis} alt='logis hotel' />
 						</a>
 					</div>

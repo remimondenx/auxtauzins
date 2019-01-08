@@ -47,6 +47,7 @@ class FooterHotel extends Component {
             </Typography>
             <Typography className={classes.content}>
               <ul>
+                <li>Le restaurant est <strong>entièrement accessible aux personnes à mobilité réduite</strong>.</li>
                 <li>Petit-déjeuner 9€</li>
                 <li>Animal domestique accepté 8€</li>
                 <li><strong>Demi-pension</strong> 39€ (par personne et par jour en supplément de la chambre)</li>

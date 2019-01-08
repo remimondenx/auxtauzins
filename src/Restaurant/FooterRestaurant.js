@@ -66,8 +66,8 @@ class FooterRestaurant extends Component {
             <Typography className={classes.content}>
               <ul>
                 <li>Connexion <strong>wifi</strong> disponible.</li>
-                <li>Possibilité de <strong>privatiser</strong> salle de réunion ou salon.</li>
-                <li>Organisation de baptêmes, communions, anniversaires.</li>
+                <li>Possibilité de <strong>privatiser</strong> salle de réunion ou salon pour tout séminaire.</li>
+                <li>Organisation de baptêmes, communions, anniversaires, mariages.</li>
               </ul>
             </Typography>
           </Grid>
