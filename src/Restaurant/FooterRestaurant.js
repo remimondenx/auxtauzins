@@ -17,6 +17,7 @@ const styles = {
   },
   content: {
     textAlign: 'justify',
+    margin: '10px',
   },
   contact: {
     display: 'flex',
@@ -46,7 +47,7 @@ class FooterRestaurant extends Component {
               A propos
             </Typography>
             <Typography className={classes.content}>
-              <ul>
+              <ul style={{paddingLeft:0}}>
                 <li>Le restaurant vous accueille de 12h00 à 13h45 ainsi que de 19h30 à 21h00.</li>
                 <li>Le restaurant est fermé le <strong>dimanche soir</strong> et le <strong>lundi toute la journée</strong>.</li>
                 <li>En saison, <strong>du 11 juillet au 20 août</strong>, le restaurant est ouvert tous les jours.</li>
@@ -64,7 +65,7 @@ class FooterRestaurant extends Component {
               Nos services
             </Typography>
             <Typography className={classes.content}>
-              <ul>
+              <ul style={{paddingLeft:0}}>
                 <li>Connexion <strong>wifi</strong> disponible.</li>
                 <li>Possibilité de <strong>privatiser</strong> salle de réunion ou salon pour tout séminaire.</li>
                 <li>Organisation de baptêmes, communions, anniversaires, mariages.</li>

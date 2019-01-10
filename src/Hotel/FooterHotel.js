@@ -17,6 +17,7 @@ const styles = {
   },
   content: {
     textAlign: 'justify',
+    margin: '10px',
   },
   contact: {
     display: 'flex',
@@ -46,7 +47,7 @@ class FooterHotel extends Component {
               A propos
             </Typography>
             <Typography className={classes.content}>
-              <ul>
+              <ul style={{paddingLeft:0}}>
                 <li>Le restaurant est <strong>entièrement accessible aux personnes à mobilité réduite</strong>.</li>
                 <li>Petit-déjeuner 9€</li>
                 <li>Animal domestique accepté 8€</li>
@@ -66,7 +67,7 @@ class FooterHotel extends Component {
               Nos services
             </Typography>
             <Typography className={classes.content}>
-              <ul>
+              <ul style={{paddingLeft:0}}>
                 <li>Connexion <strong>wifi</strong> dans tout l'hôtel</li>
                 <li>Chambre <strong>climatisée</strong> | TV Ecran plat | Sèche-cheveux</li>
                 <li><strong>Piscine</strong> | Mini-golf</li>
