@@ -5,7 +5,7 @@ import chene from '../images/logos/chene.png';
 import facebook from '../images/logos/facebook.png';
 import instagram from '../images/logos/instagram.png';
 import tripadvisor from '../images/logos/tripadvisor.png';
-import logo_video from '../images/logos/video.png';
+import logo_video from '../images/logos/video_2.png';
 import scroll from '../images/other/scroll.gif';
 import logis from '../images/logos/logis.png';
 import booking from '../images/logos/booking.png';

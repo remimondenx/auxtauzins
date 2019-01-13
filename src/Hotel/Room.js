@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 
 import { withStyles, Typography } from '@material-ui/core';
-import PropTypes from 'prop-types';
+import SwipeableViews from 'react-swipeable-views';
+import { autoPlay } from 'react-swipeable-views-utils';
+
+const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const styles = {
   root: {
@@ -17,12 +20,18 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'center',
   },
-  imgElt: {
+  swipeable: {
     height: '50%',
     width: '100%',
+    backgroundColor: 'grey'
+  },
+  imgElt: {
+    height: '200px',
+    width: '100%',
     backgroundSize: 'cover',
-		backgroundPosition: 'center',
-		overflow: 'hidden',
+    backgroundPosition: 'center',
+    overflow: 'hidden',
+    backgroundColor: 'green'
   },
   text: {
     height: '50%',
@@ -40,12 +49,30 @@ const styles = {
 }
 
 class Room extends Component {
+  state = {
+    index: 0,
+  };
+
+  handleChangeIndex = index => {
+    this.setState({
+      index,
+    });
+  };
+
   render() {
     const { classes, content, imgs } = this.props;
-    const image = imgs[0]['imgPath'];
+    const { index } = this.state;
     return(
 			<div className={classes.root}>
-        <div className={classes.imgElt} style={{backgroundImage:`url(${image})`}}></div>
+        <AutoPlaySwipeableViews 
+          className={classes.swipeable}
+          index={index} 
+          onChangeIndex={this.handleChangeIndex}>
+          {imgs.map(it => (
+            <div style={Object.assign({}, styles.imgElt, {backgroundImage:`url(${it.imgPath})`})}></div>
+          ))}
+        </AutoPlaySwipeableViews>
+        
         <div className={classes.text}>
           <Typography 
             className={classes.roomName}
