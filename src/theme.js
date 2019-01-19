@@ -29,6 +29,9 @@ const theme = createMuiTheme({
       h5: {
         fontFamily: 'Dancing Script',
         fontSize: '1.8em',
+      },
+      h6: {
+        fontFamily: 'Dancing Script',
       }
     },
     overrides: {

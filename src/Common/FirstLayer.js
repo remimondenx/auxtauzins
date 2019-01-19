@@ -5,7 +5,7 @@ import chene from '../images/logos/chene.png';
 import facebook from '../images/logos/facebook.png';
 import instagram from '../images/logos/instagram.png';
 import tripadvisor from '../images/logos/tripadvisor.png';
-import logo_video from '../images/logos/video_2.png';
+import logo_video from '../images/logos/video.png';
 import scroll from '../images/other/scroll.gif';
 import logis from '../images/logos/logis.png';
 import booking from '../images/logos/booking.png';
@@ -43,6 +43,14 @@ const styles = {
 		border: '2px solid white',
 		borderRadius: '10px',
 		textTransform: 'none',
+		'&:hover': {
+      backgroundColor: 'white'
+    },
+	},
+	englishButton: {
+		'&:hover': {
+      backgroundColor: 'transparent'
+    },
 	},
 	chene: {
 		position: 'absolute',
@@ -79,8 +87,7 @@ const styles = {
 	},
 	reserverRestaurant: {
 		marginTop: '10px',
-		borderRadius: '10px',
-		backgroundColor: '#2196f3',
+		color: 'transparent',
 	},
 	socialMedia: {
 		padding: '10px',
@@ -132,7 +139,7 @@ class FirstLayer extends Component {
 						<Button className={classes.contact} color='secondary' href='#contact'>
 							Nous contacter
 						</Button>
-						<Button>
+						<Button className={classes.englishButton} disableRipple>
 							<img 
 								src={united_kingdom}
 								alt='English version'
@@ -180,6 +187,13 @@ class FirstLayer extends Component {
 								color='secondary'
 							>
 								Réserver
+							</Button>
+						}
+						{!hotel &&
+							<Button 
+								className={classes.reserverRestaurant}
+								disabled
+							>
 							</Button>
 						}
 					</div>

@@ -21,7 +21,7 @@ const styles = {
   },
   contact: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   noCap: {
     textTransform: 'none',
@@ -48,11 +48,11 @@ class FooterRestaurant extends Component {
             </Typography>
             <Typography className={classes.content}>
               <ul style={{paddingLeft:0}}>
-                <li>Le restaurant vous accueille de 12h00 à 13h45 ainsi que de 19h30 à 21h00.</li>
-                <li>Le restaurant est fermé le <strong>dimanche soir</strong> et le <strong>lundi toute la journée</strong>.</li>
-                <li>En saison, <strong>du 11 juillet au 20 août</strong>, le restaurant est ouvert tous les jours.</li>
-                <li>Le restaurant est <strong>entièrement accessible aux personnes à mobilité réduite</strong>.</li>
-                <li>Chèque vacances acceptés</li>
+                <li>Le restaurant vous accueille de 12h00 à 13h45 ainsi que de 19h30 à 21h00</li>
+                <li>Le restaurant est fermé le <strong>vendredi soir</strong> (sauf réservation groupe), le <strong>dimanche soir</strong> et le <strong>lundi toute la journée</strong></li>
+                <li>En saison, <strong>du 14 juillet au 20 août</strong>, le restaurant est ouvert tous les jours (excepté le lundi midi)</li>
+                <li>Le restaurant est <strong>entièrement accessible aux personnes à mobilité réduite</strong></li>
+                <li>Chèque vacances et tickets restaurant acceptés</li>
               </ul>
             </Typography>
           </Grid>
@@ -66,9 +66,9 @@ class FooterRestaurant extends Component {
             </Typography>
             <Typography className={classes.content}>
               <ul style={{paddingLeft:0}}>
-                <li>Connexion <strong>wifi</strong> disponible.</li>
-                <li>Possibilité de <strong>privatiser</strong> salle de réunion ou salon pour tout séminaire.</li>
-                <li>Organisation de baptêmes, communions, anniversaires, mariages.</li>
+                <li><strong>Wifi</strong> gratuit disponible</li>
+                <li>Possibilité de <strong>privatiser</strong> salle de réunion ou salon pour tout séminaire</li>
+                <li>Organisation de baptême, communion, anniversaire, mariage</li>
               </ul>
             </Typography>
           </Grid>
@@ -87,7 +87,7 @@ class FooterRestaurant extends Component {
               <img className={classes.picto} src={mail_img} alt='mail' />auxtauzins@wanadoo.fr
             </Button>
             <Button className={classes.noCap} href="https://www.google.com/maps/place/hotel+restaurant+AUX+TAUZINS/@43.709234,-0.8244906,18z/data=!3m1!4b1!4m5!3m4!1s0xd569bf8e0c594bf:0xdf3569df98d76aa8!8m2!3d43.709234!4d-0.8233963">
-              <img className={classes.picto} src={position_img} alt='position' />486 route Raphael Lonné 40380, Montfort-en-Chalosse
+              <img className={classes.picto} src={position_img} alt='position' />547 route Raphael Lonné 40380, Montfort-en-Chalosse
             </Button>
           </Grid>
         </Grid>

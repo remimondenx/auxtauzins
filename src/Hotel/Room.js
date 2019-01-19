@@ -19,14 +19,15 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    justifyContent: 'center'
   },
   swipeable: {
-    height: '50%',
+    height: '60%',
     width: '100%',
     backgroundColor: 'grey'
   },
   imgElt: {
-    height: '200px',
+    height: '240px',
     width: '100%',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
@@ -34,7 +35,7 @@ const styles = {
     backgroundColor: 'green'
   },
   text: {
-    height: '50%',
+    height: '40%',
     padding: '10px',
     display: 'flex',
     flexDirection: 'column',
@@ -44,7 +45,10 @@ const styles = {
     fontWeight: 'bold',
   },
   table: {
-    paddingTop: '20px',
+    //paddingTop: '20px'
+  },
+  overflow: {
+    overflow: 'hidden',
   },
 }
 
@@ -78,10 +82,17 @@ class Room extends Component {
             className={classes.roomName}
             variant='h5'
             color='primary'
-            gutterBottom
           >
             {content.name}
           </Typography>
+          <Typography 
+            className={classes.roomDate}
+            variant='h6'
+            color='primary'
+          >
+            {content.date}
+          </Typography>
+
           <div className={classes.table}>
             <Typography variant='body1'>
               <table>
@@ -94,7 +105,7 @@ class Room extends Component {
                   <th>{content.avec}</th>
                 </tr>
                 <tr>
-                  <th>Troisième personne</th>
+                  <th className={classes.overflow}>Troisième pers.</th>
                   <th>+20€</th>
                 </tr>
               </table>

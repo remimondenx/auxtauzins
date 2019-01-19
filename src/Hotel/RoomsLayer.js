@@ -29,7 +29,7 @@ class RoomsLayer extends Component {
     return(
       <div className={classes.root}>
         <Typography variant='h2' gutterBottom>Nos chambres</Typography>
-        <Grid className={classes.menus} container>
+        <Grid className={classes.rooms} container>
           {listRooms.map(it =>
             <Grid item xs={12} sm={6} key={it.content.name}>
              <Room content={it.content} imgs={it.imgs} />
@@ -48,13 +48,15 @@ RoomsLayer.propTypes = {
 export default withStyles(styles)(RoomsLayer);
 
 const saisonHaute = {
-  name: 'Saison haute : 15 Mai - 30 Septembre',
+  name: 'Saison haute :',
+  date: '15 Mai - 30 Septembre',
   sans: '82/92€',
   avec: '95/120€',
 }
 
 const horsSaison = {
-  name: 'Hors saison : 1 Octobre - 15 Mai',
+  name: 'Hors saison :',
+  date: '1 Octobre - 15 Mai',
   sans: '75€',
   avec: '82€',
 }
