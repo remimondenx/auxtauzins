@@ -2,10 +2,16 @@ import React, { Component } from 'react';
 
 import RestaurantMenu from './RestaurantMenu';
 
-import img_terroir from '../images/food/assiette_du_terroir_menu1_V3.JPG';
-import img_chalossais from '../images/food/confit_de_canard_menu2_V2.JPG';
-import img_gourmand from '../images/food/magret_de_canard_menu3_V1.JPG';
-import img_gastro from '../images/food/foie_gras_chaud_aux_raisins_menu4.JPG';
+import img_assiette from '../images/food/assiette_du_terroir_menu1_V3.JPG';
+import img_patisseries from '../images/food/patisseries_maison_menu1_V1.JPG';
+import img_confit from '../images/food/confit_de_canard_menu2_V2.JPG';
+import img_magret_froid from '../images/food/magret_froid_fourre_menu2_V3.JPG';
+import img_sorbets from '../images/food/assiette_de_sorbets_menu2_V2.JPG';
+import img_magret from '../images/food/magret_de_canard_menu3_V1.JPG';
+import img_omelette from '../images/food/omelette_aux_cepes_menu3.JPG';
+import img_foie_gras_chaud from '../images/food/foie_gras_chaud_aux_raisins_menu4.JPG';
+import img_tournedos from '../images/food/tournedos_de_boeuf_menu4_V2.JPG';
+import img_artagnan from '../images/food/coupe_artagnan_menu4.JPG';
 
 import { withStyles, Grid, Typography } from '@material-ui/core';
 import PropTypes from 'prop-types';
@@ -83,28 +89,56 @@ const gastro = {
 const imgs_terroir = [
   {
     label: 'assiette_terroir',
-    imgPath: img_terroir,
+    imgPath: img_assiette,
+  },
+  {
+    label: 'patisseries',
+    imgPath: img_patisseries,
   },
 ];
 
 const imgs_chalossais = [
   {
     label: 'salade landaise',
-    imgPath: img_chalossais,
-  }
+    imgPath: img_confit,
+  },
+  {
+    label: 'magret froid fourré au foie gras',
+    imgPath: img_magret_froid,
+  },
+  {
+    label: 'magret froid fourré au foie gras',
+    imgPath: img_magret_froid,
+  },
+  {
+    label: 'assiette de sorbets',
+    imgPath: img_sorbets,
+  },
 ];
 
 const imgs_gourmand = [
   {
-    label: 'coupe Melba',
-    imgPath: img_gourmand,
-  }
+    label: 'magret',
+    imgPath: img_magret,
+  },
+  {
+    label: 'omelette aux cèpes',
+    imgPath: img_omelette,
+  },
 ];
 
 const imgs_gastro = [
   {
     label: 'tournedos boeuf',
-    imgPath: img_gastro,
+    imgPath: img_tournedos,
+  },
+  {
+    label: 'foie gras chaud',
+    imgPath: img_foie_gras_chaud,
+  },
+  {
+    label: 'coupe d\'artagnan',
+    imgPath: img_artagnan,
   },
 ];
 

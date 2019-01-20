@@ -48,14 +48,14 @@ RoomsLayer.propTypes = {
 export default withStyles(styles)(RoomsLayer);
 
 const saisonHaute = {
-  name: 'Saison haute :',
+  name: 'Saison haute,',
   date: '15 Mai - 30 Septembre',
   sans: '82/92€',
   avec: '95/120€',
 }
 
 const horsSaison = {
-  name: 'Hors saison :',
+  name: 'Hors saison,',
   date: '1 Octobre - 15 Mai',
   sans: '75€',
   avec: '82€',

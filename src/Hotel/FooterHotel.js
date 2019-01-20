@@ -26,6 +26,10 @@ const styles = {
   button: {
     textTransform: 'none',
     textAlign: 'justify',
+    '&:hover': {
+      backgroundColor: 'transparent',
+      textDecoration: 'underline'
+    },
   },
   picto: {
     height: '15px',

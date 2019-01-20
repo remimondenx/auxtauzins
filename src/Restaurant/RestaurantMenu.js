@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 
 import { withStyles, Typography } from '@material-ui/core';
 import PropTypes from 'prop-types';
+import SwipeableViews from 'react-swipeable-views';
+import Pagination from '../Common/Pagination';
+import { autoPlay } from 'react-swipeable-views-utils';
+
+const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const styles = {
   root: {
@@ -17,8 +22,16 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'center',
   },
-  imgElt: {
+  containerSwipeable: {
+    position: 'relative',
     height: '35%',
+    width: '100%',
+  },
+  swipeable: {
+    overflow: 'hidden',
+  },
+  imgElt: {
+    height: '175px',
     width: '100%',
     backgroundSize: 'cover',
 		backgroundPosition: 'center',
@@ -47,12 +60,33 @@ const styles = {
 }
 
 class RestaurantMenu extends Component {
+  state = {
+    index: 0,
+  };
+
+  handleChangeIndex = index => {
+    this.setState({
+      index,
+    });
+  };
+
   render() {
     const { classes, content, imgs } = this.props;
-    const image = imgs[0]['imgPath'];
+    const { index } = this.state;
     return(
 			<div className={classes.root}>
-        <div className={classes.imgElt} style={{backgroundImage:`url(${image})`}}></div>
+        <div className={classes.containerSwipeable}>
+          <AutoPlaySwipeableViews
+            className={classes.swipeable}
+            index={index} 
+            onChangeIndex={this.handleChangeIndex}>
+            {imgs.map(it => (
+              //<div style={Object.assign({}, styles.imgElt, {backgroundImage:`url(${it.imgPath})`})}></div>
+              <img src={it.imgPath} style={(Object.assign({}, styles.imgElt))} alt={it.imgLabel} />
+              ))}
+          </AutoPlaySwipeableViews>
+          <Pagination className={classes.pagination} dots={imgs.length} index={index} onChangeIndex={this.handleChangeIndex} />
+        </div>
         <div className={classes.text}>
           <Typography 
             className={classes.menuName}

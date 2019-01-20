@@ -23,9 +23,13 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
   },
-  noCap: {
+  button: {
     textTransform: 'none',
-    textAlign: 'justify'
+    textAlign: 'justify',
+    '&:hover': {
+      backgroundColor: 'transparent',
+      textDecoration: 'underline'
+    },
   },
   picto: {
     height: '15px',
@@ -80,13 +84,13 @@ class FooterRestaurant extends Component {
               gutterBottom>
               Nous contacter
             </Typography>
-            <Button href="tel:0558986022">
+            <Button className={classes.button} href="tel:0558986022">
               <img className={classes.picto} src={tel_img} alt='tel' />05 58 98 60 22
             </Button>
-            <Button className={classes.noCap} href="mailto:auxtauzins@wanadoo.fr">
+            <Button className={classes.button} href="mailto:auxtauzins@wanadoo.fr">
               <img className={classes.picto} src={mail_img} alt='mail' />auxtauzins@wanadoo.fr
             </Button>
-            <Button className={classes.noCap} href="https://www.google.com/maps/place/hotel+restaurant+AUX+TAUZINS/@43.709234,-0.8244906,18z/data=!3m1!4b1!4m5!3m4!1s0xd569bf8e0c594bf:0xdf3569df98d76aa8!8m2!3d43.709234!4d-0.8233963">
+            <Button className={classes.button} href="https://www.google.com/maps/place/hotel+restaurant+AUX+TAUZINS/@43.709234,-0.8244906,18z/data=!3m1!4b1!4m5!3m4!1s0xd569bf8e0c594bf:0xdf3569df98d76aa8!8m2!3d43.709234!4d-0.8233963">
               <img className={classes.picto} src={position_img} alt='position' />547 route Raphael Lonné 40380, Montfort-en-Chalosse
             </Button>
           </Grid>

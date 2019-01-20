@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import { withStyles, Typography } from '@material-ui/core';
 import SwipeableViews from 'react-swipeable-views';
+import Pagination from '../Common/Pagination';
 import { autoPlay } from 'react-swipeable-views-utils';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
@@ -16,23 +17,21 @@ const styles = {
     boxShadow: '0 2px 4px #000000',
     textAlign: 'center',
     overflow: 'hidden',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center'
+  },
+  containerSwipeable: {
+    position: 'relative',
+    height: '65%',
+    width: '100%',
   },
   swipeable: {
-    height: '60%',
-    width: '100%',
-    backgroundColor: 'grey'
+    overflow: 'hidden',
   },
   imgElt: {
-    height: '240px',
+    height: '260px',
     width: '100%',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    overflow: 'hidden',
-    backgroundColor: 'green'
+    overflow: 'hidden'
   },
   text: {
     height: '40%',
@@ -49,6 +48,9 @@ const styles = {
   },
   overflow: {
     overflow: 'hidden',
+  },
+  inline: {
+    display: 'inline'
   },
 }
 
@@ -67,15 +69,19 @@ class Room extends Component {
     const { classes, content, imgs } = this.props;
     const { index } = this.state;
     return(
-			<div className={classes.root}>
-        <AutoPlaySwipeableViews 
-          className={classes.swipeable}
-          index={index} 
-          onChangeIndex={this.handleChangeIndex}>
-          {imgs.map(it => (
-            <div style={Object.assign({}, styles.imgElt, {backgroundImage:`url(${it.imgPath})`})}></div>
-          ))}
-        </AutoPlaySwipeableViews>
+      <div className={classes.root}>
+        <div className={classes.containerSwipeable}>
+          <AutoPlaySwipeableViews
+            className={classes.swipeable}
+            index={index} 
+            onChangeIndex={this.handleChangeIndex}>
+            {imgs.map(it => (
+              //<div style={Object.assign({}, styles.imgElt, {backgroundImage:`url(${it.imgPath})`})}></div>
+              <img src={it.imgPath} style={(Object.assign({}, styles.imgElt))} alt={it.imgLabel} />
+              ))}
+          </AutoPlaySwipeableViews>
+          <Pagination className={classes.pagination} dots={imgs.length} index={index} onChangeIndex={this.handleChangeIndex} />
+        </div>
         
         <div className={classes.text}>
           <Typography 
@@ -92,7 +98,6 @@ class Room extends Component {
           >
             {content.date}
           </Typography>
-
           <div className={classes.table}>
             <Typography variant='body1'>
               <table>
@@ -103,10 +108,6 @@ class Room extends Component {
                 <tr>
                   <th>Avec balcon</th>
                   <th>{content.avec}</th>
-                </tr>
-                <tr>
-                  <th className={classes.overflow}>Troisième pers.</th>
-                  <th>+20€</th>
                 </tr>
               </table>
             </Typography>
