@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import RestaurantMenu from './RestaurantMenu';
 
 import img_assiette from '../images/food/assiette_du_terroir_menu1_V3.JPG';
+import img_coeurs_canard from '../images/food/coeurs_de_canard_menu1_V2.JPG';
 import img_patisseries from '../images/food/patisseries_maison_menu1_V1.JPG';
 import img_confit from '../images/food/confit_de_canard_menu2_V2.JPG';
 import img_magret_froid from '../images/food/magret_froid_fourre_menu2_V3.JPG';
@@ -90,6 +91,10 @@ const imgs_terroir = [
   {
     label: 'assiette_terroir',
     imgPath: img_assiette,
+  },
+  {
+    label: 'coeurs de canard',
+    imgPath: img_coeurs_canard,
   },
   {
     label: 'patisseries',
