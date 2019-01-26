@@ -13,7 +13,7 @@ import booking from '../images/logos/booking.png';
 import { withStyles, Typography, Switch, Button, Dialog, Tooltip } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { BrowserView, MobileView } from 'react-device-detect';
+import { BrowserView, isBrowser, isMobile } from 'react-device-detect';
 
 const styles = {
 	hundred: {
@@ -38,7 +38,7 @@ const styles = {
 		textAlign: 'center',
 		textShadow: '0 0 4px #000000',
 	},
-	contact: {
+	contactBrowser: {
 		textShadow: '0 0 2px #000000',
 		padding: 5,
 		border: '2px solid white',
@@ -47,6 +47,18 @@ const styles = {
 		'&:hover': {
       backgroundColor: 'white'
     },
+	},
+	contactMobile: {
+		width: '40%',
+		padding: 5,
+		margin: 10,
+		textShadow: '0 0 2px #000000',
+		border: '2px solid white',
+		borderRadius: '10px',
+		textTransform: 'none',
+		'&:hover': {
+      backgroundColor: 'white'
+		},
 	},
 	englishButton: {
 		'&:hover': {
@@ -137,9 +149,11 @@ class FirstLayer extends Component {
 						<Link to='/' style={{textDecoration: 'none'}}>
 							<img className={classes.chene} src={chene} alt='logo' />
 						</Link>
-						<Button className={classes.contact} color='secondary' href='#contact'>
-							Nous contacter
-						</Button>
+						{isBrowser && (
+							<Button className={classes.contactBrowser} color='secondary' href='#contact'>
+								Nous contacter
+							</Button>
+						)}
 						<Button className={classes.englishButton} disableRipple>
 							<img 
 								src={united_kingdom}
@@ -198,8 +212,13 @@ class FirstLayer extends Component {
 							</Button>
 						}
 					</div>
-					<div className={classes.socialMedia}>
-						<BrowserView>
+					{isMobile && (
+						<Button className={classes.contactMobile} color='secondary' href='#contact'>
+							Nous contacter
+						</Button>
+					)}
+					<BrowserView>
+						<div className={classes.socialMedia}>
 							<a href='https://www.facebook.com/auxtauzins' target='_blank'>
 								<img style={{height:'40px', paddingRight:'10px'}} src={facebook} alt='Logo Facebook' />
 							</a>
@@ -227,8 +246,8 @@ class FirstLayer extends Component {
 								<iframe title="presentation" src="https://player.vimeo.com/video/138057164?title=0&byline=0&portrait=0" width="600" height="338" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
 								</iframe>
 							</Dialog>
-						</BrowserView>
-					</div>
+						</div>
+					</BrowserView>
 					<div className={classes.scrollContainer}>
 						<img className={classes.scroll} src={scroll} alt='scroll' />
 					</div>

@@ -66,7 +66,7 @@ class FooterRestaurant extends Component {
   render() {
     const { classes } = this.props;
     return(
-			<div className={classes.root} id='contact'>
+			<div className={classes.root}>
         <Grid container spacing={32}>
           <Grid item xs={12} sm={6} md={4}>
             <Typography 
@@ -102,7 +102,7 @@ class FooterRestaurant extends Component {
             </Typography>
           </Grid>
 
-          <Grid className={classes.contact} item xs={12} sm={12} md={4}>
+          <Grid className={classes.contact} id='contact' item xs={12} sm={12} md={4}>
             <Typography 
               className={classes.title} 
               style={{color:'#ffc107'}}
