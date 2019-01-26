@@ -13,6 +13,7 @@ import booking from '../images/logos/booking.png';
 import { withStyles, Typography, Switch, Button, Dialog, Tooltip } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { BrowserView, MobileView } from 'react-device-detect';
 
 const styles = {
 	hundred: {
@@ -198,41 +199,45 @@ class FirstLayer extends Component {
 						}
 					</div>
 					<div className={classes.socialMedia}>
-						<a href='https://www.facebook.com/auxtauzins' target='_blank'>
-							<img style={{height:'40px', paddingRight:'10px'}} src={facebook} alt='Logo Facebook' />
-						</a>
-						<a href='https://www.instagram.com/auxtauzins/' target='_blank'>
-							<img style={{height:'40px', paddingRight:'10px'}} src={instagram} alt='Logo Instagram' />
-						</a>
-						{(hotel && (
-							<a href='https://www.booking.com/hotel/fr/aux-tauzins-montfort.fr.html' target='_blank'>
-								<img style={{height:'40px', paddingRight: '10px'}} src={booking} alt='Logo Booking' />
+						<BrowserView>
+							<a href='https://www.facebook.com/auxtauzins' target='_blank'>
+								<img style={{height:'40px', paddingRight:'10px'}} src={facebook} alt='Logo Facebook' />
 							</a>
-						)) || (
-							<a href='https://www.tripadvisor.fr/Restaurant_Review-g2068609-d3978484-Reviews-Aux_Tauzins-Montfort_en_Chalosse_Landes_Nouvelle_Aquitaine.html' target='_blank'>
-								<img style={{height:'40px', paddingRight: '10px'}} src={tripadvisor} alt='Logo Tripadvisor' />
+							<a href='https://www.instagram.com/auxtauzins/' target='_blank'>
+								<img style={{height:'40px', paddingRight:'10px'}} src={instagram} alt='Logo Instagram' />
 							</a>
-						)}
-						<Tooltip title="Visionnez la vidéo de l'établissement">
-							<img 
-								src={logo_video}
-								alt='logo video'
-								onClick={this.handleOpen}
-								style={{height:'40px'}}
-							/>
-						</Tooltip>
-						<Dialog open={this.state.open} onClose={this.handleClose}>
-							<iframe title="presentation" src="https://player.vimeo.com/video/138057164?title=0&byline=0&portrait=0" width="600" height="338" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-							</iframe>
-						</Dialog>
+							{(hotel && (
+								<a href='https://www.booking.com/hotel/fr/aux-tauzins-montfort.fr.html' target='_blank'>
+									<img style={{height:'40px', paddingRight: '10px'}} src={booking} alt='Logo Booking' />
+								</a>
+							)) || (
+								<a href='https://www.tripadvisor.fr/Restaurant_Review-g2068609-d3978484-Reviews-Aux_Tauzins-Montfort_en_Chalosse_Landes_Nouvelle_Aquitaine.html' target='_blank'>
+									<img style={{height:'40px', paddingRight: '10px'}} src={tripadvisor} alt='Logo Tripadvisor' />
+								</a>
+							)}
+							<Tooltip title="Visionnez la vidéo de l'établissement">
+								<img 
+									src={logo_video}
+									alt='logo video'
+									onClick={this.handleOpen}
+									style={{height:'40px'}}
+								/>
+							</Tooltip>
+							<Dialog open={this.state.open} onClose={this.handleClose}>
+								<iframe title="presentation" src="https://player.vimeo.com/video/138057164?title=0&byline=0&portrait=0" width="600" height="338" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+								</iframe>
+							</Dialog>
+						</BrowserView>
 					</div>
 					<div className={classes.scrollContainer}>
 						<img className={classes.scroll} src={scroll} alt='scroll' />
 					</div>
 					<div className={classes.logis}>
-						<a href='https://www.logishotels.com/fr' target='_blank'>
-							<img className={classes.imgLogis} src={logis} alt='logis hotel' />
-						</a>
+						<BrowserView>
+							<a href='https://www.logishotels.com/fr' target='_blank'>
+								<img className={classes.imgLogis} src={logis} alt='logis hotel' />
+							</a>
+						</BrowserView>
 					</div>
 				</div>
 			</div>
