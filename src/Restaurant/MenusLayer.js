@@ -104,12 +104,12 @@ const imgs_terroir = [
 
 const imgs_chalossais = [
   {
-    label: 'salade landaise',
-    imgPath: img_confit,
-  },
-  {
     label: 'magret froid fourré au foie gras',
     imgPath: img_magret_froid,
+  },
+  {
+    label: 'confit de canard',
+    imgPath: img_confit,
   },
   {
     label: 'assiette de sorbets',
@@ -119,23 +119,23 @@ const imgs_chalossais = [
 
 const imgs_gourmand = [
   {
-    label: 'magret',
-    imgPath: img_magret,
-  },
-  {
     label: 'omelette aux cèpes',
     imgPath: img_omelette,
+  },
+  {
+    label: 'magret',
+    imgPath: img_magret,
   },
 ];
 
 const imgs_gastro = [
   {
-    label: 'tournedos boeuf',
-    imgPath: img_tournedos,
-  },
-  {
     label: 'foie gras chaud',
     imgPath: img_foie_gras_chaud,
+  },
+  {
+    label: 'tournedos boeuf',
+    imgPath: img_tournedos,
   },
   {
     label: 'coupe d\'artagnan',
