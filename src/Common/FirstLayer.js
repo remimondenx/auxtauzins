@@ -164,14 +164,24 @@ class FirstLayer extends Component {
 					<div className={classes.titleElt}>
 						<div className={classes.switchContainer}>
 							<Link className={classes.link} to='/'>
-								<Typography 
-									className={classes.cliquable}
-									color='secondary'
-									variant='h5'
-									style={{width:'120px'}}
-								>
-									Restaurant
-								</Typography>
+								{(isBrowser && (
+									<Typography 
+										className={classes.cliquable}
+										color='secondary'
+										variant='h5'
+										style={{width:'120px'}}
+									>
+										Restaurant
+									</Typography>
+								)) || (
+									<Typography 
+										className={classes.cliquable}
+										color='secondary'
+										variant='h5'
+									>
+										Restaurant
+									</Typography>
+								)}
 							</Link>
 							<Link to={link}>
 								<Switch
@@ -184,14 +194,25 @@ class FirstLayer extends Component {
 								/>   
 							</Link>
 							<Link className={classes.link} to='/hotel'>
-								<Typography
-									className={classes.cliquable}
-									color='secondary'
-									variant='h5'
-									style={{width:'120px', textAlign:'justify'}}
-								>
-									Hôtel
-								</Typography>
+								{(isBrowser && (
+									<Typography
+										className={classes.cliquable}
+										color='secondary'
+										variant='h5'
+										style={{width:'120px', textAlign:'justify'}}
+									>
+										Hôtel
+									</Typography>
+								)) || (
+									<Typography
+										className={classes.cliquable}
+										color='secondary'
+										variant='h5'
+										style={{textAlign:'justify'}}
+									>
+										Hôtel
+									</Typography>
+								)}
 							</Link>
 						</div>
 						{hotel &&
