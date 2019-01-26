@@ -4,9 +4,7 @@ import { withStyles, Typography } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import SwipeableViews from 'react-swipeable-views';
 import Pagination from '../Common/Pagination';
-import { autoPlay } from 'react-swipeable-views-utils';
 
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const styles = {
   root: {
@@ -26,6 +24,7 @@ const styles = {
     position: 'relative',
     height: '35%',
     width: '100%',
+    overflow: 'hidden',
   },
   swipeable: {
     overflow: 'hidden',
@@ -76,7 +75,7 @@ class RestaurantMenu extends Component {
     return(
 			<div className={classes.root}>
         <div className={classes.containerSwipeable}>
-          <AutoPlaySwipeableViews
+          <SwipeableViews
             className={classes.swipeable}
             index={index} 
             onChangeIndex={this.handleChangeIndex}>
@@ -84,7 +83,7 @@ class RestaurantMenu extends Component {
               //<div style={Object.assign({}, styles.imgElt, {backgroundImage:`url(${it.imgPath})`})}></div>
               <img src={it.imgPath} style={(Object.assign({}, styles.imgElt))} alt={it.imgLabel} />
               ))}
-          </AutoPlaySwipeableViews>
+          </SwipeableViews>
           <Pagination className={classes.pagination} dots={imgs.length} index={index} onChangeIndex={this.handleChangeIndex} />
         </div>
         <div className={classes.text}>

@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 
 import Room from './Room';
-import imgSaisonHaute from '../images/rooms/chambre_1.jpg';
-import imgSaisonHaute2 from '../images/rooms/chambre_5.jpg';
-import imgSaisonHaute3 from '../images/rooms/chambre_4.jpg';
-import imgSaisonHaute4 from '../images/rooms/chambre_6.jpg';
-import imgSaisonHaute5 from '../images/rooms/sdb_1.jpg';
-import imgHorsSaison from '../images/rooms/chambre_2.jpg';
-import imgHorsSaison2 from '../images/rooms/chambre_7_1.jpg';
-import imgHorsSaison3 from '../images/rooms/chambre_8.jpg';
-import imgHorsSaison4 from '../images/rooms/chambre_9.jpg';
-import imgHorsSaison5 from '../images/rooms/sdb_2.jpg';
+import img_room_3 from '../images/rooms/chambre_3.JPG';
+import img_room_1 from '../images/rooms/chambre_1.JPG';
+import img_room_2 from '../images/rooms/chambre_2.JPG';
+import img_room_4 from '../images/rooms/chambre_4.JPG';
+import img_room_5 from '../images/rooms/chambre_5.JPG';
+import img_room_6 from '../images/rooms/chambre_6.JPG';
+import img_room_7 from '../images/rooms/chambre_7.JPG';
+import img_room_8 from '../images/rooms/chambre_8.JPG';
+import img_room_9 from '../images/rooms/chambre_9.JPG';
+import img_room_10 from '../images/rooms/chambre_10.JPG';
+import img_sdb_1 from '../images/rooms/sdb_1.JPG';
+import img_sdb_2 from '../images/rooms/sdb_2.JPG';
 
 import { withStyles, Grid, Typography } from '@material-ui/core';
 import PropTypes from 'prop-types';
@@ -65,46 +67,54 @@ const horsSaison = {
 const imgsSaisonHaute = [
   {
     label: 'img saison haute 1',
-    imgPath: imgSaisonHaute,
+    imgPath: img_room_4,
   },
   {
     label: 'img saison haute 2',
-    imgPath: imgSaisonHaute2,
+    imgPath: img_room_1,
   },
   {
     label: 'img saison haute 3',
-    imgPath: imgSaisonHaute3,
+    imgPath: img_room_2,
   },
   {
     label: 'img saison haute 4',
-    imgPath: imgSaisonHaute4,
+    imgPath: img_room_3,
   },
   {
     label: 'img saison haute 5',
-    imgPath: imgSaisonHaute5,
+    imgPath: img_room_5,
+  },
+  {
+    label: 'img saison haute 6',
+    imgPath: img_sdb_1,
   },
 ];
 
 const imgsHorsSaison = [
   {
     label: 'image hors saison 1',
-    imgPath: imgHorsSaison,
+    imgPath: img_room_8,
   },
   {
     label: 'image hors saison 2',
-    imgPath: imgHorsSaison2,
+    imgPath: img_room_6,
   },
   {
     label: 'image hors saison 3',
-    imgPath: imgHorsSaison3,
+    imgPath: img_room_7,
   },
   {
     label: 'image hors saison 4',
-    imgPath: imgHorsSaison4,
+    imgPath: img_room_9,
   },
   {
     label: 'image hors saison 5',
-    imgPath: imgHorsSaison5,
+    imgPath: img_room_10,
+  },
+  {
+    label: 'image hors saison 6',
+    imgPath: img_sdb_2,
   },
 ];
 

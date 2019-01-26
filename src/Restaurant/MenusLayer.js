@@ -112,10 +112,6 @@ const imgs_chalossais = [
     imgPath: img_magret_froid,
   },
   {
-    label: 'magret froid fourré au foie gras',
-    imgPath: img_magret_froid,
-  },
-  {
     label: 'assiette de sorbets',
     imgPath: img_sorbets,
   },
