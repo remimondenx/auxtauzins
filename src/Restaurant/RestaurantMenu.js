@@ -33,7 +33,8 @@ const styles = {
     height: '175px',
     width: '100%',
     backgroundSize: 'cover',
-		backgroundPosition: 'center',
+    backgroundPosition: 'center',
+    borderRadius: '20px 20px 0px 0px',
 		overflow: 'hidden',
   },
   text: {

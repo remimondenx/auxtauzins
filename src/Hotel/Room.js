@@ -27,6 +27,7 @@ const styles = {
   imgElt: {
     height: '260px',
     width: '100%',
+    borderRadius: '20px 20px 0px 0px',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     overflow: 'hidden'

@@ -74,8 +74,13 @@ const styles = {
 	link: {
 		textDecoration: 'none',
 	},
-	cliquable: {
+	underline: {
 		textDecoration: 'underline',
+	},
+	cliquable: {
+		borderBottom: '2px solid currentColor',
+ 	 	display: 'inline-block',
+ 	 	lineHeight: 0.85,
 	},
 	switchContainer: {
 		display: 'flex',
@@ -166,7 +171,7 @@ class FirstLayer extends Component {
 							<Link className={classes.link} to='/'>
 								{(isBrowser && (
 									<Typography 
-										className={classes.cliquable}
+										className={classes.underline}
 										color='secondary'
 										variant='h5'
 										style={{width:'120px'}}
@@ -196,7 +201,7 @@ class FirstLayer extends Component {
 							<Link className={classes.link} to='/hotel'>
 								{(isBrowser && (
 									<Typography
-										className={classes.cliquable}
+										className={classes.underline}
 										color='secondary'
 										variant='h5'
 										style={{width:'120px', textAlign:'justify'}}
