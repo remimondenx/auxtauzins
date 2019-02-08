@@ -28,7 +28,7 @@ const styles = {
     borderRadius: '20px 20px 0px 0px',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
   text: {
     height: '40%',
@@ -40,6 +40,9 @@ const styles = {
   roomName: {
     fontWeight: 'bold',
   },
+  roomDate: {
+    fontStyle: 'italic',
+  },
   table: {
     //paddingTop: '20px'
   },
@@ -47,7 +50,7 @@ const styles = {
     overflow: 'hidden',
   },
   inline: {
-    display: 'inline'
+    display: 'inline',
   },
 }
 

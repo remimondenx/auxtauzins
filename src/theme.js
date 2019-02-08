@@ -15,6 +15,9 @@ const theme = createMuiTheme({
     typography: {
       fontFamily: "Quicksand",
       useNextVariants: true,
+      h3: {
+        fontSize: '2.4em'
+      }
     },
     overrides: {
       MuiButton: {

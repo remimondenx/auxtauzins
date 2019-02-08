@@ -26,7 +26,7 @@ const styles = {
   title: {
     fontWeight: 'bold',
     fontSize: '1.1em',
-    color: 'black'
+    color: '#01579b'
   },
   content: {
     textAlign: 'justify',
@@ -39,6 +39,7 @@ const styles = {
   button: {
     textTransform: 'none',
     textAlign: 'justify',
+    fontStyle: 'normal',
     '&:hover': {
       backgroundColor: 'transparent',
       textDecoration: 'underline'

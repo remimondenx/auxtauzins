@@ -111,6 +111,7 @@ const styles = {
 		marginTop: '10px',
 		borderRadius: '10px',
 		backgroundColor: '#ffeb3b',
+		fontStyle: 'normal'
 	},
 	reserverRestaurant: {
 		marginTop: '10px',

@@ -60,7 +60,7 @@ export default withStyles(styles)(RoomsLayer);
 
 const saisonHaute = {
   name: 'Saison haute,',
-  date: '15 Mai - 30 Septembre',
+  date: '15 Mai - 30 Sept.',
   sans: '82/92€',
   avec: '95/120€',
 }
