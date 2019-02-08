@@ -25,6 +25,8 @@ const styles = {
   },
   title: {
     fontWeight: 'bold',
+    fontSize: '1.1em',
+    color: 'black'
   },
   content: {
     textAlign: 'justify',
@@ -77,7 +79,6 @@ class FooterHotel extends Component {
             <Grid item xs={12} sm={6} md={4}>
               <Typography 
                 className={classes.title} 
-                style={{color:'black'}}
                 gutterBottom>
                 A propos
               </Typography>
@@ -97,7 +98,6 @@ class FooterHotel extends Component {
             <Grid item xs={12} sm={6} md={4}>
               <Typography 
                 className={classes.title} 
-                style={{color:'black'}}
                 gutterBottom>
                 Nos services
               </Typography>
@@ -116,7 +116,6 @@ class FooterHotel extends Component {
             <Grid className={classes.contact} item xs={12} sm={12} md={4}>
               <Typography 
                 className={classes.title} 
-                style={{color:'black'}}
                 gutterBottom>
                 Nous contacter
               </Typography>

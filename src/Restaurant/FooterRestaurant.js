@@ -22,7 +22,10 @@ const styles = {
     textAlign: 'center',
   },
   title: {
-    fontWeight: 'bold',
+    fontWeight: '900',
+    fontSize: '1.1em',
+    color:'black'
+
   },
   content: {
     textAlign: 'justify',
@@ -74,8 +77,7 @@ class FooterRestaurant extends Component {
         <Grid container spacing={32}>
           <Grid item xs={12} sm={6} md={4}>
             <Typography 
-              className={classes.title} 
-              style={{color:'black'}}
+              className={classes.title}
               gutterBottom>
               A propos
             </Typography>
@@ -92,8 +94,7 @@ class FooterRestaurant extends Component {
 
           <Grid item xs={12} sm={6} md={4}>
             <Typography 
-              className={classes.title} 
-              style={{color:'black'}}
+              className={classes.title}
               gutterBottom>
               Nos services
             </Typography>
@@ -109,7 +110,6 @@ class FooterRestaurant extends Component {
           <Grid className={classes.contact} id='contact' item xs={12} sm={12} md={4}>
             <Typography 
               className={classes.title} 
-              style={{color:'black'}}
               gutterBottom>
               Nous contacter
             </Typography>

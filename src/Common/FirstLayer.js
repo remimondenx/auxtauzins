@@ -79,11 +79,15 @@ const styles = {
 	underline: {
 		textDecoration: 'underline',
 		fontSize: '2.2em',
+		textShadow: '4px 2px 4px black',
+		fontWeight: '400'
 	},
 	cliquable: {
 		borderBottom: '2px solid currentColor',
  	 	display: 'inline-block',
- 	 	lineHeight: 0.85,
+		lineHeight: 0.85,
+		textShadow: '4px 2px 4px black',
+		fontWeight: '400'
 	},
 	switchContainer: {
 		display: 'flex',
@@ -154,9 +158,9 @@ class FirstLayer extends Component {
     	<div className={classes.hundred}>
 				<div className={classes.root} style={{backgroundImage:`url(${image})`}}>
 					<div className={classes.contactElt}>
-						<Link to='/' style={{textDecoration: 'none'}}>
+						{/* <Link to='/' style={{textDecoration: 'none'}}>
 							<img className={classes.aux_tauzins} src='' alt='logo' />
-						</Link>
+						</Link> */}
 						{isBrowser && (
 							<Button className={classes.contactBrowser} color='secondary' href='#contact'>
 								Nous contacter
