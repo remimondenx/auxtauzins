@@ -122,7 +122,7 @@ class LaCarteLayer extends Component {
     const { classes } = this.props;
     return(
 			<div className={classes.root}>
-        <Typography className={classes.title} variant='h2'>
+        <Typography className={classes.title} variant='h3'>
           La carte
         </Typography>
         <Grid className={classes.gridList} container>

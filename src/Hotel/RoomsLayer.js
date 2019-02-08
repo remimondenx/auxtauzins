@@ -37,7 +37,7 @@ class RoomsLayer extends Component {
     const { classes } = this.props;
     return(
       <div className={classes.root}>
-        <Typography variant='h2' gutterBottom>Nos chambres</Typography>
+        <Typography variant='h3' gutterBottom>Nos chambres</Typography>
         <div className={classes.flex}>
           <Grid className={classes.rooms} container>
             {listRooms.map(it =>

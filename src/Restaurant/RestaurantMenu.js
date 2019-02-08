@@ -46,6 +46,14 @@ const styles = {
     alignItems: 'center',
   },
   menuName: {
+    fontWeight: 'bold'
+  },
+  food: {
+    display: 'flex',
+    flexDirection: 'column',
+    flexGrow: 1,
+    justifyContent: 'space-around',
+    margin: '10px 0 10px 0',
   },
   tilde: {
     lineHeight: '12px'

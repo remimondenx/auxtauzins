@@ -46,9 +46,11 @@ const styles = {
 		textTransform: 'none',
 		'&:hover': {
       backgroundColor: 'white'
-    },
+		},
+		fontStyle: 'normal'
 	},
 	contactMobile: {
+		alignSelf: 'flex-end',
 		width: '40%',
 		padding: 5,
 		margin: 10,
@@ -59,7 +61,7 @@ const styles = {
 		'&:hover': {
       backgroundColor: 'white'
 		},
-		alignSelf: 'flex-end'
+		fontStyle: 'normal'
 	},
 	englishButton: {
 		'&:hover': {

@@ -32,7 +32,7 @@ class MenusLayer extends Component {
     const { classes } = this.props;
     return(
       <div className={classes.root}>
-        <Typography variant='h2' gutterBottom>Nos menus</Typography>
+        <Typography variant='h3' gutterBottom>Nos menus</Typography>
         <Grid className={classes.gridList} container>
           {listMenus.map(it =>
             <Grid item xs={12} sm={6} lg={3} key={it.content.name}>
