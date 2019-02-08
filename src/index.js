@@ -6,6 +6,7 @@ import {BrowserRouter as Router} from 'react-router-dom';
 
 import 'typeface-nunito';
 import 'typeface-dancing-script';
+import 'typeface-quicksand';
 
 ReactDOM.render(
   (<Router>

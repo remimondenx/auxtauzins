@@ -20,10 +20,11 @@ import PropTypes from 'prop-types';
 
 const styles = {
   root: {
-    backgroundColor: '#FFCA28',
+    backgroundColor: '#eceff1',
     padding: '30px',
     textAlign: 'center',
   },
+  gridList: {}
 }
 
 class MenusLayer extends Component {
@@ -32,7 +33,7 @@ class MenusLayer extends Component {
     return(
       <div className={classes.root}>
         <Typography variant='h2' gutterBottom>Nos menus</Typography>
-        <Grid className={classes.menus} container>
+        <Grid className={classes.gridList} container>
           {listMenus.map(it =>
             <Grid item xs={12} sm={6} lg={3} key={it.content.name}>
              <RestaurantMenu content={it.content} imgs={it.imgs} />

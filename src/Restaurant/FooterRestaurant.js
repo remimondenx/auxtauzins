@@ -14,8 +14,11 @@ import PropTypes from 'prop-types';
 import { MobileView } from 'react-device-detect';
 
 const styles = {
+  backgroundColor: {
+    backgroundColor: '#eceff1',
+  },
   root: {
-    margin: '30px',
+    margin: '30px 30px 0 30px',
     textAlign: 'center',
   },
   title: {
@@ -66,12 +69,13 @@ class FooterRestaurant extends Component {
   render() {
     const { classes } = this.props;
     return(
-			<div className={classes.root}>
+			<div className={classes.backgroundColor}>
+        <div className={classes.root}>
         <Grid container spacing={32}>
           <Grid item xs={12} sm={6} md={4}>
             <Typography 
               className={classes.title} 
-              style={{color:'red'}}
+              style={{color:'black'}}
               gutterBottom>
               A propos
             </Typography>
@@ -89,7 +93,7 @@ class FooterRestaurant extends Component {
           <Grid item xs={12} sm={6} md={4}>
             <Typography 
               className={classes.title} 
-              style={{color:'#2196f3'}}
+              style={{color:'black'}}
               gutterBottom>
               Nos services
             </Typography>
@@ -105,7 +109,7 @@ class FooterRestaurant extends Component {
           <Grid className={classes.contact} id='contact' item xs={12} sm={12} md={4}>
             <Typography 
               className={classes.title} 
-              style={{color:'#ffc107'}}
+              style={{color:'black'}}
               gutterBottom>
               Nous contacter
             </Typography>
@@ -150,6 +154,7 @@ class FooterRestaurant extends Component {
 							</a>
 					</div>
 					</MobileView>
+        </div>
 			</div>
     );
   }

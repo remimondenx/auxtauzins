@@ -46,7 +46,9 @@ const styles = {
     alignItems: 'center',
   },
   menuName: {
-    fontWeight: 'bold',
+  },
+  tilde: {
+    lineHeight: '12px'
   },
   or: {
     fontSize: '0.8em',
@@ -81,7 +83,6 @@ class RestaurantMenu extends Component {
             index={index} 
             onChangeIndex={this.handleChangeIndex}>
             {imgs.map(it => (
-              //<div style={Object.assign({}, styles.imgElt, {backgroundImage:`url(${it.imgPath})`})}></div>
               <img src={it.imgPath} style={(Object.assign({}, styles.imgElt))} alt={it.imgLabel} />
               ))}
           </SwipeableViews>
@@ -104,7 +105,7 @@ class RestaurantMenu extends Component {
                 <Typography variant='body1'>{content.entree2}</Typography>
               </div>
             )}
-            <Typography variant='body1'>~</Typography>
+            <Typography className={classes.tilde} variant='body1'>~</Typography>
 
             <Typography variant='body1'>{content.plat}</Typography>
             {content.plat2 && (
@@ -113,11 +114,11 @@ class RestaurantMenu extends Component {
                 <Typography variant='body1'>{content.plat2}</Typography>
               </div>
             )}
-            <Typography variant='body1'>~</Typography>
+            <Typography className={classes.tilde} variant='body1'>~</Typography>
             {content.apresPlat && (
               <div>
                 <Typography variant='body1'>{content.apresPlat}</Typography>
-                <Typography variant='body1'>~</Typography>
+                <Typography className={classes.tilde} variant='body1'>~</Typography>
               </div>
             )}
             {(content.dessert2 && (

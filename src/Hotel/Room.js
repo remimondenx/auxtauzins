@@ -3,11 +3,11 @@ import React, { Component } from 'react';
 import { withStyles, Typography } from '@material-ui/core';
 import SwipeableViews from 'react-swipeable-views';
 import Pagination from '../Common/Pagination';
+import { isMobile } from 'react-device-detect';
 
 const styles = {
   root: {
     margin: '20px',
-    height: '400px',
     backgroundColor: 'white',
     border: '1px grey solid',
     borderRadius: '20px',
@@ -17,7 +17,6 @@ const styles = {
   },
   containerSwipeable: {
     position: 'relative',
-    height: '65%',
     width: '100%',
     overflow: 'hidden'
   },
@@ -25,7 +24,6 @@ const styles = {
     overflow: 'hidden',
   },
   imgElt: {
-    height: '260px',
     width: '100%',
     borderRadius: '20px 20px 0px 0px',
     backgroundSize: 'cover',
@@ -68,15 +66,14 @@ class Room extends Component {
     const { classes, content, imgs } = this.props;
     const { index } = this.state;
     return(
-      <div className={classes.root}>
-        <div className={classes.containerSwipeable}>
+      <div className={classes.root} style={isMobile ? {height: '350px'} : {height:'400px'}}>
+        <div className={classes.containerSwipeable} style={isMobile ? {height: '50%'} : {height:'65%'}}>
           <SwipeableViews
             className={classes.swipeable}
             index={index} 
             onChangeIndex={this.handleChangeIndex}>
             {imgs.map(it => (
-              //<div style={Object.assign({}, styles.imgElt, {backgroundImage:`url(${it.imgPath})`})}></div>
-              <img src={it.imgPath} style={(Object.assign({}, styles.imgElt))} alt={it.imgLabel} />
+              <img src={it.imgPath} style={(Object.assign({}, styles.imgElt, isMobile ? {height: '175px'} : {height:'260px'}))} alt={it.imgLabel} />
               ))}
           </SwipeableViews>
           <Pagination className={classes.pagination} dots={imgs.length} index={index} onChangeIndex={this.handleChangeIndex} />

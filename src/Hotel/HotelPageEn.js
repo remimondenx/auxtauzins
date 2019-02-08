@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 
 import image from '../images/main/piscine.jpg';
-import FirstLayer from '../Common/FirstLayer';
+import FirstLayerEn from '../Common/FirstLayerEn';
 import RoomsLayer from './RoomsLayer';
 import FooterHotel from './FooterHotel';
 import ActivitesLayer from './ActivitesLayer';
 
-class HotelPage extends Component {
+class HotelPageEn extends Component {
   render() {
     return(
       <div style={{height:'100%'}}>
-        <FirstLayer
+        <FirstLayerEn
           hotel={true} 
-          link='/'
+          link='/en'
           image={image}
         />
         <RoomsLayer />
@@ -24,4 +24,4 @@ class HotelPage extends Component {
   }
 }
 
-export default HotelPage;
+export default HotelPageEn;

@@ -16,6 +16,7 @@ const styles = {
     height: 12,
     width: 12,
     borderRadius: 6,
+    boxShadow: '2px 2px 4px black',
     margin: 3,
   },
   active: {

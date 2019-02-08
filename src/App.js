@@ -4,7 +4,9 @@ import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import theme from './theme.js'
 import HotelPage from './Hotel/HotelPage';
+import HotelPageEn from './Hotel/HotelPageEn';
 import RestaurantPage from './Restaurant/RestaurantPage';
+import RestaurantPageEn from './Restaurant/RestaurantPageEn';
 
 import { withStyles } from '@material-ui/core'
 import { injectGlobal } from 'styled-components';
@@ -35,6 +37,14 @@ class App extends Component {
       <div className={classes.root}>
         <MuiThemeProvider theme={theme}>
           <Switch>
+            <Route
+              path="/en"
+              component={RestaurantPageEn}
+            />
+            <Route
+              path="/hotel/en"
+              component={HotelPageEn}
+            />
             <Route
               path="/hotel"
               component={HotelPage}

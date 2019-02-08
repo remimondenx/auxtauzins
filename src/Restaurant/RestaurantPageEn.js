@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import restaurant from '../images/main/restaurant.jpg';
-import FirstLayer from '../Common/FirstLayer';
+import FirstLayerEn from '../Common/FirstLayerEn';
 import MenusLayer from './MenusLayer';
 import LaCarteLayer from './LaCarteLayer';
 
@@ -21,16 +21,16 @@ const styles = {
 	}
 }
 
-class RestaurantPage extends Component {
+class RestaurantPageEn extends Component {
   render() {
 		const { classes } = this.props;
     return(
 			<div className={classes.root}>
 				<div className={classes.firstLayer}>
-					<FirstLayer
+					<FirstLayerEn
 						className={classes.elt}
 						hotel={false}
-						link='/hotel'
+						link='/hotel/en'
 						image={restaurant}
 					/>
 				</div>
@@ -44,8 +44,8 @@ class RestaurantPage extends Component {
   }
 }
 
-RestaurantPage.propTypes = {
+RestaurantPageEn.propTypes = {
 	classes: PropTypes.object.isRequired,
 }
 
-export default withStyles(styles)(RestaurantPage);
+export default withStyles(styles)(RestaurantPageEn);

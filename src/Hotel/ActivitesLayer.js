@@ -24,6 +24,7 @@ const styles = {
   },
   gridList: {
     padding: '20px',
+    maxWidth: '1040px'
   },
   carteElt: {
     height: '300px',

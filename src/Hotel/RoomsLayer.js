@@ -19,10 +19,17 @@ import PropTypes from 'prop-types';
 
 const styles = {
   root: {
-    backgroundColor: '#FFCA28',
+    backgroundColor: '#eceff1',
     padding: '30px',
     textAlign: 'center',
   },
+  flex: {
+    display: 'flex',
+    justifyContent: 'center'
+  },
+  rooms: {
+    maxWidth: '1000px'
+  }
 }
 
 class RoomsLayer extends Component {
@@ -31,13 +38,15 @@ class RoomsLayer extends Component {
     return(
       <div className={classes.root}>
         <Typography variant='h2' gutterBottom>Nos chambres</Typography>
-        <Grid className={classes.rooms} container>
-          {listRooms.map(it =>
-            <Grid item xs={12} sm={6} key={it.content.name}>
-             <Room content={it.content} imgs={it.imgs} />
-            </Grid> 
-            )}
-        </Grid>
+        <div className={classes.flex}>
+          <Grid className={classes.rooms} container>
+            {listRooms.map(it =>
+              <Grid item xs={12} sm={6} key={it.content.name}>
+              <Room content={it.content} imgs={it.imgs} />
+              </Grid> 
+              )}
+          </Grid>
+        </div>
       </div>
     );
   }

@@ -135,7 +135,7 @@ const styles = {
 	},
 }
 
-class FirstLayer extends Component {
+class FirstLayerEn extends Component {
 	state = {
     open: false,
   }
@@ -154,9 +154,9 @@ class FirstLayer extends Component {
     	<div className={classes.hundred}>
 				<div className={classes.root} style={{backgroundImage:`url(${image})`}}>
 					<div className={classes.contactElt}>
-						<Link to='/' style={{textDecoration: 'none'}}>
+						{/* <Link to='/' style={{textDecoration: 'none'}}>
 							<img className={classes.aux_tauzins} src='' alt='logo' />
-						</Link>
+						</Link> */}
 						{isBrowser && (
 							<Button className={classes.contactBrowser} color='secondary' href='#contact'>
 								Nous contacter
@@ -293,11 +293,11 @@ class FirstLayer extends Component {
   }
 }
 
-FirstLayer.propTypes = {
+FirstLayerEn.propTypes = {
   classes: PropTypes.object.isRequired,
 	hotel: PropTypes.bool.isRequired,
 	link: PropTypes.string.isRequired,
 	image: PropTypes.string.isRequired,
 }
 
-export default withStyles(styles)(FirstLayer);
+export default withStyles(styles)(FirstLayerEn);

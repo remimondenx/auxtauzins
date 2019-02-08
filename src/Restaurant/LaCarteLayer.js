@@ -22,13 +22,22 @@ const styles = {
   },
   gridList: {
     padding: '20px',
+    maxWidth: '1000px'
   },
   carteElt: {
     height: '300px',
     padding: '20px',
   },
+  flex: {
+    width: '100%',
+    height: '100%',
+    display: 'flex',
+    justifyContent: 'center',
+  },
   backgroundImage: {
     height: '100%',
+    width: '100%',
+    maxWidth: '400px',
     backgroundSize: 'cover',
 		backgroundPosition: 'center',
     overflow: 'hidden',
@@ -60,8 +69,8 @@ const styles = {
     alignItems: 'center',
     overflow: 'auto',
   },
-  food: {
-    textAlign: 'left'
+  table: {
+    width: '100%',
   },
   titleMenu: {
     padding: '10px',
@@ -75,9 +84,17 @@ const styles = {
     fontWeight: 'normal',
     fontSize: '0.9em',
   },
+  foodContainer: {
+    display: 'flex'
+  },
+  food: {
+    textAlign: 'left',
+  },
   description: {
+    paddingLeft: '10px',
     fontSize: '0.7em',
-    textAlign: 'left'
+    lineHeight: '2em',
+    textAlign: 'left',
   },
   price: {
     fontFamily:'Nunito',
@@ -115,51 +132,53 @@ class LaCarteLayer extends Component {
               key={it.id}
               onClick={() => this.handleEvent(it.id)}
               item xs={12} sm={6}>
-              <div className={classes.backgroundImage} style={{backgroundImage:`url(${it.img})`}}>
-                {!(this.state.open===it.id) && 
-                  <div className={classes.darkBand}>
-                    <Typography className={classes.titleCarteElt} color='secondary'>{it.title}</Typography>
-                  </div>
-                }
-                {this.state.open===it.id &&
-                  <div className={classes.darkImage}>
-                    {(it.titleDescription && (
-                      <div>
-                        <Typography className={classes.titleMenu} variant='h5' color='primary'>
+              <div className={classes.flex}>
+                <div className={classes.backgroundImage} style={{backgroundImage:`url(${it.img})`}}>
+                  {!(this.state.open===it.id) && 
+                    <div className={classes.darkBand}>
+                      <Typography className={classes.titleCarteElt} color='secondary'>{it.title}</Typography>
+                    </div>
+                  }
+                  {this.state.open===it.id &&
+                    <div className={classes.darkImage}>
+                      {(it.titleDescription && (
+                        <div>
+                          <Typography className={classes.titleMenu} variant='h5' color='secondary'>
+                            {it.title}
+                          </Typography>
+                          <Typography className={classes.titleDescription} variant='h5' color='secondary' gutterBottom>
+                            {it.titleDescription}
+                          </Typography>
+                        </div>
+                      )) || (
+                        <Typography className={classes.titleMenu} variant='h5' color='secondary' gutterBottom>
                           {it.title}
                         </Typography>
-                        <Typography className={classes.titleDescription} variant='h5' color='secondary' gutterBottom>
-                          {it.titleDescription}
-                        </Typography>
-                      </div>
-                    )) || (
-                      <Typography className={classes.titleMenu} variant='h5' color='primary' gutterBottom>
-                        {it.title}
-                      </Typography>
-                    )}
-                    <table>
-                      {it.content.map(course =>
-                        (course && (
-                          <tr>
-                            <th>
-                              <Typography className={classes.food} color='secondary'>{course.food}</Typography>
-                              {course.description && 
-                                <Typography className={classes.description} color='secondary'>{course.description}</Typography>
-                              }
-                            </th>
-                            <th>
-                              <div className={classes.price}>
-                                {course.price}€
-                              </div>
-                            </th>
-                          </tr>
-                        )) || (
-                          <div className={classes.separator}>~</div>
-                        )
                       )}
-                    </table>
-                  </div>
-                }
+                      <table className={classes.table}>
+                        {it.content.map(course =>
+                          (course && (
+                            <tr>
+                              <th className={classes.foodContainer}>
+                                <Typography className={classes.food} color='secondary'>{course.food}</Typography>
+                                {course.description && 
+                                  <Typography className={classes.description} color='secondary'>{course.description}</Typography>
+                                }
+                              </th>
+                              <th>
+                                <div className={classes.price}>
+                                  {course.price}€
+                                </div>
+                              </th>
+                            </tr>
+                          )) || (
+                            <div className={classes.separator}>~</div>
+                          )
+                        )}
+                      </table>
+                    </div>
+                  }
+                </div>
               </div>
             </Grid>     
           )}
