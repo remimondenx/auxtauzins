@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import united_kingdom from '../images/logos/united_kingdom.png';
-import aux_tauzins from '../images/logos/aux_tauzins.svg';
+import aux_tauzins from '../images/logos/aux_tauzins_black.png';
 import facebook from '../images/logos/facebook.png';
 import instagram from '../images/logos/instagram.png';
 import tripadvisor from '../images/logos/tripadvisor.png';
@@ -73,7 +73,7 @@ const styles = {
 		position: 'absolute',
 		top: '10px',
 		left: '10px',
-		height: '400px',
+		height: '100px',
 	},
 	link: {
 		textDecoration: 'none',
@@ -161,9 +161,9 @@ class FirstLayer extends Component {
     	<div className={classes.hundred}>
 				<div className={classes.root} style={{backgroundImage:`url(${image})`}}>
 					<div className={classes.contactElt}>
-						{/* <Link to='/' style={{textDecoration: 'none'}}>
-							<img className={classes.aux_tauzins} src='' alt='logo' />
-						</Link> */}
+						<Link to='/' style={{textDecoration: 'none'}}>
+							<img className={classes.aux_tauzins} src={aux_tauzins} alt='logo' />
+						</Link>
 						{isBrowser && (
 							<Button className={classes.contactBrowser} color='secondary' href='#contact'>
 								Nous contacter

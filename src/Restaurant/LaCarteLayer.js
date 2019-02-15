@@ -80,12 +80,13 @@ const styles = {
   },
   titleDescription: {
     textAlign: 'left',
-    fontStyle: 'normal',
+    fontStyle: 'italic',
     fontWeight: 'normal',
     fontSize: '0.9em',
   },
   foodContainer: {
-    display: 'flex'
+    display: 'flex',
+    flexDirection: 'column'
   },
   food: {
     textAlign: 'left',
