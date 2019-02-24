@@ -24,6 +24,7 @@ const styles = {
     overflow: 'hidden',
   },
   imgElt: {
+    height: '175px',
     width: '100%',
     borderRadius: '20px 20px 0px 0px',
     backgroundSize: 'cover',
@@ -76,7 +77,7 @@ class Room extends Component {
             index={index} 
             onChangeIndex={this.handleChangeIndex}>
             {imgs.map(it => (
-              <img src={it.imgPath} style={(Object.assign({}, styles.imgElt, isMobile ? {height: '175px'} : {height:'260px'}))} alt={it.imgLabel} />
+              <div style={(Object.assign({}, {backgroundImage:`url(${it.imgPath})`}, styles.imgElt))} />
               ))}
           </SwipeableViews>
           <Pagination className={classes.pagination} dots={imgs.length} index={index} onChangeIndex={this.handleChangeIndex} />

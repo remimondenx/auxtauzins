@@ -83,6 +83,7 @@ const styles = {
     fontStyle: 'italic',
     fontWeight: 'normal',
     fontSize: '0.9em',
+    width: '100%',
   },
   foodContainer: {
     display: 'flex',
@@ -143,7 +144,7 @@ class LaCarteLayer extends Component {
                   {this.state.open===it.id &&
                     <div className={classes.darkImage}>
                       {(it.titleDescription && (
-                        <div>
+                        <div style={{width: '100%'}}>
                           <Typography className={classes.titleMenu} variant='h5' color='secondary'>
                             {it.title}
                           </Typography>
