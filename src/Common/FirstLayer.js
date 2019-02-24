@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
 import united_kingdom from '../images/logos/united_kingdom.png';
-import aux_tauzins from '../images/logos/aux_tauzins_black.png';
+import aux_tauzins_white from '../images/logos/aux_tauzins_white.png';
+import aux_tauzins_black from '../images/logos/aux_tauzins_black.png';
 import facebook from '../images/logos/facebook.png';
 import instagram from '../images/logos/instagram.png';
 import tripadvisor from '../images/logos/tripadvisor.png';
@@ -162,19 +163,31 @@ class FirstLayer extends Component {
 				<div className={classes.root} style={{backgroundImage:`url(${image})`}}>
 					<div className={classes.contactElt}>
 						<Link to='/' style={{textDecoration: 'none'}}>
-							<img className={classes.aux_tauzins} src={aux_tauzins} alt='logo' />
+							{hotel ? <img className={classes.aux_tauzins} src={aux_tauzins_white} alt='logo' /> 
+							: <img className={classes.aux_tauzins} src={aux_tauzins_black} alt='logo' />}
 						</Link>
 						{isBrowser && (
 							<Button className={classes.contactBrowser} color='secondary' href='#contact'>
 								Nous contacter
 							</Button>
 						)}
-						<Link to='/en' className={classes.englishButton} disableRipple>
-							<img 
-								src={united_kingdom}
-								alt='English version'
-								style={{height:'35px', padding:0}}/>
-						</Link>
+						{hotel ? 
+							(<Link to='/hotel/en' className={classes.englishButton} disableRipple>
+								<img 
+									src={united_kingdom}
+									alt='English version'
+									style={{height:'35px', padding:0}}
+								/>
+							</Link>) 
+						: 
+							(<Link to='/en' className={classes.englishButton} disableRipple>
+								<img 
+									src={united_kingdom}
+									alt='English version'
+									style={{height:'35px', padding:0}}
+								/>
+							</Link>)
+						}
 					</div>
 					<div className={classes.titleElt}>
 						<div className={classes.switchContainer}>

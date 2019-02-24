@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 
 import restaurant from '../images/main/restaurant.jpg';
 import FirstLayerEn from '../Common/FirstLayerEn';
-import MenusLayer from './MenusLayer';
-import LaCarteLayer from './LaCarteLayer';
+import MenusLayerEn from './MenusLayerEn';
+import LaCarteLayerEn from './LaCarteLayerEn';
 
 import { withStyles } from '@material-ui/core';
 import PropTypes from 'prop-types';
-import FooterRestaurant from './FooterRestaurant';
+import FooterRestaurantEn from './FooterRestaurantEn';
 
 
 const styles = {
@@ -35,9 +35,9 @@ class RestaurantPageEn extends Component {
 					/>
 				</div>
 				<div className={classes.following} >
-					<MenusLayer />
-					<LaCarteLayer />
-					<FooterRestaurant />
+					<MenusLayerEn />
+					<LaCarteLayerEn />
+					<FooterRestaurantEn />
 				</div>
 			</div>
     );

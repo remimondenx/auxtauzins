@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 import image from '../images/main/piscine.jpg';
 import FirstLayerEn from '../Common/FirstLayerEn';
-import RoomsLayer from './RoomsLayer';
-import FooterHotel from './FooterHotel';
-import ActivitesLayer from './ActivitesLayer';
+import RoomsLayerEn from './RoomsLayerEn';
+import FooterHotelEn from './FooterHotelEn';
+import ActivitesLayerEn from './ActivitesLayerEn';
 
 class HotelPageEn extends Component {
   render() {
@@ -15,9 +15,9 @@ class HotelPageEn extends Component {
           link='/en'
           image={image}
         />
-        <RoomsLayer />
-        <ActivitesLayer />
-        <FooterHotel />
+        <RoomsLayerEn />
+        <ActivitesLayerEn />
+        <FooterHotelEn />
       </div>
 
     );
