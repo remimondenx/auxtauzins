@@ -222,6 +222,7 @@ const entrees = {
 const poissons = {
   id: 2,
   title: 'Our fishes',
+  titleDescription: 'from the Atlantic ocean',
   img: img_poissons,
   content: [
     {food: 'Monkfish doughnuts and its vegetables', price: 25},

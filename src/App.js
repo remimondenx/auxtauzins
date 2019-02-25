@@ -8,9 +8,11 @@ import HotelPageEn from './Hotel/HotelPageEn';
 import RestaurantPage from './Restaurant/RestaurantPage';
 import RestaurantPageEn from './Restaurant/RestaurantPageEn';
 
-import { withStyles } from '@material-ui/core'
+import { isBrowser } from 'react-device-detect'
+import { withStyles} from '@material-ui/core'
 import { injectGlobal } from 'styled-components';
 import { MuiThemeProvider } from '@material-ui/core/styles';
+import ScrollUpButton from "react-scroll-up-button";
 
 
 injectGlobal`
@@ -30,6 +32,11 @@ const styles = {
   },
 }
 
+const styleScrollUpButton = {
+  width: '40px',
+  height: '40px',
+}
+
 class App extends Component {
   render() {
     const { classes } = this.props;
@@ -40,21 +47,25 @@ class App extends Component {
             <Route
               path="/en"
               component={RestaurantPageEn}
-            />
+              />
             <Route
               path="/hotel/en"
               component={HotelPageEn}
-            />
+              />
             <Route
               path="/hotel"
               component={HotelPage}
-            />
+              />
             <Route
               path="/"
               component={RestaurantPage}
-            />
+              />
           </Switch>
         </MuiThemeProvider>
+        {isBrowser ? 
+          (<ScrollUpButton style={styleScrollUpButton} ShowAtPosition={1800} />) : 
+          (<ScrollUpButton style={styleScrollUpButton} ShowAtPosition={3400} />) 
+        }
       </div>
     );
   }

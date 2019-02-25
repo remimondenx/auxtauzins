@@ -28,7 +28,6 @@ const styles = {
     width: '100%',
     borderRadius: '20px 20px 0px 0px',
     backgroundSize: 'cover',
-    backgroundPosition: 'center',
     overflow: 'hidden',
   },
   text: {
@@ -77,8 +76,8 @@ class Room extends Component {
             index={index} 
             onChangeIndex={this.handleChangeIndex}>
             {imgs.map(it => (
-              <div style={(Object.assign({}, {backgroundImage:`url(${it.imgPath})`},styles.imgElt))} />
-              ))}
+              <img src={it.imgPath} style={(Object.assign({}, styles.imgElt, isMobile ? {height: '175px'} : {height:'260px'}))} alt={it.imgLabel} />
+            ))}
           </SwipeableViews>
           <Pagination className={classes.pagination} dots={imgs.length} index={index} onChangeIndex={this.handleChangeIndex} />
         </div>

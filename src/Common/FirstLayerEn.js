@@ -106,7 +106,7 @@ const styles = {
 	colorSwitchBase: {
 		color: '#ffffff',
     '&$colorChecked': {
-      color: '#2929a3',
+      color: '#003680',
       '& + $colorBar': {
         backgroundColor: 'white',
       },
@@ -117,7 +117,7 @@ const styles = {
 	reserverHotel: {
 		marginTop: '10px',
 		borderRadius: '10px',
-		backgroundColor: '#2929a3',
+		backgroundColor: '#003680',
 		fontStyle: 'normal'
 	},
 	reserverRestaurant: {

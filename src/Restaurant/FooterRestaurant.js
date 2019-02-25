@@ -53,7 +53,11 @@ const styles = {
 	imgLogis: {
     height: '60px',
     paddingTop: '20px',
-	},
+  },
+  copyright: {
+    marginLeft: '10px',
+    fontSize: '0.8em'
+  }
 }
 
 class FooterRestaurant extends Component {
@@ -155,6 +159,7 @@ class FooterRestaurant extends Component {
 					</div>
 					</MobileView>
         </div>
+        <Typography className={classes.copyright} variant='body'>©Rémi Mondenx</Typography>
 			</div>
     );
   }

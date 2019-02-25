@@ -5,3 +5,7 @@
 #root {
     height: 100%;
 }
+
+.ScrollUpButton__Container {
+    background-color: blue;
+}
