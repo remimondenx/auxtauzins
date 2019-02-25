@@ -12,7 +12,7 @@ const styles = {
     outline: 'none'
   },
   dot: {
-    backgroundColor: '#e4e6e7',
+    backgroundColor: '#9494b8',
     height: 12,
     width: 12,
     borderRadius: 6,
@@ -20,7 +20,7 @@ const styles = {
     margin: 3,
   },
   active: {
-    backgroundColor: '#319fd6',
+    backgroundColor: '#ffffff',
   },
 };
 

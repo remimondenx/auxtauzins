@@ -76,6 +76,12 @@ const styles = {
 		left: '10px',
 		height: '100px',
 	},
+	aux_tauzins_mobile: {
+		position: 'absolute',
+		top: '10px',
+		left: '10px',
+		height: '68px',
+	},
 	link: {
 		textDecoration: 'none',
 	},
@@ -83,14 +89,14 @@ const styles = {
 		textDecoration: 'underline',
 		fontSize: '2.2em',
 		textShadow: '4px 2px 4px black',
-		fontWeight: '400'
+		fontWeight: '300'
 	},
 	cliquable: {
 		borderBottom: '2px solid currentColor',
  	 	display: 'inline-block',
 		lineHeight: 0.85,
 		textShadow: '4px 2px 4px black',
-		fontWeight: '400'
+		fontWeight: '300'
 	},
 	switchContainer: {
 		display: 'flex',
@@ -98,9 +104,9 @@ const styles = {
 		alignItems: 'center',
 	},
 	colorSwitchBase: {
-		color: '#2196f3',
+		color: '#ffffff',
     '&$colorChecked': {
-      color: '#ffeb3b',
+      color: '#2929a3',
       '& + $colorBar': {
         backgroundColor: 'white',
       },
@@ -111,7 +117,7 @@ const styles = {
 	reserverHotel: {
 		marginTop: '10px',
 		borderRadius: '10px',
-		backgroundColor: '#ffeb3b',
+		backgroundColor: '#2929a3',
 		fontStyle: 'normal'
 	},
 	reserverRestaurant: {
@@ -163,8 +169,10 @@ class FirstLayer extends Component {
 				<div className={classes.root} style={{backgroundImage:`url(${image})`}}>
 					<div className={classes.contactElt}>
 					<Link to='/en' style={{textDecoration: 'none'}}>
-							{hotel ? <img className={classes.aux_tauzins} src={aux_tauzins_white} alt='logo' /> 
-							: <img className={classes.aux_tauzins} src={aux_tauzins_black} alt='logo' />}
+							{isBrowser ? (hotel ? <img className={classes.aux_tauzins} src={aux_tauzins_white} alt='logo' /> 
+							: <img className={classes.aux_tauzins} src={aux_tauzins_black} alt='logo' />)
+							: (hotel ? <img className={classes.aux_tauzins_mobile} src={aux_tauzins_white} alt='logo' /> 
+							: <img className={classes.aux_tauzins_mobile} src={aux_tauzins_black} alt='logo' />)}
 						</Link>
 						{isBrowser && (
 							<Button className={classes.contactBrowser} color='secondary' href='#contact'>

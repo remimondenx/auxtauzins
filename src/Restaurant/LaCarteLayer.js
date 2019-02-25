@@ -222,7 +222,7 @@ const entrees = {
 const poissons = {
   id: 2,
   title: 'Nos poissons',
-  titleDescription: 'du port',
+  titleDescription: 'provenant du port de Capbreton',
     img: img_poissons,
   content: [
     {food: 'Beignets de lotte aux petits légumes', price: 25},
