@@ -255,6 +255,7 @@ class FirstLayer extends Component {
 							<Button 
 								className={classes.reserverHotel}
 								target='_blank'
+								rel="noopener noreferrer"
 								href='https://www.logishotels.com/fr/tarifs-et-disponibilites-chambre?id=1516'
 								color='secondary'
 							>
@@ -276,14 +277,14 @@ class FirstLayer extends Component {
 					)}
 					<BrowserView>
 						<div className={classes.socialMedia}>
-							<a href='https://www.facebook.com/auxtauzins' target='_blank'>
+							<a href='https://www.facebook.com/auxtauzins' target='_blank' rel="noopener noreferrer">
 								<img style={{height:'40px', paddingRight:'10px'}} src={facebook} alt='Logo Facebook' />
 							</a>
-							<a href='https://www.instagram.com/auxtauzins/' target='_blank'>
+							<a href='https://www.instagram.com/auxtauzins/' target='_blank' rel="noopener noreferrer">
 								<img style={{height:'40px', paddingRight:'10px'}} src={instagram} alt='Logo Instagram' />
 							</a>
 							{(hotel && (
-								<a href='https://www.booking.com/hotel/fr/aux-tauzins-montfort.fr.html' target='_blank'>
+								<a href='https://www.booking.com/hotel/fr/aux-tauzins-montfort.fr.html' target='_blank' rel="noopener noreferrer">
 									<img style={{height:'40px', paddingRight: '10px'}} src={booking} alt='Logo Booking' />
 								</a>
 							)) || (
@@ -310,7 +311,7 @@ class FirstLayer extends Component {
 					</div>
 					<div className={classes.logis}>
 						<BrowserView>
-							<a href='https://www.logishotels.com/fr' target='_blank'>
+							<a href='https://www.logishotels.com/fr' target='_blank' rel="noopener noreferrer">
 								<img className={classes.imgLogis} src={logis} alt='logis hotel' />
 							</a>
 						</BrowserView>

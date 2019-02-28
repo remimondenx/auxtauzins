@@ -77,7 +77,7 @@ class LaCarteLayer extends Component {
               key={it.id}
               item xs={12} sm={6}>
               {(it.link && (
-                <a href={it.link} target='_blank' alt={it.title}>
+                <a href={it.link} target='_blank' rel="noopener noreferrer" alt={it.title}>
                   <div className={classes.backgroundImage} style={{backgroundImage:`url(${it.img})`}}>
                     <div className={classes.darkBand}>
                       <Typography className={classes.titleCarteEltUnderlined} color='secondary'>{it.title}</Typography>

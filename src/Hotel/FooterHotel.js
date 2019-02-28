@@ -130,20 +130,20 @@ class FooterHotel extends Component {
               <Button className={classes.button} href="mailto:auxtauzins@wanadoo.fr">
                 <img className={classes.picto} src={mail_img} alt='mail' />auxtauzins@wanadoo.fr
               </Button>
-              <Button className={classes.button} target='_blank' href="https://www.google.com/maps/place/hotel+restaurant+AUX+TAUZINS/@43.709234,-0.8244906,18z/data=!3m1!4b1!4m5!3m4!1s0xd569bf8e0c594bf:0xdf3569df98d76aa8!8m2!3d43.709234!4d-0.8233963">
+              <Button className={classes.button} target='_blank' rel="noopener noreferrer" href="https://www.google.com/maps/place/hotel+restaurant+AUX+TAUZINS/@43.709234,-0.8244906,18z/data=!3m1!4b1!4m5!3m4!1s0xd569bf8e0c594bf:0xdf3569df98d76aa8!8m2!3d43.709234!4d-0.8233963">
                 <img className={classes.picto} src={position_img} alt='position' />547 route Raphael Lonné 4038 Montfort-en-Chalosse
               </Button>
             </Grid>
           </Grid>
           <MobileView>
               <div className={classes.socialMedia}>
-                <a href='https://www.facebook.com/auxtauzins' target='_blank'>
+                <a href='https://www.facebook.com/auxtauzins' target='_blank' rel="noopener noreferrer">
                   <img style={{height:'40px', paddingRight:'10px'}} src={facebook} alt='Logo Facebook' />
                 </a>
-                <a href='https://www.instagram.com/auxtauzins/' target='_blank'>
+                <a href='https://www.instagram.com/auxtauzins/' target='_blank' rel="noopener noreferrer">
                   <img style={{height:'40px', paddingRight:'10px'}} src={instagram} alt='Logo Instagram' />
                 </a>
-                <a href='https://www.booking.com/hotel/fr/aux-tauzins-montfort.fr.html' target='_blank'>
+                <a href='https://www.booking.com/hotel/fr/aux-tauzins-montfort.fr.html' target='_blank' rel="noopener noreferrer">
                   <img style={{height:'40px', paddingRight: '10px'}} src={booking} alt='Logo Booking' />
                 </a>
                 <Tooltip title="Visionnez la vidéo de l'établissement">
@@ -160,7 +160,7 @@ class FooterHotel extends Component {
                 </Dialog>
               </div>
               <div>
-                <a href='https://www.logishotels.com/fr' target='_blank'>
+                <a href='https://www.logishotels.com/fr' target='_blank' rel="noopener noreferrer">
                   <img className={classes.imgLogis} src={logis} alt='logis hotel' />
                 </a>
             </div>
