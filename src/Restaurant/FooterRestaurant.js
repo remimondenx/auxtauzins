@@ -26,7 +26,7 @@ const styles = {
     fontSize: '1.1em',
     color:'#01579b'
   },
-  content: {
+  margin: {
     textAlign: 'justify',
     margin: '10px',
   },
@@ -85,15 +85,15 @@ class FooterRestaurant extends Component {
               gutterBottom>
               A propos
             </Typography>
-            <Typography className={classes.content}>
+            <div className={classes.margin}>
               <ul style={{paddingLeft:0}}>
-                <li>Le restaurant vous accueille de 12h00 à 13h45 ainsi que de 19h30 à 21h00</li>
-                <li>Le restaurant est fermé le <strong>vendredi soir</strong> (sauf réservation groupe), le <strong>dimanche soir</strong> et le <strong>lundi toute la journée</strong></li>
-                <li>En saison, <strong>du 14 juillet au 20 août</strong>, le restaurant est ouvert tous les jours (excepté le lundi midi)</li>
-                <li>Le restaurant est <strong>entièrement accessible aux personnes à mobilité réduite</strong></li>
-                <li>Chèque vacances et tickets restaurant acceptés</li>
+                <li><Typography>Le restaurant vous accueille de 12h00 à 13h45 ainsi que de 19h30 à 21h00</Typography></li>
+                <li><Typography>Le restaurant est fermé le <strong>vendredi soir</strong> (sauf réservation groupe), le <strong>dimanche soir</strong> et le <strong>lundi toute la journée</strong></Typography></li>
+                <li><Typography>En saison, <strong>du 14 juillet au 20 août</strong>, le restaurant est ouvert tous les jours (excepté le lundi midi)</Typography></li>
+                <li><Typography>Le restaurant est <strong>entièrement accessible aux personnes à mobilité réduite</strong></Typography></li>
+                <li><Typography>Chèque vacances et tickets restaurant acceptés</Typography></li>
               </ul>
-            </Typography>
+            </div>
           </Grid>
 
           <Grid item xs={12} sm={6} md={4}>
@@ -102,13 +102,13 @@ class FooterRestaurant extends Component {
               gutterBottom>
               Nos services
             </Typography>
-            <Typography className={classes.content}>
+            <div className={classes.margin}>
               <ul style={{paddingLeft:0}}>
-                <li><strong>Wifi</strong> gratuit disponible</li>
-                <li>Possibilité de <strong>privatiser</strong> salle de réunion ou salon pour tout séminaire</li>
-                <li>Organisation de baptême, communion, anniversaire, mariage</li>
+                <li><Typography><strong>Wifi</strong> gratuit disponible</Typography></li>
+                <li><Typography>Possibilité de <strong>privatiser</strong> salle de réunion ou salon pour tout séminaire</Typography></li>
+                <li><Typography>Organisation de baptême, communion, anniversaire, mariage</Typography></li>
               </ul>
-            </Typography>
+            </div>
           </Grid>
 
           <Grid className={classes.contact} id='contact' item xs={12} sm={12} md={4}>
@@ -159,7 +159,7 @@ class FooterRestaurant extends Component {
 					</div>
 					</MobileView>
         </div>
-        <Typography className={classes.copyright} variant='body'>©Rémi Mondenx</Typography>
+        <Typography className={classes.copyright} variant='body1'>©Rémi Mondenx</Typography>
 			</div>
     );
   }

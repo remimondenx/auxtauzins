@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 
-import image from '../images/main/piscine.jpg';
+import piscine from '../images/main/piscine.jpg';
+import piscine_mobile from '../images/main/piscine_mobile.jpg';
 import FirstLayer from '../Common/FirstLayer';
 import RoomsLayer from './RoomsLayer';
 import FooterHotel from './FooterHotel';
 import ActivitesLayer from './ActivitesLayer';
+import { isMobileOnly } from 'react-device-detect';
 
 class HotelPage extends Component {
   render() {
@@ -13,7 +15,7 @@ class HotelPage extends Component {
         <FirstLayer
           hotel={true} 
           link='/'
-          image={image}
+          image={isMobileOnly ? piscine_mobile : piscine}
         />
         <RoomsLayer />
         <ActivitesLayer />

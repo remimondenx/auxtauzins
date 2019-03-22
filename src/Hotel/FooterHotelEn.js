@@ -28,7 +28,7 @@ const styles = {
     fontSize: '1.1em',
     color: '#01579b'
   },
-  content: {
+  margin: {
     textAlign: 'justify',
     margin: '10px',
   },
@@ -87,17 +87,17 @@ class FooterHotel extends Component {
                 gutterBottom>
                 About the hotel
               </Typography>
-              <Typography className={classes.content}>
+              <div className={classes.margin}>
                 <ul style={{paddingLeft:0}}>
-                  <li>The hotel is <strong>fully accessible to persons with disabilities</strong></li>
-                  <li>Breakfast available for an extra cost of 9,50€</li>
-                  <li>We accept pets for an extra cost of 8€</li>
-                  <li><strong>Half-board</strong> 39€</li>
-                  <li>Additional bed 20€</li>
-                  <li>The hotel is closed on <strong>Sundays evening</strong> and on <strong>Mondays</strong></li>
-                  <li><strong>From July 14 to August 20</strong>, the hotel is open every day</li>
+                  <li><Typography>The hotel is <strong>fully accessible to persons with disabilities</strong></Typography></li>
+                  <li><Typography>Breakfast available for an extra cost of 9,50€</Typography></li>
+                  <li><Typography>We accept pets for an extra cost of 8€</Typography></li>
+                  <li><Typography><strong>Half-board</strong> 39€</Typography></li>
+                  <li><Typography>Additional bed 20€</Typography></li>
+                  <li><Typography>The hotel is closed on <strong>Sundays evening</strong> and on <strong>Mondays</strong></Typography></li>
+                  <li><Typography><strong>From July 14 to August 20</strong>, the hotel is open every day</Typography></li>
                 </ul>
-              </Typography>
+              </div>
             </Grid>
             
             <Grid item xs={12} sm={6} md={4}>
@@ -106,16 +106,16 @@ class FooterHotel extends Component {
                 gutterBottom>
                 Our services
               </Typography>
-              <Typography className={classes.content}>
+              <div className={classes.margin}>
                 <ul style={{paddingLeft:0}}>
-                  <li>Free <strong>Wifi</strong> connection in the hotel</li>
-                  <li><strong>Air conditioned</strong> | Flat screen TV | Chamber hairdryer</li>
-                  <li><strong>Swimming pool</strong> | Minigolf</li>
-                  <li>Babyfoot | Ping Pong | Billiard</li>
-                  <li>Park</li>
-                  <li><strong>Parking</strong> with supervision | Cycling garage</li>
+                  <li><Typography>Free <strong>Wifi</strong> connection in the hotel</Typography></li>
+                  <li><Typography><strong>Air conditioned</strong> | Flat screen TV | Chamber hairdryer</Typography></li>
+                  <li><Typography><strong>Swimming pool</strong> | Minigolf</Typography></li>
+                  <li><Typography>Babyfoot | Ping Pong | Billiard</Typography></li>
+                  <li><Typography>Park</Typography></li>
+                  <li><Typography><strong>Parking</strong> with supervision | Cycling garage</Typography></li>
                 </ul>
-              </Typography>
+              </div>
             </Grid>
 
             <Grid className={classes.contact} id='contact' item xs={12} sm={12} md={4}>
@@ -166,7 +166,7 @@ class FooterHotel extends Component {
             </div>
             </MobileView>
         </div>
-        <Typography className={classes.copyright} variant='body'>©Rémi Mondenx</Typography>
+        <Typography className={classes.copyright} variant='body1'>©Rémi Mondenx</Typography>
       </div>
     );
   }

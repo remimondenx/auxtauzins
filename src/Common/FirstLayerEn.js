@@ -180,7 +180,7 @@ class FirstLayer extends Component {
 							</Button>
 						)}
 						{hotel ? 
-							(<Link to='/hotel' className={classes.englishButton} disableRipple>
+							(<Link to='/hotel' className={classes.englishButton}>
 								<img 
 									src={france}
 									alt='French version'
@@ -188,7 +188,7 @@ class FirstLayer extends Component {
 								/>
 							</Link>) 
 						: 
-							(<Link to='/' className={classes.englishButton} disableRipple>
+							(<Link to='/' className={classes.englishButton}>
 								<img 
 									src={france}
 									alt='French version'
@@ -267,6 +267,7 @@ class FirstLayer extends Component {
 								className={classes.reserverRestaurant}
 								disabled
 							>
+								<div style={{color:'transparent'}}>Réserver</div>
 							</Button>
 						}
 					</div>
@@ -288,7 +289,7 @@ class FirstLayer extends Component {
 									<img style={{height:'40px', paddingRight: '10px'}} src={booking} alt='Logo Booking' />
 								</a>
 							)) || (
-								<a href='https://www.tripadvisor.fr/Restaurant_Review-g2068609-d3978484-Reviews-Aux_Tauzins-Montfort_en_Chalosse_Landes_Nouvelle_Aquitaine.html' target='_blank'>
+								<a href='https://www.tripadvisor.fr/Restaurant_Review-g2068609-d3978484-Reviews-Aux_Tauzins-Montfort_en_Chalosse_Landes_Nouvelle_Aquitaine.html' target='_blank' rel="noopener noreferrer">
 									<img style={{height:'40px', paddingRight: '10px'}} src={tripadvisor} alt='Logo Tripadvisor' />
 								</a>
 							)}

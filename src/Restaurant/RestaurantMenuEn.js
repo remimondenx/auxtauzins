@@ -91,8 +91,11 @@ class RestaurantMenu extends Component {
             index={index} 
             onChangeIndex={this.handleChangeIndex}>
             {imgs.map(it => (
-              <div style={(Object.assign({}, {backgroundImage:`url(${it.imgPath})`},styles.imgElt))} />
-              ))}
+              <div
+                style={(Object.assign({}, {backgroundImage:`url(${it.imgPath})`},styles.imgElt))}
+                key={it.imgPath}
+              />
+            ))}
           </SwipeableViews>
           <Pagination className={classes.pagination} dots={imgs.length} index={index} onChangeIndex={this.handleChangeIndex} />
         </div>

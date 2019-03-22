@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 
 import restaurant from '../images/main/restaurant.jpg';
+import restaurant_mobile from '../images/main/restaurant_mobile.jpg';
 import FirstLayerEn from '../Common/FirstLayerEn';
 import MenusLayerEn from './MenusLayerEn';
 import LaCarteLayerEn from './LaCarteLayerEn';
 
+import { isMobileOnly } from 'react-device-detect';
 import { withStyles } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import FooterRestaurantEn from './FooterRestaurantEn';
@@ -31,7 +33,7 @@ class RestaurantPageEn extends Component {
 						className={classes.elt}
 						hotel={false}
 						link='/hotel/en'
-						image={restaurant}
+						image={isMobileOnly ? restaurant_mobile : restaurant}
 					/>
 				</div>
 				<div className={classes.following} >

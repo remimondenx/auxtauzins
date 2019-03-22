@@ -26,7 +26,7 @@ const styles = {
     fontSize: '1.1em',
     color:'#01579b'
   },
-  content: {
+  margin: {
     textAlign: 'justify',
     margin: '10px',
   },
@@ -85,15 +85,15 @@ class FooterRestaurant extends Component {
               gutterBottom>
               About the restaurant
             </Typography>
-            <Typography className={classes.content}>
+            <div className={classes.margin}>
               <ul style={{paddingLeft:0}}>
-                <li>The restaurant welcomes you from midday to 1:45pm and from 7:30pm to 9pm</li>
-                <li>Restaurant closed on <strong>Fridays</strong> (except group booking), on <strong>Sundays' dinner</strong> and on <strong>Mondays</strong></li>
-                <li>From <strong>July 11 to August 20</strong>, the restaurant is open every day (except Monday lunch)</li>
-                <li>The restaurant is <strong>fully accessible to persons with disabilities</strong></li>
-                <li>Holliday and luncheon vouchers accepted</li>
+                <li><Typography>The restaurant welcomes you from midday to 1:45pm and from 7:30pm to 9pm</Typography></li>
+                <li><Typography>Restaurant closed on <strong>Fridays</strong> (except group booking), on <strong>Sundays' dinner</strong> and on <strong>Mondays</strong></Typography></li>
+                <li><Typography>From <strong>July 11 to August 20</strong>, the restaurant is open every day (except Monday lunch)</Typography></li>
+                <li><Typography>The restaurant is <strong>fully accessible to persons with disabilities</strong></Typography></li>
+                <li><Typography>Holliday and luncheon vouchers accepted</Typography></li>
               </ul>
-            </Typography>
+            </div>
           </Grid>
 
           <Grid item xs={12} sm={6} md={4}>
@@ -102,12 +102,12 @@ class FooterRestaurant extends Component {
               gutterBottom>
               Our services
             </Typography>
-            <Typography className={classes.content}>
+            <div className={classes.margin}>
               <ul style={{paddingLeft:0}}>
-                <li>Free <strong>Wifi</strong> connection in the restaurant</li>
-                <li>You can book the restaurant for birthdays, weddings, workshops…</li>
+                <li><Typography>Free <strong>Wifi</strong> connection in the restaurant</Typography></li>
+                <li><Typography>You can book the restaurant for birthdays, weddings, workshops…</Typography></li>
               </ul>
-            </Typography>
+            </div>
           </Grid>
 
           <Grid className={classes.contact} id='contact' item xs={12} sm={12} md={4}>
@@ -158,7 +158,7 @@ class FooterRestaurant extends Component {
 					</div>
 					</MobileView>
         </div>
-        <Typography className={classes.copyright} variant='body'>©Rémi Mondenx</Typography>
+        <Typography className={classes.copyright} variant='body1'>©Rémi Mondenx</Typography>
 			</div>
     );
   }

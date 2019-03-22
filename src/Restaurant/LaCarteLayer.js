@@ -315,19 +315,3 @@ const desserts = {
 }
 
 const listLaCarte = [entrees, poissons, canard, sauces, viandes, desserts]
-
-
-
-/*
-<GridListTile className={classes.tile} key={it.title}>
-              <img src={it.img} alt={it.title} />
-              <GridListTileBar
-                title={it.title}
-                actionIcon={
-                  <IconButton className={classes.icon}>
-                    <InfoIcon />
-                  </IconButton>
-                }
-              />
-            </GridListTile>
-*/

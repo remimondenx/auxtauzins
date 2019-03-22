@@ -28,7 +28,7 @@ const styles = {
     fontSize: '1.1em',
     color: '#01579b'
   },
-  content: {
+  margin: {
     textAlign: 'justify',
     margin: '10px',
   },
@@ -87,17 +87,17 @@ class FooterHotel extends Component {
                 gutterBottom>
                 A propos
               </Typography>
-              <Typography className={classes.content}>
+              <div className={classes.margin}>
                 <ul style={{paddingLeft:0}}>
-                  <li>L'hôtel est <strong> accessible aux personnes à mobilité réduite</strong></li>
-                  <li>Petit-déjeuner 9,50€</li>
-                  <li>Animal domestique accepté 8€</li>
-                  <li><strong>Demi-pension</strong> 39€</li>
-                  <li>Lit supplémentaire 20€</li>
-                  <li>L'hôtel est fermé le <strong>dimanche soir</strong> et le <strong>lundi toute la journée</strong></li>
-                  <li>En saison, <strong>du 14 juillet au 20 août</strong>, l'hôtel est ouvert tous les jours</li>
+                  <li><Typography>L'hôtel est <strong> accessible aux personnes à mobilité réduite</strong></Typography></li>
+                  <li><Typography>Petit-déjeuner 9,50€</Typography></li>
+                  <li><Typography>Animal domestique accepté 8€</Typography></li>
+                  <li><Typography><strong>Demi-pension</strong> 39€</Typography></li>
+                  <li><Typography>Lit supplémentaire 20€</Typography></li>
+                  <li><Typography>L'hôtel est fermé le <strong>dimanche soir</strong> et le <strong>lundi toute la journée</strong></Typography></li>
+                  <li><Typography>En saison, <strong>du 14 juillet au 20 août</strong>, l'hôtel est ouvert tous les jours</Typography></li>
                 </ul>
-              </Typography>
+              </div>
             </Grid>
             
             <Grid item xs={12} sm={6} md={4}>
@@ -106,16 +106,16 @@ class FooterHotel extends Component {
                 gutterBottom>
                 Nos services
               </Typography>
-              <Typography className={classes.content}>
+              <div className={classes.margin}>
                 <ul style={{paddingLeft:0}}>
-                  <li><strong>Wifi</strong> gratuit disponible</li>
-                  <li>Chambre <strong>climatisée</strong> | TV Ecran plat | Sèche-cheveux</li>
-                  <li><strong>Piscine</strong> | Mini-golf</li>
-                  <li>Babyfoot | Ping Pong | Billard</li>
-                  <li>Parc pour promenade</li>
-                  <li><strong>Parking privé</strong> sous surveillance | Garage à vélo</li>
+                  <li><Typography><strong>Wifi</strong> gratuit disponible</Typography></li>
+                  <li><Typography>Chambre <strong>climatisée</strong> | TV Ecran plat | Sèche-cheveux</Typography></li>
+                  <li><Typography><strong>Piscine</strong> | Mini-golf</Typography></li>
+                  <li><Typography>Babyfoot | Ping Pong | Billard</Typography></li>
+                  <li><Typography>Parc pour promenade</Typography></li>
+                  <li><Typography><strong>Parking privé</strong> sous surveillance | Garage à vélo</Typography></li>
                 </ul>
-              </Typography>
+              </div>
             </Grid>
 
             <Grid className={classes.contact} id='contact' item xs={12} sm={12} md={4}>
@@ -166,7 +166,7 @@ class FooterHotel extends Component {
             </div>
             </MobileView>
         </div>
-        <Typography className={classes.copyright} variant='body'>©Rémi Mondenx</Typography>
+        <Typography className={classes.copyright} variant='body1'>©Rémi Mondenx</Typography>
       </div>
     );
   }

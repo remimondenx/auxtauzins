@@ -77,7 +77,12 @@ class Room extends Component {
             index={index} 
             onChangeIndex={this.handleChangeIndex}>
             {imgs.map(it => (
-              <img src={it.imgPath} style={(Object.assign({}, styles.imgElt, isMobile ? {height: '175px'} : {height:'260px'}))} alt={it.imgLabel} />
+              <img
+                src={it.imgPath}
+                style={(Object.assign({}, styles.imgElt, isMobile ? {height: '175px'} : {height:'260px'}))}
+                alt={it.imgLabel}
+                key={it.imgPath}
+              />
             ))}
           </SwipeableViews>
           <Pagination className={classes.pagination} dots={imgs.length} index={index} onChangeIndex={this.handleChangeIndex} />
@@ -99,18 +104,34 @@ class Room extends Component {
             {content.date}
           </Typography>
           <div className={classes.table}>
-            <Typography variant='body1'>
-              <table>
+            <table>
+              <tbody>
                 <tr>
-                  <th>Without balcony</th>
-                  <th>{content.sans}</th>
+                  <th>
+                    <Typography variant='body1'>
+                      Without balcony
+                    </Typography>
+                  </th>
+                  <th>
+                    <Typography variant='body1'>
+                      {content.sans}
+                    </Typography>
+                  </th>
                 </tr>
                 <tr>
-                  <th>With balcony</th>
-                  <th>{content.avec}</th>
+                  <th>
+                    <Typography variant='body1'>
+                      Wuth balcony
+                    </Typography>
+                  </th>
+                  <th>
+                    <Typography variant='body1'>
+                      {content.avec}
+                    </Typography>
+                  </th>
                 </tr>
-              </table>
-            </Typography>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
