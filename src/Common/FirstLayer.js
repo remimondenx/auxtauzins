@@ -169,10 +169,10 @@ class FirstLayer extends Component {
 				<div className={classes.root} style={{backgroundImage:`url(${image})`}}>
 					<div className={classes.contactElt}>
 						<Link to='/' style={{textDecoration: 'none'}}>
-							{isBrowser ? (hotel ? <img className={classes.aux_tauzins} src={aux_tauzins_white} alt='logo' /> 
-							: <img className={classes.aux_tauzins} src={aux_tauzins_black} alt='logo' />)
-							: (hotel ? <img className={classes.aux_tauzins_mobile} src={aux_tauzins_white} alt='logo' /> 
-							: <img className={classes.aux_tauzins_mobile} src={aux_tauzins_black} alt='logo' />)}
+							{isBrowser ? (hotel ? <h1><img className={classes.aux_tauzins} src={aux_tauzins_white} alt='Restaurant Hôtel Chalosse Landes Dax' title="Restaurant Hôtel Chalosse Landes Dax" /></h1> 
+							: <h1><img className={classes.aux_tauzins} src={aux_tauzins_black} alt='Restaurant Hôtel Chalosse Landes Dax' title="Restaurant Hôtel Chalosse Landes Dax" /></h1>)
+							: (hotel ? <h1><img className={classes.aux_tauzins_mobile} src={aux_tauzins_white} alt='Restaurant Hôtel Chalosse Landes Dax' title="Restaurant Hôtel Chalosse Landes Dax" /></h1> 
+							: <h1><img className={classes.aux_tauzins_mobile} src={aux_tauzins_black} alt='Restaurant Hôtel Chalosse Landes Dax' title="Restaurant Hôtel Chalosse Landes Dax" /></h1>)}
 						</Link>
 						{isBrowser && (
 							<Button className={classes.contactBrowser} color='secondary' href='#contact'>
@@ -204,7 +204,7 @@ class FirstLayer extends Component {
 									<Typography 
 										className={classes.underline}
 										color='secondary'
-										variant='h5'
+										variant='h2'
 										style={{width:'180px'}}
 									>
 										Restaurant
@@ -213,7 +213,7 @@ class FirstLayer extends Component {
 									<Typography 
 										className={classes.cliquable}
 										color='secondary'
-										variant='h5'
+										variant='h2'
 									>
 										Restaurant
 									</Typography>
@@ -234,7 +234,7 @@ class FirstLayer extends Component {
 									<Typography
 										className={classes.underline}
 										color='secondary'
-										variant='h5'
+										variant='h2'
 										style={{width:'180px', textAlign:'justify'}}
 									>
 										Hôtel
@@ -243,7 +243,7 @@ class FirstLayer extends Component {
 									<Typography
 										className={classes.cliquable}
 										color='secondary'
-										variant='h5'
+										variant='h2'
 										style={{textAlign:'justify'}}
 									>
 										Hôtel
