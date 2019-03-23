@@ -15,6 +15,12 @@ const theme = createMuiTheme({
     typography: {
       fontFamily: "Quicksand",
       useNextVariants: true,
+      h1: {
+        fontSize: '2em'
+      },
+      h2: {
+        fontSize: '2em'
+      },
       h3: {
         fontSize: '2.4em'
       }

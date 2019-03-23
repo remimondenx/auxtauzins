@@ -14,7 +14,7 @@ import booking from '../images/logos/booking.png';
 import { withStyles, Typography, Switch, Button, Dialog, Tooltip } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { BrowserView, isBrowser, isMobile } from 'react-device-detect';
+import { BrowserView, isMobileOnly } from 'react-device-detect';
 
 const styles = {
 	hundred: {
@@ -169,12 +169,12 @@ class FirstLayer extends Component {
 				<div className={classes.root} style={{backgroundImage:`url(${image})`}}>
 					<div className={classes.contactElt}>
 					<Link to='/en' style={{textDecoration: 'none'}}>
-							{isBrowser ? (hotel ? <h1><img className={classes.aux_tauzins} src={aux_tauzins_white}  alt='Restaurant Hôtel Chalosse Landes Dax' title="Restaurant Hôtel Chalosse Landes Dax" /></h1>
-							: <h1><img className={classes.aux_tauzins} src={aux_tauzins_black}  alt='Restaurant Hôtel Chalosse Landes Dax' title="Restaurant Hôtel Chalosse Landes Dax" /></h1>)
-							: (hotel ? <h1><img className={classes.aux_tauzins_mobile} src={aux_tauzins_white}  alt='Restaurant Hôtel Chalosse Landes Dax' title="Restaurant Hôtel Chalosse Landes Dax" /></h1>
-							: <h1><img className={classes.aux_tauzins_mobile} src={aux_tauzins_black}  alt='Restaurant Hôtel Chalosse Landes Dax' title="Restaurant Hôtel Chalosse Landes Dax" /></h1>)}
-					</Link>
-						{isBrowser && (
+							{!isMobileOnly ? (hotel ? <img className={classes.aux_tauzins} src={aux_tauzins_white} alt='logo' /> 
+							: <img className={classes.aux_tauzins} src={aux_tauzins_black} alt='logo' />)
+							: (hotel ? <img className={classes.aux_tauzins_mobile} src={aux_tauzins_white} alt='logo' /> 
+							: <img className={classes.aux_tauzins_mobile} src={aux_tauzins_black} alt='logo' />)}
+						</Link>
+						{!isMobileOnly && (
 							<Button className={classes.contactBrowser} color='secondary' href='#contact'>
 								Reach us
 							</Button>
@@ -200,7 +200,7 @@ class FirstLayer extends Component {
 					<div className={classes.titleElt}>
 						<div className={classes.switchContainer}>
 							<Link className={classes.link} to='/en'>
-								{(isBrowser && (
+								{(!isMobileOnly && (
 									<Typography 
 										className={classes.underline}
 										color='secondary'
@@ -230,11 +230,11 @@ class FirstLayer extends Component {
 								/>   
 							</Link>
 							<Link className={classes.link} to='/hotel/en'>
-								{(isBrowser && (
+								{(!isMobileOnly && (
 									<Typography
 										className={classes.underline}
 										color='secondary'
-										variant='h1'
+										variant='h2'
 										style={{width:'180px', textAlign:'justify'}}
 									>
 										Hotel
@@ -243,7 +243,7 @@ class FirstLayer extends Component {
 									<Typography
 										className={classes.cliquable}
 										color='secondary'
-										variant='h1'
+										variant='h2'
 										style={{textAlign:'justify'}}
 									>
 										Hotel
@@ -271,7 +271,7 @@ class FirstLayer extends Component {
 							</Button>
 						}
 					</div>
-					{isMobile && (
+					{isMobileOnly && (
 						<Button className={classes.contactMobile} color='secondary' href='#contact'>
 							Reach us
 						</Button>

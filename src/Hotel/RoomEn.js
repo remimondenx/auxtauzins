@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { withStyles, Typography } from '@material-ui/core';
 import SwipeableViews from 'react-swipeable-views';
 import Pagination from '../Common/Pagination';
-import { isMobile } from 'react-device-detect';
+import { isMobileOnly } from 'react-device-detect';
 
 const styles = {
   root: {
@@ -70,8 +70,8 @@ class Room extends Component {
     const { classes, content, imgs } = this.props;
     const { index } = this.state;
     return(
-      <div className={classes.root} style={isMobile ? {height: '350px'} : {height:'400px'}}>
-        <div className={classes.containerSwipeable} style={isMobile ? {height: '50%'} : {height:'65%'}}>
+      <div className={classes.root} style={isMobileOnly ? {height: '350px'} : {height:'400px'}}>
+        <div className={classes.containerSwipeable} style={isMobileOnly ? {height: '50%'} : {height:'65%'}}>
           <SwipeableViews
             className={classes.swipeable}
             index={index} 
@@ -79,7 +79,7 @@ class Room extends Component {
             {imgs.map(it => (
               <img
                 src={it.imgPath}
-                style={(Object.assign({}, styles.imgElt, isMobile ? {height: '175px'} : {height:'260px'}))}
+                style={(Object.assign({}, styles.imgElt, isMobileOnly ? {height: '175px'} : {height:'260px'}))}
                 alt={it.imgLabel}
                 key={it.imgPath}
               />
