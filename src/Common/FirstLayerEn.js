@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import france from '../images/logos/france.png';
 import aux_tauzins_white from '../images/logos/aux_tauzins_white.png';
-import aux_tauzins_black from '../images/logos/aux_tauzins_black.png';
 import facebook from '../images/logos/facebook.png';
 import instagram from '../images/logos/instagram.png';
 import tripadvisor from '../images/logos/tripadvisor.png';
@@ -40,15 +39,16 @@ const styles = {
 		textShadow: '2px 2px 4px black',
 	},
 	contactBrowser: {
-		textShadow: '0 0 2px #000000',
+		//textShadow: '0 0 2px #000000',
 		padding: 5,
-		border: '2px solid white',
+		border: '2px solid #aaa',
 		borderRadius: '10px',
 		textTransform: 'none',
 		'&:hover': {
       backgroundColor: 'white'
 		},
-		fontStyle: 'normal'
+		fontStyle: 'normal',
+		color: '#aaa'
 	},
 	contactMobile: {
 		alignSelf: 'flex-end',
@@ -170,9 +170,9 @@ class FirstLayer extends Component {
 					<div className={classes.contactElt}>
 					<Link to='/en' style={{textDecoration: 'none'}}>
 							{!isMobileOnly ? (hotel ? <img className={classes.aux_tauzins} src={aux_tauzins_white} alt='logo' /> 
-							: <img className={classes.aux_tauzins} src={aux_tauzins_black} alt='logo' />)
+							: <img className={classes.aux_tauzins} src={aux_tauzins_white} alt='logo' />)
 							: (hotel ? <img className={classes.aux_tauzins_mobile} src={aux_tauzins_white} alt='logo' /> 
-							: <img className={classes.aux_tauzins_mobile} src={aux_tauzins_black} alt='logo' />)}
+							: <img className={classes.aux_tauzins_mobile} src={aux_tauzins_white} alt='logo' />)}
 						</Link>
 						{!isMobileOnly && (
 							<Button className={classes.contactBrowser} color='secondary' href='#contact'>
