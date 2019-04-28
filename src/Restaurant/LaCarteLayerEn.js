@@ -159,25 +159,27 @@ class LaCarteLayer extends Component {
                         </Typography>
                       )}
                       <table className={classes.table}>
-                        {it.content.map(course =>
-                          (course && (
-                            <tr>
-                              <th className={classes.foodContainer}>
-                                <Typography className={classes.food} color='secondary'>{course.food}</Typography>
-                                {course.description && 
-                                  <Typography className={classes.description} color='secondary'>{course.description}</Typography>
-                                }
-                              </th>
-                              <th>
-                                <div className={classes.price}>
-                                  {course.price}€
-                                </div>
-                              </th>
-                            </tr>
-                          )) || (
-                            <div className={classes.separator}>~</div>
-                          )
-                        )}
+                        <tbody>
+                          {it.content.map((course, index) =>
+                            (course && (
+                              <tr key={course.food}>
+                                <th className={classes.foodContainer}>
+                                  <Typography className={classes.food} color='secondary'>{course.food}</Typography>
+                                  {course.description && 
+                                    <Typography className={classes.description} color='secondary'>{course.description}</Typography>
+                                  }
+                                </th>
+                                <th>
+                                  <div className={classes.price}>
+                                    {course.price}€
+                                  </div>
+                                </th>
+                              </tr>
+                            )) || (
+                              <tr className={classes.separator} key={`separator${index}`}><th><div>~</div></th></tr>
+                            )
+                          )}
+                        </tbody>
                       </table>
                     </div>
                   }
