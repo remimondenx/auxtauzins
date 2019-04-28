@@ -320,7 +320,7 @@ class FirstLayer extends Component {
 						</div>
 					}
 					<div className={classes.scrollContainer}>
-						<img className={classes.scroll} src={scroll} alt='scroll' />
+						<a href={hotel ? '#rooms' : '#menus'} alt="scroll"><img className={classes.scroll} src={scroll} alt='scroll' /></a>
 					</div>
 					<div className={classes.logis}>
 						{!isMobileOnly &&

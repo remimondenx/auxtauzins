@@ -36,7 +36,7 @@ class RoomsLayer extends Component {
   render() {
     const { classes } = this.props;
     return(
-      <div className={classes.root}>
+      <div className={classes.root} id="roomsEn">
         <Typography variant='h3' gutterBottom>Our rooms</Typography>
         <div className={classes.flex}>
           <Grid className={classes.rooms} container>
