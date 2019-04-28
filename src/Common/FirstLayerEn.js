@@ -13,7 +13,7 @@ import booking from '../images/logos/booking.png';
 import { withStyles, Typography, Switch, Button, Dialog, Tooltip } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { BrowserView, isMobileOnly } from 'react-device-detect';
+import { isMobileOnly } from 'react-device-detect';
 
 const styles = {
 	hundred: {
@@ -276,7 +276,7 @@ class FirstLayer extends Component {
 							Reach us
 						</Button>
 					)}
-					<BrowserView>
+					{!isMobileOnly &&
 						<div className={classes.socialMedia}>
 							<a href='https://www.facebook.com/auxtauzins' target='_blank' rel="noopener noreferrer">
 								<img style={{height:'40px', paddingRight:'10px'}} src={facebook} alt='Logo Facebook' />
@@ -299,23 +299,25 @@ class FirstLayer extends Component {
 									alt='logo video'
 									onClick={this.handleOpen}
 									style={{height:'40px'}}
-								/>
+									/>
 							</Tooltip>
 							<Dialog open={this.state.open} onClose={this.handleClose}>
 								<iframe title="presentation" src="https://player.vimeo.com/video/138057164?title=0&byline=0&portrait=0" width="600" height="338" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
 								</iframe>
 							</Dialog>
 						</div>
-					</BrowserView>
+					}
 					<div className={classes.scrollContainer}>
 						<img className={classes.scroll} src={scroll} alt='scroll' />
 					</div>
 					<div className={classes.logis}>
-						<BrowserView>
-							<a href='https://www.logishotels.com/fr' target='_blank' rel="noopener noreferrer">
-								<img className={classes.imgLogis} src={logis} alt='logis hotel' />
-							</a>
-						</BrowserView>
+						{!isMobileOnly && 
+							<div>
+								<a href='https://www.logishotels.com/fr' target='_blank' rel="noopener noreferrer">
+									<img className={classes.imgLogis} src={logis} alt='logis hotel' />
+								</a>
+							</div>
+						}
 					</div>
 				</div>
 			</div>

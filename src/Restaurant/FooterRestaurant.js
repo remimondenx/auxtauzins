@@ -11,7 +11,7 @@ import logis from '../images/logos/logis.png';
 
 import { withStyles, Typography, Grid, Button, Tooltip, Dialog } from '@material-ui/core';
 import PropTypes from 'prop-types';
-import { MobileView } from 'react-device-detect';
+import { isMobileOnly } from 'react-device-detect';
 
 const styles = {
   backgroundColor: {
@@ -128,7 +128,8 @@ class FooterRestaurant extends Component {
             </Button>
           </Grid>
         </Grid>
-        <MobileView>
+        {isMobileOnly &&
+          <div>
 						<div className={classes.socialMedia}>
 							<a href='https://www.facebook.com/auxtauzins' target='_blank' rel="noopener noreferrer">
 								<img style={{height:'40px', paddingRight:'10px'}} src={facebook} alt='Logo Facebook' />
@@ -156,8 +157,9 @@ class FooterRestaurant extends Component {
 							<a href='https://www.logishotels.com/fr' target='_blank' rel="noopener noreferrer">
 								<img className={classes.imgLogis} src={logis} alt='logis hotel' />
 							</a>
+					  </div>
 					</div>
-					</MobileView>
+        }
         </div>
         <Typography className={classes.copyright} variant='body1'>©Rémi Mondenx</Typography>
 			</div>

@@ -45,6 +45,7 @@ const styles = {
     borderRadius: '20px',
     boxShadow: '0 2px 4px #000000',
     display: 'flex',
+    cursor: 'pointer',
   },
   darkBand: {
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
