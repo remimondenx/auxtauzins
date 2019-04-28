@@ -169,10 +169,9 @@ class FirstLayer extends Component {
 				<div className={classes.root} style={{backgroundImage:`url(${image})`}}>
 					<div className={classes.contactElt}>
 						<Link to='/' style={{textDecoration: 'none'}}>
-							{!isMobileOnly ? (hotel ? <img className={classes.aux_tauzins} src={aux_tauzins_white} alt='logo' /> 
-							: <img className={classes.aux_tauzins} src={aux_tauzins_white} alt='logo' />)
-							: (hotel ? <img className={classes.aux_tauzins_mobile} src={aux_tauzins_white} alt='logo' /> 
-							: <img className={classes.aux_tauzins_mobile} src={aux_tauzins_white} alt='logo' />)}
+							{!isMobileOnly ? <img className={classes.aux_tauzins} src={aux_tauzins_white} alt='logo' />
+							: <img className={classes.aux_tauzins_mobile} src={aux_tauzins_white} alt='logo' />
+							}
 						</Link>
 						{!isMobileOnly && (
 							<Button className={classes.contactBrowser} href='#contact'>
