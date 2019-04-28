@@ -38,31 +38,44 @@ const styles = {
 		textAlign: 'center',
 		textShadow: '2px 2px 4px black',
 	},
-	contactBrowser: {
-		//textShadow: '0 0 2px #000000',
+	contactBrowserRestaurant: {
 		padding: 5,
-		border: '2px solid #aaa',
 		borderRadius: '10px',
 		textTransform: 'none',
-		'&:hover': {
-      backgroundColor: 'white'
-		},
 		fontStyle: 'normal',
-		color: '#aaa'
+		border: '2px solid #b0bec5',
+		color: '#b0bec5',
+		'&:hover': {
+			backgroundColor: '#b0bec5',
+			color: 'white',
+		},
+	},
+	contactBrowserHotel: {
+		padding: 5,
+		borderRadius: '10px',
+		textTransform: 'none',
+		fontStyle: 'normal',
+		border: '2px solid white',
+		color: 'white',
+		'&:hover': {
+			backgroundColor: 'white',
+			color: 'black',
+		},
 	},
 	contactMobile: {
 		alignSelf: 'flex-end',
 		width: '40%',
 		padding: 5,
 		margin: 10,
-		textShadow: '0 0 2px #000000',
-		border: '2px solid white',
 		borderRadius: '10px',
 		textTransform: 'none',
+		fontStyle: 'normal',
+		border: '2px solid white',
+		color: 'white',
 		'&:hover': {
-      backgroundColor: 'white'
+			backgroundColor: 'white',
+			color: 'black',
 		},
-		fontStyle: 'normal'
 	},
 	englishButton: {
 		'&:hover': {
@@ -174,7 +187,7 @@ class FirstLayer extends Component {
 							}
 						</Link>
 						{!isMobileOnly && (
-							<Button className={classes.contactBrowser} href='#contact'>
+							<Button className={hotel ? classes.contactBrowserHotel : classes.contactBrowserRestaurant} href='#contact'>
 								Nous contacter
 							</Button>
 						)}
