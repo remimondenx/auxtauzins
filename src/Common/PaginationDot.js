@@ -1,27 +1,33 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
+import _ from "underscore";
 
 const styles = {
   root: {
     height: 18,
     width: 18,
-    cursor: 'pointer',
+    cursor: "pointer",
     border: 0,
-    background: 'none',
+    background: "none",
     padding: 0,
-    outline: 'none'
+    outline: "none"
   },
   dot: {
-    backgroundColor: '#9494b8',
+    backgroundColor: "#9494b8",
     height: 12,
     width: 12,
     borderRadius: 6,
-    boxShadow: '2px 2px 4px black',
-    margin: 3,
+    boxShadow: "2px 2px 4px black",
+    margin: 3
   },
-  active: {
-    backgroundColor: '#ffffff',
-  },
+  dot_active: {
+    backgroundColor: "#ffffff",
+    height: 12,
+    width: 12,
+    borderRadius: 6,
+    boxShadow: "2px 2px 4px black",
+    margin: 3
+  }
 };
 
 class PaginationDot extends React.Component {
@@ -32,17 +38,9 @@ class PaginationDot extends React.Component {
   render() {
     const { active } = this.props;
 
-    let styleDot;
-
-    if (active) {
-      styleDot = Object.assign({}, styles.dot, styles.active);
-    } else {
-      styleDot = styles.dot;
-    }
-
     return (
       <button type="button" style={styles.root} onClick={this.handleClick}>
-        <div style={styleDot} />
+        <div style={active ? styles.dot_active : styles.dot} />
       </button>
     );
   }
@@ -51,7 +49,7 @@ class PaginationDot extends React.Component {
 PaginationDot.propTypes = {
   active: PropTypes.bool.isRequired,
   index: PropTypes.number.isRequired,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func.isRequired
 };
 
 export default PaginationDot;
