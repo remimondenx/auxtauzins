@@ -1,6 +1,7 @@
 RewriteCond %{REQUEST_URI} index\.html
 RewriteRule .* http://www.auxtauzins.com [R=301,L]
 
+RequestHeader set X-Prerender-Token "FgS7mTWlBNx6Zgmg0OOd"
 
 <IfModule mod_deflate.c>
     AddOutputFilterByType DEFLATE application/javascript

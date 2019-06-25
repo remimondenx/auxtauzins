@@ -1,5 +1,5 @@
 import React from 'react';
-import { hydrate, render } from "react-dom";
+import { render } from "react-dom";
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter as Router} from 'react-router-dom';
@@ -9,17 +9,11 @@ import 'typeface-dancing-script';
 import 'typeface-quicksand';
 
 const rootElement = document.getElementById("root");
-if (rootElement.hasChildNodes()) {
-  hydrate(
+render(
   <Router>
     <App />
-  </Router>, rootElement);
-} else {
-  render(
-  <Router>
-    <App />
-  </Router>, rootElement);
-}
+  </Router>, rootElement
+);
 
 
 // If you want your app to work offline and load faster, you can change

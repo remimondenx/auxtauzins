@@ -57,7 +57,7 @@ class App extends Component {
               component={HotelPage}
               />
             <Route
-              path="/"
+              exact path="/"
               component={RestaurantPage}
               />
           </Switch>
