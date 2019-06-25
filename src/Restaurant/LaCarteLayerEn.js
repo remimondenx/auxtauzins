@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 
-import img_entrees from "../images/food/nos_entrees.JPG";
-import img_poissons from "../images/food/nos_poissons.JPG";
+import img_entrees from "../images/food/nos_entrees.jpg";
+import img_poissons from "../images/food/nos_poissons.jpg";
 import img_canard from "../images/food/canard.png";
-import img_sauces from "../images/food/plats_en_sauce.JPG";
-import img_viandes from "../images/food/nos_viandes.JPG";
-import img_desserts from "../images/food/nos_desserts_V1.JPG";
+import img_sauces from "../images/food/plats_en_sauce.jpg";
+import img_viandes from "../images/food/nos_viandes.jpg";
+import img_desserts from "../images/food/nos_desserts_V1.jpg";
 
 import { withStyles, Typography, Grid } from "@material-ui/core";
 import PropTypes from "prop-types";

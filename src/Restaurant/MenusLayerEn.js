@@ -2,18 +2,18 @@ import React, { Component } from "react";
 
 import RestaurantMenuEn from "./RestaurantMenuEn";
 
-import img_artagnan from "../images/food/coupe_artagnan_menu4.JPG";
-import img_assiette from "../images/food/assiette_du_terroir_menu1_V4.JPG";
-import img_coeurs_canard from "../images/food/coeurs_de_canard_menu1_V5.JPG";
-import img_confit from "../images/food/confit_de_canard_menu2_V2.JPG";
-import img_foie_gras_chaud from "../images/food/foie_gras_chaud_aux_raisins_menu4.JPG";
-import img_magret from "../images/food/magret_de_canard_menu3_V1.JPG";
-import img_magret_froid from "../images/food/magret_froid_fourre_menu2_V3.JPG";
-import img_omelette from "../images/food/omelette_aux_cepes_menu3.JPG";
-import img_patisseries from "../images/food/patisseries_maison_menu1_V3.JPG";
-import img_salade_gesiers from "../images/food/salade_de_gesiers_oie.JPG";
-import img_sorbets from "../images/food/assiette_de_sorbets_menu2_V2.JPG";
-import img_tournedos from "../images/food/tournedos_de_boeuf_menu4_V2.JPG";
+import img_artagnan from "../images/food/coupe_artagnan_menu4.jpg";
+import img_assiette from "../images/food/assiette_du_terroir_menu1_V4.jpg";
+import img_coeurs_canard from "../images/food/coeurs_de_canard_menu1_V5.jpg";
+import img_confit from "../images/food/confit_de_canard_menu2_V2.jpg";
+import img_foie_gras_chaud from "../images/food/foie_gras_chaud_aux_raisins_menu4.jpg";
+import img_magret from "../images/food/magret_de_canard_menu3_V1.jpg";
+import img_magret_froid from "../images/food/magret_froid_fourre_menu2_V3.jpg";
+import img_omelette from "../images/food/omelette_aux_cepes_menu3.jpg";
+import img_patisseries from "../images/food/patisseries_maison_menu1_V3.jpg";
+import img_salade_gesiers from "../images/food/salade_de_gesiers_oie.jpg";
+import img_sorbets from "../images/food/assiette_de_sorbets_menu2_V2.jpg";
+import img_tournedos from "../images/food/tournedos_de_boeuf_menu4_V2.jpg";
 
 import { withStyles, Grid, Typography } from "@material-ui/core";
 import PropTypes from "prop-types";
