@@ -1,19 +1,18 @@
-import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import React, { Component } from "react";
+import { Route, Switch } from "react-router-dom";
 
-import './App.css';
-import theme from './theme.js'
-import HotelPage from './Hotel/HotelPage';
-import HotelPageEn from './Hotel/HotelPageEn';
-import RestaurantPage from './Restaurant/RestaurantPage';
-import RestaurantPageEn from './Restaurant/RestaurantPageEn';
+import "./App.css";
+import theme from "./theme.js";
+import HotelPage from "./Hotel/HotelPage";
+import HotelPageEn from "./Hotel/HotelPageEn";
+import RestaurantPage from "./Restaurant/RestaurantPage";
+import RestaurantPageEn from "./Restaurant/RestaurantPageEn";
 
-import { isBrowser } from 'react-device-detect'
-import { withStyles} from '@material-ui/core'
-import { injectGlobal } from 'styled-components';
-import { MuiThemeProvider } from '@material-ui/core/styles';
+import { isBrowser } from "react-device-detect";
+import { withStyles } from "@material-ui/core";
+import { injectGlobal } from "styled-components";
+import { MuiThemeProvider } from "@material-ui/core/styles";
 import ScrollUpButton from "react-scroll-up-button";
-
 
 injectGlobal`
   html,
@@ -26,16 +25,16 @@ injectGlobal`
 
 const styles = {
   root: {
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-  },
-}
+    height: "100%",
+    display: "flex",
+    flexDirection: "column"
+  }
+};
 
 const styleScrollUpButton = {
-  width: '40px',
-  height: '40px',
-}
+  width: "40px",
+  height: "40px"
+};
 
 class App extends Component {
   render() {
@@ -44,28 +43,17 @@ class App extends Component {
       <div className={classes.root}>
         <MuiThemeProvider theme={theme}>
           <Switch>
-            <Route
-              path="/en"
-              component={RestaurantPageEn}
-              />
-            <Route
-              path="/hotel/en"
-              component={HotelPageEn}
-              />
-            <Route
-              path="/hotel"
-              component={HotelPage}
-              />
-            <Route
-              exact path="/"
-              component={RestaurantPage}
-              />
+            <Route path="/en" component={RestaurantPageEn} />
+            <Route path="/hotel/en" component={HotelPageEn} />
+            <Route path="/hotel" component={HotelPage} />
+            <Route exact path="/" component={RestaurantPage} />
           </Switch>
         </MuiThemeProvider>
-        {isBrowser ? 
-          (<ScrollUpButton style={styleScrollUpButton} ShowAtPosition={1800} />) : 
-          (<ScrollUpButton style={styleScrollUpButton} ShowAtPosition={3400} />) 
-        }
+        {isBrowser ? (
+          <ScrollUpButton style={styleScrollUpButton} ShowAtPosition={1800} />
+        ) : (
+          <ScrollUpButton style={styleScrollUpButton} ShowAtPosition={3400} />
+        )}
       </div>
     );
   }
