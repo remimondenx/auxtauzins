@@ -7,6 +7,7 @@ import HotelPage from "./Hotel/HotelPage";
 import HotelPageEn from "./Hotel/HotelPageEn";
 import RestaurantPage from "./Restaurant/RestaurantPage";
 import RestaurantPageEn from "./Restaurant/RestaurantPageEn";
+import NotFound from "./Common/NotFound";
 
 import { isBrowser } from "react-device-detect";
 import { withStyles } from "@material-ui/core";
@@ -43,10 +44,11 @@ class App extends Component {
       <div className={classes.root}>
         <MuiThemeProvider theme={theme}>
           <Switch>
-            <Route path="/en" component={RestaurantPageEn} />
-            <Route path="/hotel/en" component={HotelPageEn} />
-            <Route path="/hotel" component={HotelPage} />
+            <Route exact path="/en" component={RestaurantPageEn} />
+            <Route exact path="/hotel/en" component={HotelPageEn} />
+            <Route exact path="/hotel" component={HotelPage} />
             <Route exact path="/" component={RestaurantPage} />
+            <Route path="*" component={NotFound} />
           </Switch>
         </MuiThemeProvider>
         {isBrowser ? (
