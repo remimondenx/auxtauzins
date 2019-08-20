@@ -7,46 +7,23 @@ import MenusLayerEn from "./MenusLayerEn";
 import LaCarteLayerEn from "./LaCarteLayerEn";
 
 import { isMobileOnly } from "react-device-detect";
-import { withStyles } from "@material-ui/core";
-import PropTypes from "prop-types";
 import FooterRestaurantEn from "./FooterRestaurantEn";
-
-const styles = {
-  root: {
-    display: "flex",
-    flexDirection: "column",
-    height: "100%"
-  },
-  firstLayer: {
-    height: "100%"
-  }
-};
 
 class RestaurantPageEn extends Component {
   render() {
-    const { classes } = this.props;
     return (
-      <div className={classes.root}>
-        <div className={classes.firstLayer}>
-          <FirstLayerEn
-            className={classes.elt}
-            hotel={false}
-            link="/hotel/en"
-            image={isMobileOnly ? restaurant_mobile : restaurant}
-          />
-        </div>
-        <div className={classes.following}>
-          <MenusLayerEn />
-          <LaCarteLayerEn />
-          <FooterRestaurantEn />
-        </div>
+      <div style={{ height: "100%" }}>
+        <FirstLayerEn
+          hotel={false}
+          link="/hotel/en"
+          image={isMobileOnly ? restaurant_mobile : restaurant}
+        />
+        <MenusLayerEn />
+        <LaCarteLayerEn />
+        <FooterRestaurantEn />
       </div>
     );
   }
 }
 
-RestaurantPageEn.propTypes = {
-  classes: PropTypes.object.isRequired
-};
-
-export default withStyles(styles)(RestaurantPageEn);
+export default RestaurantPageEn;
