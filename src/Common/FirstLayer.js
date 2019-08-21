@@ -14,6 +14,7 @@ import { withStyles, Typography, Switch, Button, Dialog, Tooltip } from '@mater
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { isMobileOnly } from 'react-device-detect';
+import Typist from 'react-typist'
 
 const styles = {
 	hundred: {
@@ -27,6 +28,16 @@ const styles = {
 		display: 'flex',
 		flexDirection: 'column',
 		justifyContent: 'space-between',
+	},
+	headerElt: {
+		display: 'flex',
+		flexDirection: 'column',
+	},
+	infoElt: {
+		padding: '0 300px',
+    // backgroundColor: 'rgba(255, 255, 255, .2)',
+    fontSize: '1em',
+    textAlign: 'center'
 	},
 	contactElt: {
 		display: 'flex',
@@ -163,7 +174,7 @@ const styles = {
 }
 
 class FirstLayer extends Component {
-	state = {
+  state = {
     open: false,
   }
 
@@ -173,42 +184,52 @@ class FirstLayer extends Component {
 
   handleClose = () => {
       this.setState({open: false})
-	}
+  }
 	
   render() {
-		const { classes, hotel, link, image } = this.props;
+    const { classes, hotel, link, image } = this.props;
+    const { open } = this.state;
     return(
     	<div className={classes.hundred}>
 				<div className={classes.root} style={{backgroundImage:`url(${image})`}}>
-					<div className={classes.contactElt}>
-						<Link to='/' style={{textDecoration: 'none'}}>
-							{!isMobileOnly ? <img className={classes.aux_tauzins} src={aux_tauzins_white} alt='logo' />
-							: <img className={classes.aux_tauzins_mobile} src={aux_tauzins_white} alt='logo' />
+					<div className={classes.headerElt}>
+						{!hotel && <div className={classes.infoElt}>
+              <Typist avgTypingDelay={30} stdTypingDelay={0}>
+                Le restaurant sera fermé du 10 Septembre au 22 Octobre inclus. Vous pouvez voir les menus 
+								sur <a href="https://www.facebook.com">le site Facebook Aux Tauzins</a>
+              </Typist>
+            </div>}
+						<div className={classes.contactElt}>
+							<Link to='/' style={{textDecoration: 'none'}}>
+								{!isMobileOnly ? <img className={classes.aux_tauzins} src={aux_tauzins_white} alt='logo' />
+								: <img className={classes.aux_tauzins_mobile} src={aux_tauzins_white} alt='logo' />
+								}
+							</Link>
+							{!isMobileOnly && (
+								<Button className={hotel ? classes.contactBrowserHotel : classes.contactBrowserRestaurant} href='#contact'>
+									Nous contacter
+								</Button>
+							)}
+							{hotel ? 
+								(<Link to='/hotel/en' className={classes.englishButton}>
+									<img 
+										src={united_kingdom}
+										alt='English version'
+										style={{height:'35px', padding:0}}
+									/>
+								</Link>) 
+							: 
+								(<Link to='/en' className={classes.englishButton}>
+									<img 
+										src={united_kingdom}
+										alt='English version'
+										style={{height:'35px', padding:0}}
+									/>
+								</Link>)
 							}
-						</Link>
-						{!isMobileOnly && (
-							<Button className={hotel ? classes.contactBrowserHotel : classes.contactBrowserRestaurant} href='#contact'>
-								Nous contacter
-							</Button>
-						)}
-						{hotel ? 
-							(<Link to='/hotel/en' className={classes.englishButton}>
-								<img 
-									src={united_kingdom}
-									alt='English version'
-									style={{height:'35px', padding:0}}
-								/>
-							</Link>) 
-						: 
-							(<Link to='/en' className={classes.englishButton}>
-								<img 
-									src={united_kingdom}
-									alt='English version'
-									style={{height:'35px', padding:0}}
-								/>
-							</Link>)
-						}
+						</div>
 					</div>
+					
 					<div className={classes.titleElt}>
 						<div className={classes.switchContainer}>
 							<Link className={classes.link} to='/'>
@@ -313,7 +334,7 @@ class FirstLayer extends Component {
 									style={{height:'40px'}}
 									/>
 							</Tooltip>
-							<Dialog open={this.state.open} onClose={this.handleClose}>
+							<Dialog open={open} onClose={this.handleClose}>
 								<iframe title="presentation" src="https://player.vimeo.com/video/138057164?title=0&byline=0&portrait=0" width="600" height="338" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
 								</iframe>
 							</Dialog>
