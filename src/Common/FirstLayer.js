@@ -34,10 +34,12 @@ const styles = {
 		flexDirection: 'column',
 	},
 	infoElt: {
-		padding: '0 300px',
-    // backgroundColor: 'rgba(255, 255, 255, .2)',
+		maxHeight: '45px',
     fontSize: '1em',
-    textAlign: 'center'
+		textAlign: 'center',
+		overflow: 'hidden',
+		backgroundColor: 'white',
+		borderBottom: '2px solid grey'
 	},
 	contactElt: {
 		display: 'flex',
@@ -97,6 +99,12 @@ const styles = {
 	aux_tauzins: {
 		position: 'absolute',
 		top: '10px',
+		left: '10px',
+		height: '100px',
+	},
+	aux_tauzins_info: {
+		position: 'absolute',
+		top: '45px',
 		left: '10px',
 		height: '100px',
 	},
@@ -187,21 +195,21 @@ class FirstLayer extends Component {
   }
 	
   render() {
-    const { classes, hotel, link, image } = this.props;
+    const { classes, hotel, link, image, infoDisplayed } = this.props;
     const { open } = this.state;
     return(
     	<div className={classes.hundred}>
 				<div className={classes.root} style={{backgroundImage:`url(${image})`}}>
 					<div className={classes.headerElt}>
-						{!hotel && <div className={classes.infoElt}>
+						{infoDisplayed && !hotel && !isMobileOnly && <div className={classes.infoElt}>
               <Typist avgTypingDelay={30} stdTypingDelay={0}>
-                Le restaurant sera fermé du 10 Septembre au 22 Octobre inclus. Vous pouvez voir les menus 
-								sur <a href="https://www.facebook.com">le site Facebook Aux Tauzins</a>
+								L’établissement Aux Tauzins recherche un commis de cuisine à mi-temps à compter du 1er Octobre 2019.
+								N’hésitez pas à nous contacter.
               </Typist>
             </div>}
 						<div className={classes.contactElt}>
 							<Link to='/' style={{textDecoration: 'none'}}>
-								{!isMobileOnly ? <img className={classes.aux_tauzins} src={aux_tauzins_white} alt='logo' />
+								{!isMobileOnly ? <img className={(infoDisplayed && !hotel && !isMobileOnly) ? classes.aux_tauzins_info : classes.aux_tauzins} src={aux_tauzins_white} alt='logo' />
 								: <img className={classes.aux_tauzins_mobile} src={aux_tauzins_white} alt='logo' />
 								}
 							</Link>
