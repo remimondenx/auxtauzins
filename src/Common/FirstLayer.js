@@ -35,11 +35,11 @@ const styles = {
 	},
 	infoElt: {
 		maxHeight: '45px',
+		padding: '0 30px',
     fontSize: '1em',
 		textAlign: 'center',
 		overflow: 'hidden',
-		backgroundColor: 'white',
-		borderBottom: '2px solid grey'
+		backgroundColor: 'rgba(255, 255, 255, 0.4)',
 	},
 	contactElt: {
 		display: 'flex',
@@ -183,7 +183,8 @@ const styles = {
 
 class FirstLayer extends Component {
   state = {
-    open: false,
+		open: false,
+		typing: true,
   }
 
   handleOpen = () => {
@@ -192,20 +193,30 @@ class FirstLayer extends Component {
 
   handleClose = () => {
       this.setState({open: false})
+	}
+	
+  done = () => {
+    this.setState({ typing: false }, () => {
+      this.setState({ typing: true })
+    });
   }
 	
   render() {
     const { classes, hotel, link, image, infoDisplayed } = this.props;
-    const { open } = this.state;
+    const { open, typing} = this.state;
     return(
     	<div className={classes.hundred}>
 				<div className={classes.root} style={{backgroundImage:`url(${image})`}}>
 					<div className={classes.headerElt}>
 						{infoDisplayed && !hotel && !isMobileOnly && <div className={classes.infoElt}>
-              <Typist avgTypingDelay={30} stdTypingDelay={0}>
-								L’établissement Aux Tauzins recherche un commis de cuisine à mi-temps à compter du 1er Octobre 2019.
-								N’hésitez pas à nous contacter.
-              </Typist>
+							<Typography>
+								{typing && 
+								<Typist avgTypingDelay={40} stdTypingDelay={0} onTypingDone={() => setTimeout(this.done, 3000)}>
+									L’établissement Aux Tauzins recherche un commis de cuisine à mi-temps à compter du 1er Octobre 2019.
+									N’hésitez pas à nous contacter.
+								</Typist>
+								}
+							</Typography>
             </div>}
 						<div className={classes.contactElt}>
 							<Link to='/' style={{textDecoration: 'none'}}>
