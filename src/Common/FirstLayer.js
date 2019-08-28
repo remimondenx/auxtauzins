@@ -36,8 +36,14 @@ const styles = {
 	infoElt: {
 		maxHeight: '45px',
 		padding: '0 30px',
-    fontSize: '1em',
 		textAlign: 'center',
+		overflow: 'hidden',
+		backgroundColor: 'rgba(255, 255, 255, 0.4)',
+	},
+	infoEltMobile: {
+		maxHeight: '48px',
+		textAlign: 'center',
+		fontSize: '0.8em',
 		overflow: 'hidden',
 		backgroundColor: 'rgba(255, 255, 255, 0.4)',
 	},
@@ -96,21 +102,27 @@ const styles = {
 		},
 		padding: '10px 5px 5px 5px'
 	},
-	aux_tauzins: {
+	auxTauzins: {
 		position: 'absolute',
 		top: '10px',
 		left: '10px',
 		height: '100px',
 	},
-	aux_tauzins_info: {
+	auxTauzinsInfo: {
 		position: 'absolute',
 		top: '45px',
 		left: '10px',
 		height: '100px',
 	},
-	aux_tauzins_mobile: {
+	auxTauzinsMobile: {
 		position: 'absolute',
 		top: '10px',
+		left: '10px',
+		height: '68px',
+	},
+	auxTauzinsMobileInfo: {
+		position: 'absolute',
+		top: '35px',
 		left: '10px',
 		height: '68px',
 	},
@@ -208,20 +220,28 @@ class FirstLayer extends Component {
     	<div className={classes.hundred}>
 				<div className={classes.root} style={{backgroundImage:`url(${image})`}}>
 					<div className={classes.headerElt}>
-						{infoDisplayed && !hotel && !isMobileOnly && <div className={classes.infoElt}>
-							<Typography>
+						{infoDisplayed && !isMobileOnly && !hotel && 
+							<Typography className={isMobileOnly ? classes.infoEltMobile : classes.infoElt}>
 								{typing && 
 								<Typist avgTypingDelay={40} stdTypingDelay={0} onTypingDone={() => setTimeout(this.done, 3000)}>
-									L’établissement Aux Tauzins recherche un commis de cuisine à mi-temps à compter du 1er Octobre 2019.
-									N’hésitez pas à nous contacter.
+									{infoDisplayed}
 								</Typist>
 								}
 							</Typography>
-            </div>}
+						}
+
+						{infoDisplayed && isMobileOnly && !hotel &&
+							<div className={classes.infoEltMobile}>
+								<div class="marquee">
+									<span>{infoDisplayed}</span>
+								</div>
+							</div>
+						}
+						
 						<div className={classes.contactElt}>
 							<Link to='/' style={{textDecoration: 'none'}}>
-								{!isMobileOnly ? <img className={(infoDisplayed && !hotel && !isMobileOnly) ? classes.aux_tauzins_info : classes.aux_tauzins} src={aux_tauzins_white} alt='logo' />
-								: <img className={classes.aux_tauzins_mobile} src={aux_tauzins_white} alt='logo' />
+								{!isMobileOnly ? <img className={(infoDisplayed && !hotel) ? classes.auxTauzinsInfo : classes.auxTauzins} src={aux_tauzins_white} alt='logo' />
+								: <img className={(infoDisplayed && !hotel) ? classes.auxTauzinsMobileInfo : classes.auxTauzinsMobile} src={aux_tauzins_white} alt='logo' />
 								}
 							</Link>
 							{!isMobileOnly && (
