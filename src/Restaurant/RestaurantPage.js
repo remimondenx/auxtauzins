@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import restaurant from "../images/main/table.jpg";
 import restaurant_mobile from "../images/main/table_mobile.jpg";
 import FirstLayer from "../Common/FirstLayer";
+import History from "./History";
 import MenusLayer from "./MenusLayer";
 import LaCarteLayer from "./LaCarteLayer";
 
@@ -21,6 +22,7 @@ class RestaurantPage extends Component {
           infoDisplayed="L’établissement Aux Tauzins recherche un commis de cuisine à mi-temps à compter du 1er Octobre 2019.
             N’hésitez pas à nous contacter."
         />
+        <History />
         <MenusLayer />
         <LaCarteLayer />
         <FooterRestaurant />
