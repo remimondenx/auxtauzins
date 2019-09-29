@@ -223,7 +223,7 @@ class FirstLayer extends Component {
 						{infoDisplayed && !isMobileOnly && !hotel && 
 							<Typography className={isMobileOnly ? classes.infoEltMobile : classes.infoElt}>
 								{typing && 
-								<Typist avgTypingDelay={40} stdTypingDelay={0} onTypingDone={() => setTimeout(this.done, 3000)}>
+								<Typist avgTypingDelay={50} stdTypingDelay={0} onTypingDone={() => setTimeout(this.done, 3000)}>
 									{infoDisplayed}
 								</Typist>
 								}
