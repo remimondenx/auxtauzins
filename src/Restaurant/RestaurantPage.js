@@ -18,7 +18,6 @@ class RestaurantPage extends Component {
           hotel={false}
           link="/hotel"
           image={isMobileOnly ? restaurant_mobile : restaurant}
-          infoDisplayed="L'établissement Aux Tauzins informe son aimable clientèle de la fermeture automnale de son établissement. Réouverture le mardi 15 Octobre."
         />
         <MenusLayer />
         <LaCarteLayer />
