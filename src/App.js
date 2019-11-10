@@ -7,6 +7,7 @@ import HotelPage from "./Hotel/HotelPage";
 import HotelPageEn from "./Hotel/HotelPageEn";
 import RestaurantPage from "./Restaurant/RestaurantPage";
 import RestaurantPageEn from "./Restaurant/RestaurantPageEn";
+import Admin from "./Admin/Admin";
 import NotFound from "./Common/NotFound";
 
 import { isBrowser } from "react-device-detect";
@@ -47,6 +48,7 @@ class App extends Component {
             <Route exact path="/en" component={RestaurantPageEn} />
             <Route exact path="/hotel/en" component={HotelPageEn} />
             <Route exact path="/hotel" component={HotelPage} />
+            <Route exact path="/admin" component={Admin} />
             <Route exact path="/" component={RestaurantPage} />
             <Route path="*" component={NotFound} />
           </Switch>
