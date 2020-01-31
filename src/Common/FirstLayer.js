@@ -224,7 +224,7 @@ class FirstLayer extends Component {
 							<Typography className={isMobileOnly ? classes.infoEltMobile : classes.infoElt}>
 								{typing && 
 								<Typist avgTypingDelay={50} stdTypingDelay={0} onTypingDone={() => setTimeout(this.done, 3000)}>
-									Les menus de fin d'année sont arrivés ! À découvrir <a href='https://www.facebook.com/auxtauzins' target='_blank' rel='noopener noreferrer'>par ici</a>
+									À tous les romantiques, le menu de la Saint Valentin est arrivé, accompagné d’un jeu concours ! Découvrez le tout  <a href='https://www.facebook.com/auxtauzins' target='_blank' rel='noopener noreferrer'>ici</a>
 								</Typist>
 								}
 							</Typography>
@@ -234,8 +234,8 @@ class FirstLayer extends Component {
 							<div className={classes.infoEltMobile}>
 								<div class="marquee">
 									<span>
-										Les menus de fin d'année sont arrivés ! À découvrir <a href='https://www.facebook.com/auxtauzins' target='_blank' rel='noopener noreferrer'>par ici</a>
-										</span>
+										À tous les romantiques, le menu de la Saint Valentin est arrivé, accompagné d’un jeu concours ! Découvrez le tout  <a href='https://www.facebook.com/auxtauzins' target='_blank' rel='noopener noreferrer'>ici</a>
+									</span>
 								</div>
 							</div>
 						}
