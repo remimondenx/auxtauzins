@@ -23,6 +23,7 @@ class RestaurantPage extends Component {
           hotel={false}
           link="/hotel"
           image={isMobileOnly ? restaurant_mobile : restaurant}
+          infoDisplayed
         />
         <MenusLayer />
         <LaCarteLayer />
