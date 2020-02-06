@@ -24,21 +24,23 @@ const styles = {
     padding: '30px',
     textAlign: 'center',
   },
-  gridList: {}
-}
+  gridList: {},
+};
 
 class MenusLayer extends Component {
   render() {
-    const { classes } = this.props;
-    return(
+    const { classes } = this.props;
+    return (
       <div className={classes.root}>
-        <Typography variant='h3' gutterBottom>Nos menus</Typography>
+        <Typography variant="h3" gutterBottom>
+          Nos menus
+        </Typography>
         <Grid className={classes.gridList} container>
-          {listMenus.map(it =>
+          {listMenus.map(it => (
             <Grid item xs={12} sm={6} lg={3} key={it.content.name}>
-             <RestaurantMenu content={it.content} imgs={it.imgs} />
-            </Grid> 
-            )}
+              <RestaurantMenu content={it.content} imgs={it.imgs} />
+            </Grid>
+          ))}
         </Grid>
       </div>
     );
@@ -46,8 +48,8 @@ class MenusLayer extends Component {
 }
 
 MenusLayer.propTypes = {
-	classes: PropTypes.object.isRequired,
-}
+  classes: PropTypes.object.isRequired,
+};
 
 export default withStyles(styles)(MenusLayer);
 
@@ -60,17 +62,17 @@ const terroir = {
   dessert: 'Pâtisserie maison',
   dessert2: 'Glace',
   prix: 26,
-}
+};
 
-const chalossais = {
+const chalossais = {
   name: 'Menu Chalossais',
   entree: 'Magret froid fourré au foie gras sur lit de salade',
   plat: 'Confit de canard Chalossais, pommes frites',
   dessert: 'Assiette de sorbets',
   prix: 32,
-}
+};
 
-const gourmand = {
+const gourmand = {
   name: 'Menu Gourmand',
   entree: 'Poisson de la marée',
   entree2: 'Omelette aux cèpes',
@@ -78,16 +80,16 @@ const gourmand = {
   plat2: 'Magret de canard sauce au poivre',
   dessert: 'Coupe Melba',
   prix: 36,
-}
+};
 
 const gastro = {
   name: 'Menu Gastronomique',
-  entree: 'Salade de gésiers d\'oie',
+  entree: "Salade de gésiers d'oie",
   plat: 'Foie gras chaud aux raisins',
   apresPlat: 'Tournedos de boeuf',
-  dessert: 'Coupe d\'Artagnan',
+  dessert: "Coupe d'Artagnan",
   prix: 45,
-}
+};
 
 const imgs_terroir = [
   {
@@ -144,7 +146,7 @@ const imgs_gastro = [
     imgPath: img_tournedos,
   },
   {
-    label: 'coupe d\'artagnan',
+    label: "coupe d'artagnan",
     imgPath: img_artagnan,
   },
 ];
@@ -152,7 +154,7 @@ const imgs_gastro = [
 const listMenus = [
   {
     content: terroir,
-    imgs: imgs_terroir
+    imgs: imgs_terroir,
   },
   {
     content: chalossais,
@@ -165,5 +167,5 @@ const listMenus = [
   {
     content: gastro,
     imgs: imgs_gastro,
-  }
-]
+  },
+];

@@ -1,120 +1,120 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import img_entrees from "../images/food/nos_entrees.jpg";
-import img_poissons from "../images/food/nos_poissons.jpg";
-import img_canard from "../images/food/canard.png";
-import img_sauces from "../images/food/plats_en_sauce.jpg";
-import img_viandes from "../images/food/nos_viandes.jpg";
-import img_desserts from "../images/food/nos_desserts_V1.jpg";
+import img_entrees from '../images/food/nos_entrees.jpg';
+import img_poissons from '../images/food/nos_poissons.jpg';
+import img_canard from '../images/food/canard.png';
+import img_sauces from '../images/food/plats_en_sauce.jpg';
+import img_viandes from '../images/food/nos_viandes.jpg';
+import img_desserts from '../images/food/nos_desserts_V1.jpg';
 
-import { withStyles, Typography, Grid } from "@material-ui/core";
-import PropTypes from "prop-types";
+import { withStyles, Typography, Grid } from '@material-ui/core';
+import PropTypes from 'prop-types';
 
 const styles = {
   root: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center"
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
   title: {
-    padding: "10px",
-    textAlign: "center"
+    padding: '10px',
+    textAlign: 'center',
   },
   gridList: {
-    padding: "20px",
-    maxWidth: "1000px"
+    padding: '20px',
+    maxWidth: '1000px',
   },
   carteElt: {
-    height: "300px",
-    padding: "20px"
+    height: '300px',
+    padding: '20px',
   },
   flex: {
-    width: "100%",
-    height: "100%",
-    display: "flex",
-    justifyContent: "center"
+    width: '100%',
+    height: '100%',
+    display: 'flex',
+    justifyContent: 'center',
   },
   backgroundImage: {
-    height: "100%",
-    width: "100%",
-    maxWidth: "400px",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    overflow: "hidden",
-    border: "1px grey solid",
-    borderRadius: "20px",
-    boxShadow: "0 2px 4px #000000",
-    display: "flex",
-    cursor: "pointer"
+    height: '100%',
+    width: '100%',
+    maxWidth: '400px',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    overflow: 'hidden',
+    border: '1px grey solid',
+    borderRadius: '20px',
+    boxShadow: '0 2px 4px #000000',
+    display: 'flex',
+    cursor: 'pointer',
   },
   darkBand: {
-    backgroundColor: "rgba(0, 0, 0, 0.5)",
-    height: "40px",
-    width: "100%",
-    display: "flex",
-    alignItems: "center",
-    alignSelf: "flex-end"
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    height: '40px',
+    width: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    alignSelf: 'flex-end',
   },
   titleCarteElt: {
-    padding: "10px",
-    fontWeight: "bold",
-    fontSize: "1.1em"
+    padding: '10px',
+    fontWeight: 'bold',
+    fontSize: '1.1em',
   },
   darkImage: {
-    backgroundColor: "rgba(0, 0, 0, 0.7)",
-    borderRadius: "20px",
-    width: "100%",
-    padding: "10px",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    overflow: "auto"
+    backgroundColor: 'rgba(0, 0, 0, 0.7)',
+    borderRadius: '20px',
+    width: '100%',
+    padding: '10px',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    overflow: 'auto',
   },
   table: {
-    width: "100%"
+    width: '100%',
   },
   titleMenu: {
-    padding: "10px",
-    textAlign: "center",
-    fontWeight: "bold",
-    lineHeight: "30px"
+    padding: '10px',
+    textAlign: 'center',
+    fontWeight: 'bold',
+    lineHeight: '30px',
   },
   titleDescription: {
-    textAlign: "left",
-    fontStyle: "italic",
-    fontWeight: "normal",
-    fontSize: "0.9em",
-    width: "100%"
+    textAlign: 'left',
+    fontStyle: 'italic',
+    fontWeight: 'normal',
+    fontSize: '0.9em',
+    width: '100%',
   },
   foodContainer: {
-    display: "flex",
-    flexDirection: "column"
+    display: 'flex',
+    flexDirection: 'column',
   },
   food: {
-    textAlign: "left"
+    textAlign: 'left',
   },
   description: {
-    paddingLeft: "10px",
-    fontSize: "0.7em",
-    lineHeight: "2em",
-    textAlign: "left"
+    paddingLeft: '10px',
+    fontSize: '0.7em',
+    lineHeight: '2em',
+    textAlign: 'left',
   },
   price: {
-    fontFamily: "Nunito",
-    color: "#4CAF50",
-    fontWeight: "bold",
-    fontSize: "0.9em"
+    fontFamily: 'Nunito',
+    color: '#4CAF50',
+    fontWeight: 'bold',
+    fontSize: '0.9em',
   },
   separator: {
-    textAlign: "center",
-    color: "white",
-    tewtWeight: "bold"
-  }
+    textAlign: 'center',
+    color: 'white',
+    tewtWeight: 'bold',
+  },
 };
 
 class LaCarteLayer extends Component {
   state = {
-    open: 0
+    open: 0,
   };
 
   handleEvent = id => {
@@ -156,7 +156,7 @@ class LaCarteLayer extends Component {
                   {this.state.open === it.id && (
                     <div className={classes.darkImage}>
                       {(it.titleDescription && (
-                        <div style={{ width: "100%" }}>
+                        <div style={{ width: '100%' }}>
                           <Typography
                             className={classes.titleMenu}
                             variant="h5"
@@ -220,7 +220,7 @@ class LaCarteLayer extends Component {
                                     <div>~</div>
                                   </th>
                                 </tr>
-                              )
+                              ),
                           )}
                         </tbody>
                       </table>
@@ -237,61 +237,61 @@ class LaCarteLayer extends Component {
 }
 
 LaCarteLayer.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles)(LaCarteLayer);
 
 const entrees = {
   id: 1,
-  title: "Our starters",
+  title: 'Our starters',
   img: img_entrees,
   content: [
-    { food: "Salad with tomatoes, onions, asparaguses", price: 12 },
+    { food: 'Salad with tomatoes, onions, asparaguses', price: 12 },
     {
-      food: "Landaise salad",
+      food: 'Landaise salad',
       description:
-        "Salad, tomatoes, asparaguses, gizzards, smoked duck breast, foie gras",
-      price: 25
+        'Salad, tomatoes, asparaguses, gizzards, smoked duck breast, foie gras',
+      price: 25,
     },
     false,
-    { food: "Garbure Landaise soup", price: 13 },
-    { food: "Fish soup", price: 13 },
+    { food: 'Garbure Landaise soup', price: 13 },
+    { food: 'Fish soup', price: 13 },
     false,
-    { food: "Homemade pork’s pâté", price: 10 },
-    { food: "Homemade deer’s pâté", price: 10 },
+    { food: 'Homemade pork’s pâté', price: 10 },
+    { food: 'Homemade deer’s pâté', price: 10 },
     false,
-    { food: "Local ham", price: 15 },
-    { food: "Homemade delicatessen plate", price: 15 },
+    { food: 'Local ham', price: 15 },
+    { food: 'Homemade delicatessen plate', price: 15 },
     false,
-    { food: "Omelet with ham", price: 14 },
-    { food: "Omelet with cheese", price: 14 },
-    { food: "Omelet with cèpes (mushroom)", price: 18 }
-  ]
+    { food: 'Omelet with ham', price: 14 },
+    { food: 'Omelet with cheese', price: 14 },
+    { food: 'Omelet with cèpes (mushroom)', price: 18 },
+  ],
 };
 
 const poissons = {
   id: 2,
-  title: "Our fishes",
-  titleDescription: "from the Atlantic ocean",
+  title: 'Our fishes',
+  titleDescription: 'from the Atlantic ocean',
   img: img_poissons,
   content: [
-    { food: "Monkfish doughnuts and its vegetables", price: 25 },
-    { food: "Scallops in a Provençal way", price: 26 },
-    { food: "Scallops on leeks in a flaky way", price: 26 },
-    { food: "Sole meunière", price: 28 },
-    { food: "Fricassee of monkfish, scallops and cèpes", price: 30 }
-  ]
+    { food: 'Monkfish doughnuts and its vegetables', price: 25 },
+    { food: 'Scallops in a Provençal way', price: 26 },
+    { food: 'Scallops on leeks in a flaky way', price: 26 },
+    { food: 'Sole meunière', price: 28 },
+    { food: 'Fricassee of monkfish, scallops and cèpes', price: 30 },
+  ],
 };
 
 const canard = {
   id: 3,
   title: "All duck' products",
-  titleDescription: "with french fries and vegetables of the season",
+  titleDescription: 'with french fries and vegetables of the season',
   img: img_canard,
   content: [
-    { food: "Duck’s heart in skewer", price: 19 },
-    { food: "Cold duck breast with foie gras inside", price: 24 },
+    { food: 'Duck’s heart in skewer', price: 19 },
+    { food: 'Cold duck breast with foie gras inside', price: 24 },
     false,
     { food: 'Duck confit "the thigh"', price: 18 },
     { food: 'Duck confit "the wing"', price: 24 },
@@ -299,100 +299,100 @@ const canard = {
     { food: 'Goose confit "the wing"', price: 26 },
     false,
     {
-      food: "Roasted duck",
-      description: "grilled or with green pepper sauce",
-      price: 20
+      food: 'Roasted duck',
+      description: 'grilled or with green pepper sauce',
+      price: 20,
     },
-    { food: "Duck foie gras slice", price: 24 },
-    { food: "Warm foie gras", description: "with apples or grapes", price: 25 },
-    { food: "Fried cutlets of foie gras with cèpes", price: 30 }
-  ]
+    { food: 'Duck foie gras slice', price: 24 },
+    { food: 'Warm foie gras', description: 'with apples or grapes', price: 25 },
+    { food: 'Fried cutlets of foie gras with cèpes', price: 30 },
+  ],
 };
 
 const sauces = {
   id: 4,
-  title: "Our dishes in sauce",
+  title: 'Our dishes in sauce',
   img: img_sauces,
   content: [
-    { food: "Marinated civet", price: 18 },
+    { food: 'Marinated civet', price: 18 },
     { food: "Calf's head in a gribiche sauce", price: 18 },
-    { food: "Sauce of cèpes", price: 24 },
-    { food: "Poultry of wood pigeon", price: 24 },
-    { food: "River lamprey of the Adour", price: 24 },
-    { food: "Sweet bread with financier sauce", price: 25 }
-  ]
+    { food: 'Sauce of cèpes', price: 24 },
+    { food: 'Poultry of wood pigeon', price: 24 },
+    { food: 'River lamprey of the Adour', price: 24 },
+    { food: 'Sweet bread with financier sauce', price: 25 },
+  ],
 };
 
 const viandes = {
   id: 5,
-  title: "Our meats",
-  titleDescription: "with french fries and vegetables of the season",
+  title: 'Our meats',
+  titleDescription: 'with french fries and vegetables of the season',
   img: img_viandes,
   content: [
-    { food: "Pork confit", price: 16 },
-    { food: "Veal cutlet", description: "grilled or with cream", price: 20 },
-    { food: "Beef tournedos in a pepper sauce", price: 24 },
-    { food: "Sirloin of beef (Blonde of Aquitaine race)", price: 28 },
-    { food: "Sweet bread with cèpes", price: 30 },
+    { food: 'Pork confit', price: 16 },
+    { food: 'Veal cutlet', description: 'grilled or with cream', price: 20 },
+    { food: 'Beef tournedos in a pepper sauce', price: 24 },
+    { food: 'Sirloin of beef (Blonde of Aquitaine race)', price: 28 },
+    { food: 'Sweet bread with cèpes', price: 30 },
     {
-      food: "Landais Tournedos",
+      food: 'Landais Tournedos',
       description:
-        "beef steak on garlic crouton with a slice of foie gras and cèpes",
-      price: 30
+        'beef steak on garlic crouton with a slice of foie gras and cèpes',
+      price: 30,
     },
     false,
-    { food: "Additional portion of vegetables", price: 5 }
-  ]
+    { food: 'Additional portion of vegetables', price: 5 },
+  ],
 };
 
 const desserts = {
   id: 6,
-  title: "Our desserts",
+  title: 'Our desserts',
   img: img_desserts,
   content: [
-    { food: "Homemade pastries", price: 8 },
-    { food: "The jar of cream", price: 8 },
-    { food: "Cheese plate", price: 9 },
-    { food: "The ice-cold Grand Marnier foam", price: 9 },
-    { food: "Homemade profiteroles", price: 9 },
+    { food: 'Homemade pastries', price: 8 },
+    { food: 'The jar of cream', price: 8 },
+    { food: 'Cheese plate', price: 9 },
+    { food: 'The ice-cold Grand Marnier foam', price: 9 },
+    { food: 'Homemade profiteroles', price: 9 },
     false,
     {
-      food: "Choice of water ice , 2 scoops",
-      description: "pear, blackcurrant, lemon, mandarin",
-      price: 8
+      food: 'Choice of water ice , 2 scoops',
+      description: 'pear, blackcurrant, lemon, mandarin',
+      price: 8,
     },
     {
-      food: "Choice of ice-creams, 2 scoops",
+      food: 'Choice of ice-creams, 2 scoops',
       description:
-        "vanilla, coffee, pistachios, strawberries, grape rums, prunes",
-      price: 8
+        'vanilla, coffee, pistachios, strawberries, grape rums, prunes',
+      price: 8,
     },
     false,
-    { food: "Melba peach", price: 8 },
-    { food: "The coffee ice cream", price: 8 },
-    { food: "The chocolate ice cream", price: 8 },
+    { food: 'Melba peach', price: 8 },
+    { food: 'The coffee ice cream', price: 8 },
+    { food: 'The chocolate ice cream', price: 8 },
     {
-      food: "The cardinal cup",
-      description: "brown sorbet, cream of brown",
-      price: 8
+      food: 'The cardinal cup',
+      description: 'brown sorbet, cream of brown',
+      price: 8,
     },
-    { food: "The Colonel Cup", description: "lemon sorbet, vodka", price: 9 },
+    { food: 'The Colonel Cup', description: 'lemon sorbet, vodka', price: 9 },
     {
-      food: "Williamine cup",
-      description: "pear sorbet, pear alcohol",
-      price: 9
+      food: 'Williamine cup',
+      description: 'pear sorbet, pear alcohol',
+      price: 9,
     },
     {
       food: "The cup d'Artagnan",
-      description: "prune ice, prune, armagnac and chantilly",
-      price: 9
+      description: 'prune ice, prune, armagnac and chantilly',
+      price: 9,
     },
     false,
-    { food: "Coffee", price: 2.8 },
-    { food: "Ingusions or tea", price: 4 },
-    { food: "Cappuccino", price: 6 },
-    { food: "Café gourmand", price: 9 }
-  ]
+    { food: 'Coffee', price: 2.8 },
+    { food: 'Ingusions or tea', price: 4 },
+    { food: 'Cappuccino', price: 6 },
+    { food: 'Café gourmand', price: 9 },
+  ],
 };
 
 const listLaCarte = [entrees, poissons, canard, sauces, viandes, desserts];

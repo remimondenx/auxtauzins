@@ -1,32 +1,32 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const styles = {
   root: {
     height: 18,
     width: 18,
-    cursor: "pointer",
+    cursor: 'pointer',
     border: 0,
-    background: "none",
+    background: 'none',
     padding: 0,
-    outline: "none"
+    outline: 'none',
   },
   dot: {
-    backgroundColor: "#9494b8",
+    backgroundColor: '#9494b8',
     height: 12,
     width: 12,
     borderRadius: 6,
-    boxShadow: "2px 2px 4px black",
-    margin: 3
+    boxShadow: '2px 2px 4px black',
+    margin: 3,
   },
   dot_active: {
-    backgroundColor: "#ffffff",
+    backgroundColor: '#ffffff',
     height: 12,
     width: 12,
     borderRadius: 6,
-    boxShadow: "2px 2px 4px black",
-    margin: 3
-  }
+    boxShadow: '2px 2px 4px black',
+    margin: 3,
+  },
 };
 
 class PaginationDot extends React.Component {
@@ -48,7 +48,7 @@ class PaginationDot extends React.Component {
 PaginationDot.propTypes = {
   active: PropTypes.bool.isRequired,
   index: PropTypes.number.isRequired,
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func.isRequired,
 };
 
 export default PaginationDot;

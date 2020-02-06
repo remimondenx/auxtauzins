@@ -1,14 +1,8 @@
 // in myRestProvider.js
 import { stringify } from 'query-string';
-import {
-  GET_LIST,
-  GET_ONE,
-  CREATE,
-  UPDATE,
-  DELETE,
-} from 'react-admin';
+import { GET_LIST, GET_ONE, CREATE, UPDATE, DELETE } from 'react-admin';
 
-const apiUrl = 'https://back.auxtauzins.com/api';
+const apiUrl = 'http://localhost:8000/api';
 
 /**
  * Maps react-admin queries to my REST API
@@ -24,22 +18,22 @@ export default (type, resource, params) => {
 
   switch (type) {
     case GET_LIST:
-      url = `${apiUrl}/${resource}`
-      break
+      url = `${apiUrl}/${resource}`;
+      break;
     case GET_ONE:
-      url = `${apiUrl}/${resource}/${params.id}`
-      break
+      url = `${apiUrl}/${resource}/${params.id}`;
+      break;
     case CREATE:
-      url = `${apiUrl}/${resource}`
-      options = { method: 'POST', body: JSON.stringify(params.data) }
-      break
+      url = `${apiUrl}/${resource}`;
+      options = { method: 'POST', body: JSON.stringify(params.data) };
+      break;
     case UPDATE:
-      url = `${apiUrl}/${resource}/${params.id}/update`
-      options = { method: 'POST', body: JSON.stringify(params.data) }
-      break
+      url = `${apiUrl}/${resource}/${params.id}/update`;
+      options = { method: 'POST', body: JSON.stringify(params.data) };
+      break;
     case DELETE:
-      url = `${apiUrl}/${resource}/${params.id}/delete`
-      options = { method: 'POST' }
+      url = `${apiUrl}/${resource}/${params.id}/delete`;
+      options = { method: 'POST' };
   }
 
   return fetch(url, options)

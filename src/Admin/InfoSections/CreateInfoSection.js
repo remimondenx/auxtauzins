@@ -1,10 +1,10 @@
 import React from 'react';
-import { Create, SimpleForm, DisabledInput, TextInput, NumberInput } from 'react-admin';
+import { Create, SimpleForm, TextInput } from 'react-admin';
 
-export default (props) => (
-    <Create {...props}>
-        <SimpleForm>
-            <TextInput source="name" />
-        </SimpleForm>
-    </Create>
+export default props => (
+  <Create {...props}>
+    <SimpleForm>
+      <TextInput source="name" />
+    </SimpleForm>
+  </Create>
 );

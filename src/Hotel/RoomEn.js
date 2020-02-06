@@ -1,74 +1,74 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import { withStyles, Typography } from "@material-ui/core";
-import SwipeableViews from "react-swipeable-views";
-import Pagination from "../Common/Pagination";
-import { isMobileOnly } from "react-device-detect";
+import { withStyles, Typography } from '@material-ui/core';
+import SwipeableViews from 'react-swipeable-views';
+import Pagination from '../Common/Pagination';
+import { isMobileOnly } from 'react-device-detect';
 
 const styles = {
   root: {
-    margin: "20px",
-    backgroundColor: "white",
-    border: "1px grey solid",
-    borderRadius: "20px",
-    boxShadow: "0 2px 4px #000000",
-    textAlign: "center",
-    overflow: "hidden"
+    margin: '20px',
+    backgroundColor: 'white',
+    border: '1px grey solid',
+    borderRadius: '20px',
+    boxShadow: '0 2px 4px #000000',
+    textAlign: 'center',
+    overflow: 'hidden',
   },
   containerSwipeable: {
-    position: "relative",
-    width: "100%",
-    overflow: "hidden"
+    position: 'relative',
+    width: '100%',
+    overflow: 'hidden',
   },
   swipeable: {
-    overflow: "hidden"
+    overflow: 'hidden',
   },
   imgEltDesktop: {
-    height: "260px",
-    width: "100%",
-    borderRadius: "20px 20px 0px 0px",
-    backgroundSize: "cover",
-    overflow: "hidden"
+    height: '260px',
+    width: '100%',
+    borderRadius: '20px 20px 0px 0px',
+    backgroundSize: 'cover',
+    overflow: 'hidden',
   },
   imgEltMobile: {
-    height: "175px",
-    width: "100%",
-    borderRadius: "20px 20px 0px 0px",
-    backgroundSize: "cover",
-    overflow: "hidden"
+    height: '175px',
+    width: '100%',
+    borderRadius: '20px 20px 0px 0px',
+    backgroundSize: 'cover',
+    overflow: 'hidden',
   },
   text: {
-    height: "40%",
-    padding: "10px",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center"
+    height: '40%',
+    padding: '10px',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
   roomName: {
-    fontWeight: "bold"
+    fontWeight: 'bold',
   },
   roomDate: {
-    fontStyle: "italic"
+    fontStyle: 'italic',
   },
   table: {
     //paddingTop: '20px'
   },
   overflow: {
-    overflow: "hidden"
+    overflow: 'hidden',
   },
   inline: {
-    display: "inline"
-  }
+    display: 'inline',
+  },
 };
 
 class Room extends Component {
   state = {
-    index: 0
+    index: 0,
   };
 
   handleChangeIndex = index => {
     this.setState({
-      index
+      index,
     });
   };
 
@@ -78,11 +78,11 @@ class Room extends Component {
     return (
       <div
         className={classes.root}
-        style={isMobileOnly ? { height: "350px" } : { height: "400px" }}
+        style={isMobileOnly ? { height: '350px' } : { height: '400px' }}
       >
         <div
           className={classes.containerSwipeable}
-          style={isMobileOnly ? { height: "50%" } : { height: "65%" }}
+          style={isMobileOnly ? { height: '50%' } : { height: '65%' }}
         >
           <SwipeableViews
             className={classes.swipeable}

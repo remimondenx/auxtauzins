@@ -1,73 +1,73 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import { withStyles, Typography } from "@material-ui/core";
-import PropTypes from "prop-types";
-import SwipeableViews from "react-swipeable-views";
-import Pagination from "../Common/Pagination";
+import { withStyles, Typography } from '@material-ui/core';
+import PropTypes from 'prop-types';
+import SwipeableViews from 'react-swipeable-views';
+import Pagination from '../Common/Pagination';
 
 const styles = {
   root: {
-    margin: "20px",
-    height: "500px",
-    backgroundColor: "white",
-    border: "1px grey solid",
-    borderRadius: "20px",
-    boxShadow: "0 2px 4px #000000",
-    textAlign: "center",
-    overflow: "hidden",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center"
+    margin: '20px',
+    height: '500px',
+    backgroundColor: 'white',
+    border: '1px grey solid',
+    borderRadius: '20px',
+    boxShadow: '0 2px 4px #000000',
+    textAlign: 'center',
+    overflow: 'hidden',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
   containerSwipeable: {
-    position: "relative",
-    height: "35%",
-    width: "100%",
-    overflow: "hidden"
+    position: 'relative',
+    height: '35%',
+    width: '100%',
+    overflow: 'hidden',
   },
   swipeable: {
-    overflow: "hidden"
+    overflow: 'hidden',
   },
   text: {
-    height: "65%",
-    padding: "10px",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-between",
-    alignItems: "center"
+    height: '65%',
+    padding: '10px',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
   menuName: {
-    fontWeight: "bold"
+    fontWeight: 'bold',
   },
   food: {
-    display: "flex",
-    flexDirection: "column",
+    display: 'flex',
+    flexDirection: 'column',
     flexGrow: 1,
-    justifyContent: "space-around",
-    margin: "10px 0 10px 0"
+    justifyContent: 'space-around',
+    margin: '10px 0 10px 0',
   },
   tilde: {
-    lineHeight: "12px"
+    lineHeight: '12px',
   },
   or: {
-    fontSize: "0.8em",
-    fontWeight: "bold",
-    fontStyle: "italic",
-    lineHeight: "8px"
+    fontSize: '0.8em',
+    fontWeight: 'bold',
+    fontStyle: 'italic',
+    lineHeight: '8px',
   },
   prix: {
-    fontWeight: "bold"
-  }
+    fontWeight: 'bold',
+  },
 };
 
 class RestaurantMenu extends Component {
   state = {
-    index: 0
+    index: 0,
   };
 
   handleChangeIndex = index => {
     this.setState({
-      index
+      index,
     });
   };
 
@@ -85,13 +85,13 @@ class RestaurantMenu extends Component {
             {imgs.map(it => (
               <div
                 style={{
-                  height: "175px",
-                  width: "100%",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  borderRadius: "20px 20px 0px 0px",
-                  overflow: "hidden",
-                  backgroundImage: `url(${it.imgPath})`
+                  height: '175px',
+                  width: '100%',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  borderRadius: '20px 20px 0px 0px',
+                  overflow: 'hidden',
+                  backgroundImage: `url(${it.imgPath})`,
                 }}
                 key={it.imgPath}
               />
@@ -173,14 +173,14 @@ RestaurantMenu.propTypes = {
     entree: PropTypes.string.isRequired,
     plat: PropTypes.string.isRequired,
     dessert: PropTypes.string.isRequired,
-    prix: PropTypes.number.isRequired
+    prix: PropTypes.number.isRequired,
   }).isRequired,
   imgs: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
-      imgPath: PropTypes.string.isRequired
-    }).isRequired
-  ).isRequired
+      imgPath: PropTypes.string.isRequired,
+    }).isRequired,
+  ).isRequired,
 };
 
 export default withStyles(styles)(RestaurantMenu);

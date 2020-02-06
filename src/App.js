@@ -1,20 +1,20 @@
-import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
+import React, { Component } from 'react';
+import { Route, Switch } from 'react-router-dom';
 
-import "./App.css";
-import theme from "./theme.js";
-import HotelPage from "./Hotel/HotelPage";
-import HotelPageEn from "./Hotel/HotelPageEn";
-import RestaurantPage from "./Restaurant/RestaurantPage";
-import RestaurantPageEn from "./Restaurant/RestaurantPageEn";
-import Admin from "./Admin/Admin";
-import NotFound from "./Common/NotFound";
+import './App.css';
+import theme from './theme.js';
+import HotelPage from './Hotel/HotelPage';
+import HotelPageEn from './Hotel/HotelPageEn';
+import RestaurantPage from './Restaurant/RestaurantPage';
+import RestaurantPageEn from './Restaurant/RestaurantPageEn';
+import Admin from './Admin/Admin';
+import NotFound from './Common/NotFound';
 
-import { isBrowser } from "react-device-detect";
-import { withStyles } from "@material-ui/core";
-import { injectGlobal } from "styled-components";
-import { MuiThemeProvider } from "@material-ui/core/styles";
-import ScrollUpButton from "react-scroll-up-button";
+import { isBrowser } from 'react-device-detect';
+import { withStyles } from '@material-ui/core';
+import { injectGlobal } from 'styled-components';
+import { MuiThemeProvider } from '@material-ui/core/styles';
+import ScrollUpButton from 'react-scroll-up-button';
 
 injectGlobal`
   html,
@@ -27,15 +27,15 @@ injectGlobal`
 
 const styles = {
   root: {
-    height: "100%",
-    display: "flex",
-    flexDirection: "column"
-  }
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+  },
 };
 
 const styleScrollUpButton = {
-  width: "40px",
-  height: "40px"
+  width: '40px',
+  height: '40px',
 };
 
 class App extends Component {

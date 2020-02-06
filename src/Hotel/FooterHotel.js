@@ -1,13 +1,13 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import tel_img from "../images/logos/tel.png";
-import mail_img from "../images/logos/mail.png";
-import position_img from "../images/logos/position.png";
-import facebook from "../images/logos/facebook.png";
-import instagram from "../images/logos/instagram.png";
-import booking from "../images/logos/booking.png";
-import logo_video from "../images/logos/video.png";
-import logis from "../images/logos/logis.png";
+import tel_img from '../images/logos/tel.png';
+import mail_img from '../images/logos/mail.png';
+import position_img from '../images/logos/position.png';
+import facebook from '../images/logos/facebook.png';
+import instagram from '../images/logos/instagram.png';
+import booking from '../images/logos/booking.png';
+import logo_video from '../images/logos/video.png';
+import logis from '../images/logos/logis.png';
 
 import {
   withStyles,
@@ -15,63 +15,63 @@ import {
   Grid,
   Button,
   Tooltip,
-  Dialog
-} from "@material-ui/core";
-import PropTypes from "prop-types";
-import { isMobileOnly } from "react-device-detect";
+  Dialog,
+} from '@material-ui/core';
+import PropTypes from 'prop-types';
+import { isMobileOnly } from 'react-device-detect';
 
 const styles = {
   backgroundColor: {
-    backgroundColor: "#eceff1",
+    backgroundColor: '#eceff1',
     margin: 0,
-    padding: 0
+    padding: 0,
   },
   root: {
-    margin: "30px 30px 0 30px",
-    textAlign: "center"
+    margin: '30px 30px 0 30px',
+    textAlign: 'center',
   },
   title: {
-    fontWeight: "bold",
-    fontSize: "1.1em",
-    color: "#01579b"
+    fontWeight: 'bold',
+    fontSize: '1.1em',
+    color: '#01579b',
   },
   margin: {
-    textAlign: "justify",
-    margin: "10px"
+    textAlign: 'justify',
+    margin: '10px',
   },
   contact: {
-    display: "flex",
-    flexDirection: "column"
+    display: 'flex',
+    flexDirection: 'column',
   },
   button: {
-    textTransform: "none",
-    textAlign: "justify",
-    fontStyle: "normal",
-    "&:hover": {
-      backgroundColor: "transparent",
-      textDecoration: "underline"
-    }
+    textTransform: 'none',
+    textAlign: 'justify',
+    fontStyle: 'normal',
+    '&:hover': {
+      backgroundColor: 'transparent',
+      textDecoration: 'underline',
+    },
   },
   picto: {
-    height: "15px",
-    paddingRight: "10px"
+    height: '15px',
+    paddingRight: '10px',
   },
   socialMedia: {
-    paddingTop: "20px"
+    paddingTop: '20px',
   },
   imgLogis: {
-    height: "60px",
-    paddingTop: "20px"
+    height: '60px',
+    paddingTop: '20px',
   },
   copyright: {
-    marginLeft: "10px",
-    fontSize: "0.8em"
-  }
+    marginLeft: '10px',
+    fontSize: '0.8em',
+  },
 };
 
 class FooterHotel extends Component {
   state = {
-    open: false
+    open: false,
   };
 
   handleOpen = () => {
@@ -96,9 +96,9 @@ class FooterHotel extends Component {
                 <ul style={{ paddingLeft: 0 }}>
                   <li>
                     <Typography>
-                      L'hôtel est{" "}
+                      L'hôtel est{' '}
                       <strong>
-                        {" "}
+                        {' '}
                         accessible aux personnes à mobilité réduite
                       </strong>
                     </Typography>
@@ -119,7 +119,7 @@ class FooterHotel extends Component {
                   </li>
                   <li>
                     <Typography>
-                      L'hôtel est fermé le <strong>dimanche soir</strong> et le{" "}
+                      L'hôtel est fermé le <strong>dimanche soir</strong> et le{' '}
                       <strong>lundi toute la journée</strong>
                     </Typography>
                   </li>
@@ -217,7 +217,7 @@ class FooterHotel extends Component {
                   rel="noopener noreferrer"
                 >
                   <img
-                    style={{ height: "40px", paddingRight: "10px" }}
+                    style={{ height: '40px', paddingRight: '10px' }}
                     src={facebook}
                     alt="Logo Facebook"
                   />
@@ -228,7 +228,7 @@ class FooterHotel extends Component {
                   rel="noopener noreferrer"
                 >
                   <img
-                    style={{ height: "40px", paddingRight: "10px" }}
+                    style={{ height: '40px', paddingRight: '10px' }}
                     src={instagram}
                     alt="Logo Instagram"
                   />
@@ -239,7 +239,7 @@ class FooterHotel extends Component {
                   rel="noopener noreferrer"
                 >
                   <img
-                    style={{ height: "40px", paddingRight: "10px" }}
+                    style={{ height: '40px', paddingRight: '10px' }}
                     src={booking}
                     alt="Logo Booking"
                   />
@@ -249,7 +249,7 @@ class FooterHotel extends Component {
                     src={logo_video}
                     alt="logo video"
                     onClick={this.handleOpen}
-                    style={{ height: "40px" }}
+                    style={{ height: '40px' }}
                   />
                 </Tooltip>
                 <Dialog open={this.state.open} onClose={this.handleClose}>
@@ -290,7 +290,7 @@ class FooterHotel extends Component {
 }
 
 FooterHotel.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles)(FooterHotel);

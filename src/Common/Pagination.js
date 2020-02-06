@@ -1,15 +1,15 @@
-import React from "react";
-import PropTypes from "prop-types";
-import PaginationDot from "./PaginationDot";
+import React from 'react';
+import PropTypes from 'prop-types';
+import PaginationDot from './PaginationDot';
 
 const styles = {
   root: {
-    position: "absolute",
+    position: 'absolute',
     bottom: 8,
     right: 8,
-    display: "flex",
-    flexDirection: "row"
-  }
+    display: 'flex',
+    flexDirection: 'row',
+  },
 };
 
 class Pagination extends React.Component {
@@ -29,7 +29,7 @@ class Pagination extends React.Component {
           index={i}
           active={i === index}
           onClick={this.handleClick}
-        />
+        />,
       );
     }
 
@@ -40,7 +40,7 @@ class Pagination extends React.Component {
 Pagination.propTypes = {
   dots: PropTypes.number.isRequired,
   index: PropTypes.number.isRequired,
-  onChangeIndex: PropTypes.func.isRequired
+  onChangeIndex: PropTypes.func.isRequired,
 };
 
 export default Pagination;

@@ -6,7 +6,14 @@ import ShowInfoSection from './InfoSections/ShowInfoSection';
 import CreateInfoSection from './InfoSections/CreateInfoSection';
 import EditInfoSection from './InfoSections/EditInfoSection';
 
-export default () =>
+export default () => (
   <Admin dataProvider={dataProvider}>
-    <Resource name="info-sections" list={ListInfoSections} show={ShowInfoSection} create={CreateInfoSection} edit={EditInfoSection} />
+    <Resource
+      name="info-sections"
+      list={ListInfoSections}
+      show={ShowInfoSection}
+      create={CreateInfoSection}
+      edit={EditInfoSection}
+    />
   </Admin>
+);
