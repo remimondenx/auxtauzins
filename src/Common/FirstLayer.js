@@ -242,15 +242,9 @@ class FirstLayer extends Component {
                     stdTypingDelay={0}
                     onTypingDone={() => setTimeout(this.done, 3000)}
                   >
-                    À tous les romantiques, le menu de la Saint Valentin est
-                    arrivé, accompagné d’un jeu concours ! Découvrez le tout{' '}
-                    <a
-                      href="https://www.facebook.com/auxtauzins"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      ici
-                    </a>
+                    L'établissement Aux Tauzins informe son aimable clientèle de
+                    la fermeture hivernale de son établissement à partir du 17
+                    Février. Réouverture le mardi 17 Mars.
                   </Typist>
                 )}
               </Typography>
@@ -260,15 +254,9 @@ class FirstLayer extends Component {
               <div className={classes.infoEltMobile}>
                 <div class="marquee">
                   <span>
-                    À tous les romantiques, le menu de la Saint Valentin est
-                    arrivé, accompagné d’un jeu concours ! Découvrez le tout{' '}
-                    <a
-                      href="https://www.facebook.com/auxtauzins"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      ici
-                    </a>
+                    L'établissement Aux Tauzins informe son aimable clientèle de
+                    la fermeture hivernale de son établissement à partir du 17
+                    Février. Réouverture le mardi 17 Mars.
                   </span>
                 </div>
               </div>
