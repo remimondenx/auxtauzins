@@ -242,9 +242,9 @@ class FirstLayer extends Component {
                     stdTypingDelay={0}
                     onTypingDone={() => setTimeout(this.done, 3000)}
                   >
-                    L'établissement Aux Tauzins informe son aimable clientèle de
-                    la fermeture hivernale de son établissement à partir du 17
-                    Février. Réouverture le mardi 17 Mars.
+                    Suite au contexte actuel qui sévit en France, notre
+                    établissement reste fermé jusqu’à nouvel ordre. Prenez soin
+                    de vous
                   </Typist>
                 )}
               </Typography>
@@ -254,9 +254,9 @@ class FirstLayer extends Component {
               <div className={classes.infoEltMobile}>
                 <div class="marquee">
                   <span>
-                    L'établissement Aux Tauzins informe son aimable clientèle de
-                    la fermeture hivernale de son établissement à partir du 17
-                    Février. Réouverture le mardi 17 Mars.
+                    Suite au contexte actuel qui sévit en France, notre
+                    établissement reste fermé jusqu’à nouvel ordre. Prenez soin
+                    de vous
                   </span>
                 </div>
               </div>
