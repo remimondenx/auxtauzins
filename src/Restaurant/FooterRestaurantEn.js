@@ -259,7 +259,7 @@ class FooterRestaurant extends Component {
               </div>
               <div>
                 <a
-                  href="https://www.logishotels.com/fr"
+                  href="https://www.logishotels.com/fr/hotel/logis-hotel-aux-tauzins-1516"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
