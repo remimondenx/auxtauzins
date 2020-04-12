@@ -1,24 +1,23 @@
-import React, { Component } from 'react';
-
-import tel_img from '../images/logos/tel.png';
-import mail_img from '../images/logos/mail.png';
-import position_img from '../images/logos/position.png';
-import facebook from '../images/logos/facebook.png';
-import instagram from '../images/logos/instagram.png';
-import tripadvisor from '../images/logos/tripadvisor.png';
-import logo_video from '../images/logos/video.png';
-import logis from '../images/logos/logis.png';
-
 import {
-  withStyles,
-  Typography,
-  Grid,
   Button,
-  Tooltip,
   Dialog,
+  Grid,
+  Tooltip,
+  Typography,
+  withStyles,
 } from '@material-ui/core';
 import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import { isMobileOnly } from 'react-device-detect';
+import facebook from '../images/logos/facebook.png';
+import instagram from '../images/logos/instagram.png';
+import mail_img from '../images/logos/mail.png';
+import position_img from '../images/logos/position.png';
+import restaurantGourmand from '../images/logos/restaurant_gourmand.png';
+import tel_img from '../images/logos/tel.png';
+import tripadvisor from '../images/logos/tripadvisor.png';
+import logo_video from '../images/logos/video.png';
+import velo from '../images/logos/velo.png';
 
 const styles = {
   backgroundColor: {
@@ -58,12 +57,16 @@ const styles = {
     paddingTop: '20px',
   },
   imgLogis: {
-    height: '60px',
+    height: '40px',
     paddingTop: '20px',
+    marginBottom: '20px',
   },
   copyright: {
     marginLeft: '10px',
     fontSize: '0.8em',
+  },
+  velo: {
+    height: '70px',
   },
 };
 
@@ -154,8 +157,18 @@ class FooterRestaurant extends Component {
                   </li>
                 </ul>
               </div>
+              <a
+                href="https://www.francevelotourisme.com/accueil-velo"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  className={classes.velo}
+                  src={velo}
+                  alt="velo disponible"
+                />
+              </a>
             </Grid>
-
             <Grid
               className={classes.contact}
               id="contact"
@@ -258,7 +271,7 @@ class FooterRestaurant extends Component {
                 >
                   <img
                     className={classes.imgLogis}
-                    src={logis}
+                    src={restaurantGourmand}
                     alt="logis hotel"
                   />
                 </a>

@@ -7,7 +7,8 @@ import facebook from '../images/logos/facebook.png';
 import instagram from '../images/logos/instagram.png';
 import booking from '../images/logos/booking.png';
 import logo_video from '../images/logos/video.png';
-import logis from '../images/logos/logis.png';
+import hotelCosy from '../images/logos/hotel_cosy.png';
+import velo from '../images/logos/velo.png';
 
 import {
   withStyles,
@@ -60,12 +61,16 @@ const styles = {
     paddingTop: '20px',
   },
   imgLogis: {
-    height: '60px',
+    height: '40px',
+    paddingTop: '20px',
     paddingTop: '20px',
   },
   copyright: {
     marginLeft: '10px',
     fontSize: '0.8em',
+  },
+  velo: {
+    height: '70px',
   },
 };
 
@@ -171,6 +176,17 @@ class FooterHotel extends Component {
                   </li>
                 </ul>
               </div>
+              <a
+                href="https://www.francevelotourisme.com/accueil-velo"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  className={classes.velo}
+                  src={velo}
+                  alt="velo disponible"
+                />
+              </a>
             </Grid>
 
             <Grid
@@ -275,7 +291,7 @@ class FooterHotel extends Component {
                 >
                   <img
                     className={classes.imgLogis}
-                    src={logis}
+                    src={hotelCosy}
                     alt="logis hotel"
                   />
                 </a>

@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
+import { isMobileOnly } from 'react-device-detect';
 import { Helmet } from 'react-helmet';
-
+import FirstLayer from '../Common/FirstLayer';
 import restaurant from '../images/main/table.jpg';
 import restaurant_mobile from '../images/main/table_mobile.jpg';
-import FirstLayer from '../Common/FirstLayer';
-import MenusLayer from './MenusLayer';
-import LaCarteLayer from './LaCarteLayer';
-
-import { isMobileOnly } from 'react-device-detect';
 import FooterRestaurant from './FooterRestaurant';
+import LaCarteLayer from './LaCarteLayer';
+import MenusLayer from './MenusLayer';
+import History from './History';
 
 class RestaurantPage extends Component {
   render() {
@@ -27,6 +26,7 @@ class RestaurantPage extends Component {
           image={isMobileOnly ? restaurant_mobile : restaurant}
           infoDisplayed
         />
+        <History />
         <MenusLayer />
         <LaCarteLayer />
         <FooterRestaurant />

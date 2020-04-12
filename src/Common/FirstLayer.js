@@ -7,7 +7,8 @@ import instagram from '../images/logos/instagram.png';
 import tripadvisor from '../images/logos/tripadvisor.png';
 import logo_video from '../images/logos/video.png';
 import scroll from '../images/other/scroll.gif';
-import logis from '../images/logos/logis.png';
+import restaurantGourmand from '../images/logos/restaurant_gourmand.png';
+import hotelCosy from '../images/logos/hotel_cosy.png';
 import booking from '../images/logos/booking.png';
 
 import {
@@ -196,7 +197,7 @@ const styles = {
     right: '10px',
   },
   imgLogis: {
-    height: '50px',
+    height: '30px',
   },
 };
 
@@ -482,7 +483,7 @@ class FirstLayer extends Component {
                 >
                   <img
                     className={classes.imgLogis}
-                    src={logis}
+                    src={hotel ? hotelCosy : restaurantGourmand}
                     alt="logis hotel"
                   />
                 </a>
