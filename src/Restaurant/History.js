@@ -2,6 +2,7 @@ import React from 'react';
 import { withStyles, Grid } from '@material-ui/core';
 import history from '../images/history/history.jpg';
 import { isMobileOnly } from 'react-device-detect';
+import LazyLoad from 'react-lazyload';
 
 const styles = {
   root: {
@@ -92,7 +93,9 @@ const History = ({ classes }) => (
       </div>
     </Grid>
     <Grid item xs={12} md={6} className={classes.imageContainer}>
-      <img src={history} className={classes.image} />
+      <LazyLoad>
+        <img src={history} className={classes.image} />
+      </LazyLoad>
     </Grid>
   </Grid>
 );

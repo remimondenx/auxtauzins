@@ -1,14 +1,13 @@
+import { Grid, Typography, withStyles } from '@material-ui/core';
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-
+import Lazyload from 'react-lazyload';
+import img_canard from '../images/food/canard.png';
+import img_desserts from '../images/food/nos_desserts_V1.jpg';
 import img_entrees from '../images/food/nos_entrees.jpg';
 import img_poissons from '../images/food/nos_poissons.jpg';
-import img_canard from '../images/food/canard.png';
-import img_sauces from '../images/food/plats_en_sauce.jpg';
 import img_viandes from '../images/food/nos_viandes.jpg';
-import img_desserts from '../images/food/nos_desserts_V1.jpg';
-
-import { withStyles, Typography, Grid } from '@material-ui/core';
-import PropTypes from 'prop-types';
+import img_sauces from '../images/food/plats_en_sauce.jpg';
 
 const styles = {
   root: {
@@ -117,7 +116,7 @@ class LaCarteLayer extends Component {
     open: 0,
   };
 
-  handleEvent = id => {
+  handleEvent = (id) => {
     this.setState({ open: id });
   };
 
@@ -129,7 +128,7 @@ class LaCarteLayer extends Component {
           A la Carte
         </Typography>
         <Grid className={classes.gridList} container>
-          {listLaCarte.map(it => (
+          {listLaCarte.map((it) => (
             <Grid
               className={classes.carteElt}
               key={it.id}
@@ -139,94 +138,96 @@ class LaCarteLayer extends Component {
               sm={6}
             >
               <div className={classes.flex}>
-                <div
-                  className={classes.backgroundImage}
-                  style={{ backgroundImage: `url(${it.img})` }}
-                >
-                  {!(this.state.open === it.id) && (
-                    <div className={classes.darkBand}>
-                      <Typography
-                        className={classes.titleCarteElt}
-                        color="secondary"
-                      >
-                        {it.title}
-                      </Typography>
-                    </div>
-                  )}
-                  {this.state.open === it.id && (
-                    <div className={classes.darkImage}>
-                      {(it.titleDescription && (
-                        <div style={{ width: '100%' }}>
+                <Lazyload height={300}>
+                  <div
+                    className={classes.backgroundImage}
+                    style={{ backgroundImage: `url(${it.img})` }}
+                  >
+                    {!(this.state.open === it.id) && (
+                      <div className={classes.darkBand}>
+                        <Typography
+                          className={classes.titleCarteElt}
+                          color="secondary"
+                        >
+                          {it.title}
+                        </Typography>
+                      </div>
+                    )}
+                    {this.state.open === it.id && (
+                      <div className={classes.darkImage}>
+                        {(it.titleDescription && (
+                          <div style={{ width: '100%' }}>
+                            <Typography
+                              className={classes.titleMenu}
+                              variant="h5"
+                              color="secondary"
+                            >
+                              {it.title}
+                            </Typography>
+                            <Typography
+                              className={classes.titleDescription}
+                              variant="h5"
+                              color="secondary"
+                              gutterBottom
+                            >
+                              {it.titleDescription}
+                            </Typography>
+                          </div>
+                        )) || (
                           <Typography
                             className={classes.titleMenu}
                             variant="h5"
                             color="secondary"
+                            gutterBottom
                           >
                             {it.title}
                           </Typography>
-                          <Typography
-                            className={classes.titleDescription}
-                            variant="h5"
-                            color="secondary"
-                            gutterBottom
-                          >
-                            {it.titleDescription}
-                          </Typography>
-                        </div>
-                      )) || (
-                        <Typography
-                          className={classes.titleMenu}
-                          variant="h5"
-                          color="secondary"
-                          gutterBottom
-                        >
-                          {it.title}
-                        </Typography>
-                      )}
-                      <table className={classes.table}>
-                        <tbody>
-                          {it.content.map(
-                            (course, index) =>
-                              (course && (
-                                <tr key={course.food}>
-                                  <th className={classes.foodContainer}>
-                                    <Typography
-                                      className={classes.food}
-                                      color="secondary"
-                                    >
-                                      {course.food}
-                                    </Typography>
-                                    {course.description && (
+                        )}
+                        <table className={classes.table}>
+                          <tbody>
+                            {it.content.map(
+                              (course, index) =>
+                                (course && (
+                                  <tr key={course.food}>
+                                    <th className={classes.foodContainer}>
                                       <Typography
-                                        className={classes.description}
+                                        className={classes.food}
                                         color="secondary"
                                       >
-                                        {course.description}
+                                        {course.food}
                                       </Typography>
-                                    )}
-                                  </th>
-                                  <th>
-                                    <div className={classes.price}>
-                                      {course.price}€
-                                    </div>
-                                  </th>
-                                </tr>
-                              )) || (
-                                <tr
-                                  className={classes.separator}
-                                  key={`separator${index}`}
-                                >
-                                  <th>
-                                    <div>~</div>
-                                  </th>
-                                </tr>
-                              ),
-                          )}
-                        </tbody>
-                      </table>
-                    </div>
-                  )}
-                </div>
+                                      {course.description && (
+                                        <Typography
+                                          className={classes.description}
+                                          color="secondary"
+                                        >
+                                          {course.description}
+                                        </Typography>
+                                      )}
+                                    </th>
+                                    <th>
+                                      <div className={classes.price}>
+                                        {course.price}€
+                                      </div>
+                                    </th>
+                                  </tr>
+                                )) || (
+                                  <tr
+                                    className={classes.separator}
+                                    key={`separator${index}`}
+                                  >
+                                    <th>
+                                      <div>~</div>
+                                    </th>
+                                  </tr>
+                                ),
+                            )}
+                          </tbody>
+                        </table>
+                      </div>
+                    )}
+                  </div>
+                </Lazyload>
               </div>
             </Grid>
           ))}

@@ -8,6 +8,7 @@ import ocean_img from '../images/activities/ocean.jpg';
 import ferme_img from '../images/activities/ferme.jpg';
 import musee_img from '../images/activities/musee.jpg';
 import chateau_img from '../images/activities/chateau.jpg';
+import Lazyload from 'react-lazyload';
 
 import { withStyles, Typography, Grid } from '@material-ui/core';
 import PropTypes from 'prop-types';
@@ -70,7 +71,7 @@ class LaCarteLayer extends Component {
           Activities
         </Typography>
         <Grid className={classes.gridList} container>
-          {listActivites.map(it => (
+          {listActivites.map((it) => (
             <Grid className={classes.carteElt} key={it.id} item xs={12} sm={6}>
               {(it.link && (
                 <a
@@ -79,34 +80,38 @@ class LaCarteLayer extends Component {
                   rel="noopener noreferrer"
                   alt={it.title}
                 >
+                  <Lazyload height={300}>
+                    <div
+                      className={classes.backgroundImage}
+                      style={{ backgroundImage: `url(${it.img})` }}
+                    >
+                      <div className={classes.darkBand}>
+                        <Typography
+                          className={classes.titleCarteEltUnderlined}
+                          color="secondary"
+                        >
+                          {it.title}
+                        </Typography>
+                      </div>
+                    </div>
+                  </Lazyload>
+                </a>
+              )) || (
+                <Lazyload height={300}>
                   <div
                     className={classes.backgroundImage}
                     style={{ backgroundImage: `url(${it.img})` }}
                   >
                     <div className={classes.darkBand}>
                       <Typography
-                        className={classes.titleCarteEltUnderlined}
+                        className={classes.titleCarteElt}
                         color="secondary"
                       >
                         {it.title}
                       </Typography>
                     </div>
                   </div>
-                </a>
-              )) || (
-                <div
-                  className={classes.backgroundImage}
-                  style={{ backgroundImage: `url(${it.img})` }}
-                >
-                  <div className={classes.darkBand}>
-                    <Typography
-                      className={classes.titleCarteElt}
-                      color="secondary"
-                    >
-                      {it.title}
-                    </Typography>
-                  </div>
-                </div>
+                </Lazyload>
               )}
             </Grid>
           ))}

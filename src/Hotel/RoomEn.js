@@ -1,9 +1,9 @@
+import { Typography, withStyles } from '@material-ui/core';
 import React, { Component } from 'react';
-
-import { withStyles, Typography } from '@material-ui/core';
+import { isMobileOnly } from 'react-device-detect';
+import Lazyload from 'react-lazyload';
 import SwipeableViews from 'react-swipeable-views';
 import Pagination from '../Common/Pagination';
-import { isMobileOnly } from 'react-device-detect';
 
 const styles = {
   root: {
@@ -66,7 +66,7 @@ class Room extends Component {
     index: 0,
   };
 
-  handleChangeIndex = index => {
+  handleChangeIndex = (index) => {
     this.setState({
       index,
     });
@@ -89,15 +89,17 @@ class Room extends Component {
             index={index}
             onChangeIndex={this.handleChangeIndex}
           >
-            {imgs.map(it => (
-              <img
-                src={it.imgPath}
-                style={
-                  isMobileOnly ? styles.imgEltMobile : styles.imgEltDesktop
-                }
-                alt={it.imgLabel}
-                key={it.imgPath}
-              />
+            {imgs.map((it) => (
+              <Lazyload height={isMobileOnly ? 175 : 260}>
+                <img
+                  src={it.imgPath}
+                  style={
+                    isMobileOnly ? styles.imgEltMobile : styles.imgEltDesktop
+                  }
+                  alt={it.imgLabel}
+                  key={it.imgPath}
+                />
+              </Lazyload>
             ))}
           </SwipeableViews>
           <Pagination

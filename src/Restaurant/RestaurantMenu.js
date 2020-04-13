@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-
-import { withStyles, Typography } from '@material-ui/core';
+import { Typography, withStyles } from '@material-ui/core';
 import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import SwipeableViews from 'react-swipeable-views';
 import Pagination from '../Common/Pagination';
+import LazyLoad from 'react-lazyload';
 
 const styles = {
   root: {
@@ -65,7 +65,7 @@ class RestaurantMenu extends Component {
     index: 0,
   };
 
-  handleChangeIndex = index => {
+  handleChangeIndex = (index) => {
     this.setState({
       index,
     });
@@ -82,19 +82,21 @@ class RestaurantMenu extends Component {
             index={index}
             onChangeIndex={this.handleChangeIndex}
           >
-            {imgs.map(it => (
-              <div
-                style={{
-                  height: '175px',
-                  width: '100%',
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  borderRadius: '20px 20px 0px 0px',
-                  overflow: 'hidden',
-                  backgroundImage: `url(${it.imgPath})`,
-                }}
-                key={it.imgPath}
-              />
+            {imgs.map((it) => (
+              <LazyLoad height={175}>
+                <div
+                  style={{
+                    height: '175px',
+                    width: '100%',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    borderRadius: '20px 20px 0px 0px',
+                    overflow: 'hidden',
+                    backgroundImage: `url(${it.imgPath})`,
+                  }}
+                  key={it.imgPath}
+                />
+              </LazyLoad>
             ))}
           </SwipeableViews>
           <Pagination
