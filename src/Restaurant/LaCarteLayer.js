@@ -2,7 +2,7 @@ import { Grid, Typography, withStyles } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import LazyLoad from 'react-lazyload';
-import img_canard from '../images/food/canard.png';
+import img_canard from '../images/food/canard.jpg';
 import img_desserts from '../images/food/nos_desserts_V1.jpg';
 import img_entrees from '../images/food/nos_entrees.jpg';
 import img_poissons from '../images/food/nos_poissons.jpg';
