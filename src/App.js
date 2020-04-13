@@ -1,20 +1,19 @@
-import React, { Component } from 'react';
+import { withStyles } from '@material-ui/core';
+import { MuiThemeProvider } from '@material-ui/core/styles';
+import React, { Component, lazy, Suspense } from 'react';
+import { isBrowser } from 'react-device-detect';
 import { Route, Switch } from 'react-router-dom';
-
+import ScrollUpButton from 'react-scroll-up-button';
+import { injectGlobal } from 'styled-components';
+import Admin from './Admin/Admin';
 import './App.css';
 import theme from './theme.js';
-import HotelPage from './Hotel/HotelPage';
-import HotelPageEn from './Hotel/HotelPageEn';
-import RestaurantPage from './Restaurant/RestaurantPage';
-import RestaurantPageEn from './Restaurant/RestaurantPageEn';
-import Admin from './Admin/Admin';
-import NotFound from './Common/NotFound';
 
-import { isBrowser } from 'react-device-detect';
-import { withStyles } from '@material-ui/core';
-import { injectGlobal } from 'styled-components';
-import { MuiThemeProvider } from '@material-ui/core/styles';
-import ScrollUpButton from 'react-scroll-up-button';
+const RestaurantPage = lazy(() => import('./Restaurant/RestaurantPage'));
+const RestaurantPageEn = lazy(() => import('./Restaurant/RestaurantPageEn'));
+const HotelPage = lazy(() => import('./Hotel/HotelPage'));
+const HotelPageEn = lazy(() => import('./Hotel/HotelPageEn'));
+const NotFound = lazy(() => import('./Common/NotFound'));
 
 injectGlobal`
   html,
@@ -44,14 +43,16 @@ class App extends Component {
     return (
       <div className={classes.root}>
         <MuiThemeProvider theme={theme}>
-          <Switch>
-            <Route exact path="/en" component={RestaurantPageEn} />
-            <Route exact path="/hotel/en" component={HotelPageEn} />
-            <Route exact path="/hotel" component={HotelPage} />
-            <Route exact path="/admin" component={Admin} />
-            <Route exact path="/" component={RestaurantPage} />
-            <Route path="*" component={NotFound} />
-          </Switch>
+          <Suspense fallback={null}>
+            <Switch>
+              <Route exact path="/en" component={RestaurantPageEn} />
+              <Route exact path="/hotel/en" component={HotelPageEn} />
+              <Route exact path="/hotel" component={HotelPage} />
+              <Route exact path="/admin" component={Admin} />
+              <Route exact path="/" component={RestaurantPage} />
+              <Route path="/" component={NotFound} />
+            </Switch>
+          </Suspense>
         </MuiThemeProvider>
         {isBrowser ? (
           <ScrollUpButton style={styleScrollUpButton} ShowAtPosition={1800} />
