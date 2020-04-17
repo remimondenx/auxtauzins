@@ -5,7 +5,6 @@ import { isBrowser } from 'react-device-detect';
 import { Route, Switch } from 'react-router-dom';
 import ScrollUpButton from 'react-scroll-up-button';
 import { injectGlobal } from 'styled-components';
-import Admin from './Admin/Admin';
 import './App.css';
 import theme from './theme.js';
 
@@ -48,7 +47,6 @@ class App extends Component {
               <Route exact path="/en" component={RestaurantPageEn} />
               <Route exact path="/hotel/en" component={HotelPageEn} />
               <Route exact path="/hotel" component={HotelPage} />
-              <Route exact path="/admin" component={Admin} />
               <Route exact path="/" component={RestaurantPage} />
               <Route path="/" component={NotFound} />
             </Switch>
