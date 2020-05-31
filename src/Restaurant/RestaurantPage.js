@@ -26,9 +26,9 @@ class RestaurantPage extends Component {
           image={isMobileOnly ? restaurant_mobile : restaurant}
           infoDisplayed
         />
-        <History />
         <MenusLayer />
         <LaCarteLayer />
+        <History />
         <FooterRestaurant />
       </div>
     );

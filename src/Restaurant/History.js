@@ -11,6 +11,7 @@ const styles = {
   },
   gridContainer: {
     padding: '60px',
+    backgroundColor: '#eceff1',
   },
   description: {
     textAlign: 'justify',

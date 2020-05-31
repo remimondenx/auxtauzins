@@ -24,7 +24,7 @@ const styles = {
     backgroundColor: '#eceff1',
   },
   root: {
-    margin: '30px 30px 0 30px',
+    margin: '0 30px 0 30px',
     textAlign: 'center',
   },
   title: {
