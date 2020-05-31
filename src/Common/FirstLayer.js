@@ -243,9 +243,9 @@ class FirstLayer extends Component {
                     stdTypingDelay={0}
                     onTypingDone={() => setTimeout(this.done, 3000)}
                   >
-                    Suite au contexte actuel qui sévit en France, notre
-                    établissement reste fermé jusqu’à nouvel ordre. Prenez soin
-                    de vous
+                    Réouverture de notre établissement dès le 2 juin. Nous
+                    sommes ravis de vous revoir ! Retrouvez le menu spécial fête
+                    des mères ci-dessous
                   </Typist>
                 )}
               </Typography>
@@ -255,9 +255,9 @@ class FirstLayer extends Component {
               <div className={classes.infoEltMobile}>
                 <div class="marquee">
                   <span>
-                    Suite au contexte actuel qui sévit en France, notre
-                    établissement reste fermé jusqu’à nouvel ordre. Prenez soin
-                    de vous
+                    Réouverture de notre établissement dès le 2 juin. Nous
+                    sommes ravis de vous revoir ! Retrouvez le menu spécial fête
+                    des mères ci-dessous
                   </span>
                 </div>
               </div>
