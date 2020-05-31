@@ -1,17 +1,14 @@
 import { Grid, Typography, withStyles } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import img_sorbets from '../images/food/assiette_de_sorbets_menu2_V2.jpg';
 import img_assiette from '../images/food/assiette_du_terroir_menu1_V4.jpg';
 import img_coeurs_canard from '../images/food/coeurs_de_canard_menu1_V5.jpg';
-import img_confit from '../images/food/confit_de_canard_menu2_V2.jpg';
 import img_artagnan from '../images/food/coupe_artagnan_menu4.jpg';
 import img_foie_gras_chaud from '../images/food/foie_gras_chaud_aux_raisins_menu4.jpg';
+import img_fraisier from '../images/food/fraisier.jpg';
 import img_magret from '../images/food/magret_de_canard_menu3_V1.jpg';
-import img_magret_froid from '../images/food/magret_froid_fourre_menu2_V3.jpg';
 import img_omelette from '../images/food/omelette_aux_cepes_menu3.jpg';
 import img_patisseries from '../images/food/patisseries_maison_menu1_V3.jpg';
-import img_salade_gesiers from '../images/food/salade_de_gesiers_oie.jpg';
 import img_tournedos from '../images/food/tournedos_de_boeuf_menu4_V2.jpg';
 import RestaurantMenu from './RestaurantMenu';
 
@@ -50,43 +47,47 @@ MenusLayer.propTypes = {
 
 export default withStyles(styles)(MenusLayer);
 
+const menuDuMoment = {
+  name: 'Menu du moment - Fête des mères',
+  entree: 'Foie gras frais aux raisins',
+  plat: 'Ris de veau sauce financière',
+  plat2:
+    "Magret de canard sauce au poivre accompagné d'un gratin dauphinois aux champignons",
+  dessert: 'Fraisier maison',
+  extra: 'Sur place ou à emporter',
+};
+
 const terroir = {
   name: 'Menu du terroir',
   entree: 'Assiette du terroir',
-  entree2: 'Garbure Landaise',
-  plat: 'Coq fermier sauce Madiran',
-  plat2: 'Brochette de coeurs de canard',
-  dessert: 'Pâtisserie maison',
-  dessert2: 'Glace',
+  entree2: 'Entrée du jour',
+  plat: 'Civet de gibier maison',
+  plat2: 'Brochette de coeurs de canard grillés',
+  dessert: 'Glace',
+  dessert2: 'Dessert maison',
   prix: 26,
-};
-
-const chalossais = {
-  name: 'Menu Chalossais',
-  entree: 'Magret froid fourré au foie gras sur lit de salade',
-  plat: 'Confit de canard Chalossais, pommes frites',
-  dessert: 'Assiette de sorbets',
-  prix: 32,
 };
 
 const gourmand = {
   name: 'Menu Gourmand',
-  entree: 'Poisson de la marée',
-  entree2: 'Omelette aux cèpes',
-  plat: 'Civet de gibier',
-  plat2: 'Magret de canard sauce au poivre',
+  entree: 'Omelette aux cèpes',
+  plat: 'Poisson de la marée',
+  plat2: 'Magret de canard grillé',
+  plat3: 'Confit de canard',
   dessert: 'Coupe Melba',
   prix: 36,
 };
 
 const gastro = {
   name: 'Menu Gastronomique',
-  entree: "Salade de gésiers d'oie",
+  entree: 'Mise en bouche de saison',
   plat: 'Foie gras chaud aux raisins',
-  apresPlat: 'Tournedos de boeuf',
+  apresPlat: 'Tournedos de boeuf sauce aux cèpes et légumes de saison',
   dessert: "Coupe d'Artagnan",
   prix: 45,
 };
+
+const imgs_menu_du_moment = [{ label: 'fraisier', imgPath: img_fraisier }];
 
 const imgs_terroir = [
   {
@@ -103,21 +104,6 @@ const imgs_terroir = [
   },
 ];
 
-const imgs_chalossais = [
-  {
-    label: 'magret froid fourré au foie gras',
-    imgPath: img_magret_froid,
-  },
-  {
-    label: 'confit de canard',
-    imgPath: img_confit,
-  },
-  {
-    label: 'assiette de sorbets',
-    imgPath: img_sorbets,
-  },
-];
-
 const imgs_gourmand = [
   {
     label: 'omelette aux cèpes',
@@ -130,10 +116,6 @@ const imgs_gourmand = [
 ];
 
 const imgs_gastro = [
-  {
-    label: 'salade de gésiers d oie',
-    imgPath: img_salade_gesiers,
-  },
   {
     label: 'foie gras chaud',
     imgPath: img_foie_gras_chaud,
@@ -150,12 +132,12 @@ const imgs_gastro = [
 
 const listMenus = [
   {
-    content: terroir,
-    imgs: imgs_terroir,
+    content: menuDuMoment,
+    imgs: imgs_menu_du_moment,
   },
   {
-    content: chalossais,
-    imgs: imgs_chalossais,
+    content: terroir,
+    imgs: imgs_terroir,
   },
   {
     content: gourmand,

@@ -58,6 +58,9 @@ const styles = {
   prix: {
     fontWeight: 'bold',
   },
+  extra: {
+    fontWeight: 'bold',
+  },
 };
 
 class RestaurantMenu extends Component {
@@ -134,6 +137,12 @@ class RestaurantMenu extends Component {
                 <Typography variant="body1">{content.plat2}</Typography>
               </div>
             )}
+            {content.plat3 && (
+              <div>
+                <Typography className={classes.or}>ou</Typography>
+                <Typography variant="body1">{content.plat3}</Typography>
+              </div>
+            )}
             <Typography className={classes.tilde} variant="body1">
               ~
             </Typography>
@@ -159,9 +168,16 @@ class RestaurantMenu extends Component {
               </Typography>
             )}
           </div>
-          <Typography className={classes.prix} variant="body1">
-            - {content.prix} euros -
-          </Typography>
+          {content.prix && (
+            <Typography className={classes.prix} variant="body1">
+              - {content.prix} euros -
+            </Typography>
+          )}
+          {content.extra && (
+            <Typography className={classes.extra} variant="body1">
+              {content.extra}
+            </Typography>
+          )}
         </div>
       </div>
     );
@@ -175,7 +191,7 @@ RestaurantMenu.propTypes = {
     entree: PropTypes.string.isRequired,
     plat: PropTypes.string.isRequired,
     dessert: PropTypes.string.isRequired,
-    prix: PropTypes.number.isRequired,
+    prix: PropTypes.number,
   }).isRequired,
   imgs: PropTypes.arrayOf(
     PropTypes.shape({
