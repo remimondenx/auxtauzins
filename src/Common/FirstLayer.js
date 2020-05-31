@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import united_kingdom from '../images/logos/united_kingdom.png';
 import aux_tauzins_white from '../images/logos/aux_tauzins_white.png';
+import aux_tauzins_black from '../images/logos/aux_tauzins_black.png';
 import facebook from '../images/logos/facebook.png';
 import instagram from '../images/logos/instagram.png';
 import tripadvisor from '../images/logos/tripadvisor.png';
@@ -272,7 +273,7 @@ class FirstLayer extends Component {
                         ? classes.auxTauzinsInfo
                         : classes.auxTauzins
                     }
-                    src={aux_tauzins_white}
+                    src={hotel ? aux_tauzins_white : aux_tauzins_black}
                     alt="logo"
                   />
                 ) : (
@@ -282,7 +283,7 @@ class FirstLayer extends Component {
                         ? classes.auxTauzinsMobileInfo
                         : classes.auxTauzinsMobile
                     }
-                    src={aux_tauzins_white}
+                    src={hotel ? aux_tauzins_white : aux_tauzins_black}
                     alt="logo"
                   />
                 )}
