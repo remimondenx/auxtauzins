@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import restaurant from '../images/main/table.jpg';
-import restaurant_mobile from '../images/main/table_mobile.jpg';
+import restaurant from '../images/main/terrasse.jpg';
+import restaurant_mobile from '../images/main/terrasse_mobile.jpg';
 import FirstLayerEn from '../Common/FirstLayerEn';
 import MenusLayerEn from './MenusLayerEn';
 import LaCarteLayerEn from './LaCarteLayerEn';
