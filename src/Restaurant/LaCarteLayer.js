@@ -8,6 +8,7 @@ import img_entrees from '../images/food/nos_entrees.jpg';
 import img_poissons from '../images/food/nos_poissons.jpg';
 import img_viandes from '../images/food/nos_viandes.jpg';
 import img_sauces from '../images/food/plats_en_sauce.jpg';
+import img_vins from '../images/food/vins.jpg';
 
 const styles = {
   root: {
@@ -88,6 +89,15 @@ const styles = {
   foodContainer: {
     display: 'flex',
     flexDirection: 'column',
+  },
+  courseTitle: {
+    textAlign: 'center',
+    fontSize: '18px',
+    fontWeight: 'bold',
+  },
+  courseSubtitle: {
+    textDecoration: 'underline',
+    marginTop: '4px',
   },
   food: {
     textAlign: 'left',
@@ -187,29 +197,45 @@ class LaCarteLayer extends Component {
                           <tbody>
                             {it.content.map((course, index) =>
                               course ? (
-                                <tr key={course.food}>
-                                  <th className={classes.foodContainer}>
-                                    <Typography
-                                      className={classes.food}
-                                      color="secondary"
-                                    >
-                                      {course.food}
-                                    </Typography>
-                                    {course.description && (
+                                course.title ? (
+                                  <Typography
+                                    className={classes.courseTitle}
+                                    color="secondary"
+                                  >
+                                    {course.title}
+                                  </Typography>
+                                ) : course.subtitle ? (
+                                  <Typography
+                                    className={classes.courseSubtitle}
+                                    color="secondary"
+                                  >
+                                    {course.subtitle}
+                                  </Typography>
+                                ) : (
+                                  <tr key={course.food}>
+                                    <th className={classes.foodContainer}>
                                       <Typography
-                                        className={classes.description}
+                                        className={classes.food}
                                         color="secondary"
                                       >
-                                        {course.description}
+                                        {course.food}
                                       </Typography>
-                                    )}
-                                  </th>
-                                  <th>
-                                    <div className={classes.price}>
-                                      {course.price}€
-                                    </div>
-                                  </th>
-                                </tr>
+                                      {course.description && (
+                                        <Typography
+                                          className={classes.description}
+                                          color="secondary"
+                                        >
+                                          {course.description}
+                                        </Typography>
+                                      )}
+                                    </th>
+                                    <th>
+                                      <div className={classes.price}>
+                                        {course.price}€
+                                      </div>
+                                    </th>
+                                  </tr>
+                                )
                               ) : (
                                 <tr
                                   className={classes.separator}
@@ -388,4 +414,149 @@ const desserts = {
   ],
 };
 
-const listLaCarte = [entrees, poissons, canard, sauces, viandes, desserts];
+const vins = {
+  id: 7,
+  title: 'Nos vins et spiritueux',
+  img: img_vins,
+  content: [
+    { title: 'Verre de vin' },
+    { food: 'Rouge du mois, 16cl', price: 5 },
+    { food: 'Rosé du mois, 16cl', price: 5 },
+    { food: 'Jurançon sec ou moelleux, 8cl', price: 5 },
+    false,
+    { title: 'Nos vins rouges' },
+    { subtitle: 'AOC' },
+    {
+      food: 'Madiran, cuvée Vieux Ceps',
+      price: 26,
+      description: '1/2 bouteille 18€',
+    },
+    {
+      food: 'Château Barréjat',
+      price: 20,
+      description: '1/2 bouteille 16€',
+    },
+    { food: 'St Nicolas de Bourgueil, rouge frais', price: 26 },
+    { subtitle: 'Bordeaux' },
+    { food: 'Château Cap Royal (2015)', price: 26 },
+    { food: 'Château de Terrefort Quancard (2014)', price: 26 },
+    { food: 'Château Vieux Liron (2016)', price: 26 },
+    { food: 'Château Naudonnet Plaisance (2014)', price: 26 },
+    {
+      food: "Château Brun d'Espagne (2015)",
+      price: 26,
+      description: '1/2 bouteille (2016) 17€',
+    },
+    { subtitle: 'Bourgogne' },
+    { food: 'Côte de Nuits (2016)', price: 45 },
+    { subtitle: 'Graves' },
+    { food: 'Château Bel Air Gallier (2012)', price: 33 },
+    { subtitle: 'Lalande de Pomerol' },
+    { food: 'Vieux Cardinal Lafaurie (2014)', price: 40 },
+    { subtitle: 'Margaux' },
+    { food: 'Château Mongravey (2014)', price: 40 },
+    { food: 'Zede de Labegorce (2015)', price: 60 },
+    { subtitle: 'Médoc et Haut-Médoc' },
+    { food: 'Château Gravat Cru Bourgeois (2012)', price: 35 },
+    { food: 'Château Donissan (2014)', price: 35 },
+    { subtitle: 'Pauillac' },
+    { food: 'La Fleur de Haut Bages Libéral (2014)', price: 58 },
+    { food: 'Les Chevaliers de Dauprat (2014)', price: 55 },
+    { subtitle: 'Pessac Léognan' },
+    { food: 'Château Seguin (2016)', price: 50 },
+    {
+      food: 'L’Angelot de Seguin (2016)',
+      price: 40,
+      description: '1/2 bouteille 22€',
+    },
+    { subtitle: 'St Emilion' },
+    { food: 'La Croix Fourche (2016)', price: 40 },
+    { food: 'Château Grand Bert (2014)', price: 40 },
+    {
+      food: 'Château Patris Grand (2015)',
+      price: 50,
+      description: '1/2 bouteille 26€',
+    },
+    { food: 'Château Tertre De Calon, Montagne St Emilion (2015)', price: 30 },
+    { food: 'Château de Beaulieu, Montagne de St Emilion (2015)', price: 32 },
+    { subtitle: 'St Estephe' },
+    { food: 'Château Ségur de Cabanac (2013)', price: 50 },
+    { food: 'Les Hauts de Cabanac (2014)', price: 45 },
+    { food: 'Les Hauts de Pez (2014)', price: 55 },
+    { food: 'Cossieu Coutelin (2015)', price: 50 },
+    { subtitle: 'St Julien' },
+    { food: 'Château Teynac (2004)', price: 60 },
+    { food: 'La Croix Dillanges (2015)', price: 65 },
+    { subtitle: 'Pomerol' },
+    { food: 'Château Le Moulin Basileus (2014)', price: 70 },
+    { subtitle: 'Vins de pays' },
+    { food: 'Chalosse', price: 15, description: '1/2 bouteille 11€' },
+    { subtitle: 'VDQS' },
+    { food: 'Tursan', price: 18 },
+    { food: 'Tursan Impératrice, 50cl', price: 14 },
+    false,
+    { title: 'Nos vins blancs' },
+    { subtitle: 'Alsace' },
+    { food: 'Riesling', price: 28 },
+    { food: 'Gewurztraminer', price: 28 },
+    { subtitle: 'AOC' },
+    { food: 'Sauternes', price: 41 },
+    {
+      food: 'Jurançon, sec ou moelleux',
+      price: 29,
+      description: '1/2 bouteille 20€',
+    },
+    { subtitle: 'Bourgogne' },
+    { food: "Côte d'Auxerre (2009)", price: 35 },
+    { subtitle: 'VDQS' },
+    { food: 'Tursan', price: 18 },
+    { food: 'Tursan Impératrice, 50cl', price: 14 },
+    false,
+    { title: 'Nos vins rosés' },
+    { subtitle: 'AOC' },
+    { food: 'Sélection de la maison', price: 25 },
+    { subtitle: 'Vins de pays' },
+    { food: 'Chalosse', price: 15, description: '1/2 bouteille 11€' },
+    { subtitle: 'VDQS' },
+    { food: 'Tursan', price: 18 },
+    { food: 'Tursan Impératrice, 50cl', price: 14 },
+    false,
+    { title: 'Nos champagnes' },
+    { food: 'Réserve de propriétaire brut', price: 55 },
+    { food: 'Veuve Cheurlin Prestige brut', price: 65 },
+    false,
+    { title: 'Nos apéritifs' },
+    { food: 'Cocktail de jus de fruit sans alcool, 10cl', price: 3 },
+    { food: 'Cocktail de jus de fruit avec alcool, 10cl', price: 6 },
+    { food: 'Pousse Rapière, 10cl', price: 8 },
+    { food: 'Américano, 6l', price: 6.5 },
+    { food: 'Floc de Gascogne, 5cl', price: 3.5 },
+    { food: 'Kir sec, 10cl', price: 3.5 },
+    { food: 'Kir pétillant, 10cl', price: 6.5 },
+    { food: 'Kir Champagne, 10cl', price: 9 },
+    { food: 'Jurançon fruité, 8cl', price: 5 },
+    { food: 'Vin cuit, 2cl', price: 3.5 },
+    { food: 'Ricard, 2cl', price: 3.5 },
+    { food: 'Whisky, 4cl', price: 6 },
+    false,
+    { title: 'Eaux minérales' },
+    { subtitle: 'Plate' },
+    { food: 'Evian', price: 4 },
+    { food: '1/2 Vittel', price: 3 },
+    { food: 'Vittel', price: 4 },
+    { subtitle: 'Gazeuse' },
+    { food: '1/2 Badoit', price: 3 },
+    { food: 'Badoit', price: 4 },
+    { food: 'San Pellegrino', price: 4 },
+  ],
+};
+
+const listLaCarte = [
+  entrees,
+  poissons,
+  canard,
+  sauces,
+  viandes,
+  desserts,
+  vins,
+];
