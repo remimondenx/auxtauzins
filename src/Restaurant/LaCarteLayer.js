@@ -295,7 +295,6 @@ const entrees = {
 const poissons = {
   id: 2,
   title: 'Nos poissons',
-  titleDescription: 'provenance : port de Capbreton',
   img: img_poissons,
   content: [
     { food: 'Coquilles Saint-Jacques à la Provençale', price: 26 },
@@ -308,7 +307,7 @@ const poissons = {
 const canard = {
   id: 3,
   title: 'Les produits du canard',
-  titleDescription: 'accompagnés de frites maison et légumes de saison',
+  titleDescription: 'accompagnés de frites maison et de légumes de saison',
   img: img_canard,
   content: [
     { food: 'Confit de canard "la cuisse"', price: 18 },
@@ -335,7 +334,7 @@ const canard = {
 const sauces = {
   id: 4,
   title: 'Nos plats en sauce',
-  titleDescription: 'accompagnées de frites maison et de légumes de saison',
+  titleDescription: 'accompagnés de frites maison et de légumes de saison',
   img: img_sauces,
   content: [
     { food: 'Civet de gibier façon grand-mère', price: 18 },
