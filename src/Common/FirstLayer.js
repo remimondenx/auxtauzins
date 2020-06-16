@@ -246,7 +246,7 @@ class FirstLayer extends Component {
                   >
                     Réouverture de notre établissement dès le 2 juin. Nous
                     sommes ravis de vous revoir ! Retrouvez le menu spécial fête
-                    des mères ci-dessous
+                    des pères ci-dessous
                   </Typist>
                 )}
               </Typography>
@@ -258,7 +258,7 @@ class FirstLayer extends Component {
                   <span>
                     Réouverture de notre établissement dès le 2 juin. Nous
                     sommes ravis de vous revoir ! Retrouvez le menu spécial fête
-                    des mères ci-dessous
+                    des pères ci-dessous
                   </span>
                 </div>
               </div>

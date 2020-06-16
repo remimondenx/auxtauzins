@@ -5,7 +5,6 @@ import img_assiette from '../images/food/assiette_du_terroir_menu1_V4.jpg';
 import img_coeurs_canard from '../images/food/coeurs_de_canard_menu1_V5.jpg';
 import img_artagnan from '../images/food/coupe_artagnan_menu4.jpg';
 import img_foie_gras_chaud from '../images/food/foie_gras_chaud_aux_raisins_menu4.jpg';
-import img_fraisier from '../images/food/fraisier.jpg';
 import img_magret from '../images/food/magret_de_canard_menu3_V1.jpg';
 import img_omelette from '../images/food/omelette_aux_cepes_menu3.jpg';
 import img_patisseries from '../images/food/patisseries_maison_menu1_V3.jpg';
@@ -48,12 +47,12 @@ MenusLayer.propTypes = {
 export default withStyles(styles)(MenusLayer);
 
 const menuDuMoment = {
-  name: 'Menu du moment - Fête des mères',
-  entree: 'Foie gras frais aux raisins',
-  plat: 'Ris de veau sauce financière',
+  name: 'Menu fête des pères',
+  entree: 'Mises en bouche',
+  plat: 'Beignets de lotte et légumes au wok',
   plat2:
-    "Magret de canard sauce au poivre accompagné d'un gratin dauphinois aux champignons",
-  dessert: 'Fraisier maison',
+    'Tournedos de bœuf, sauce forestière accompagné de frites et légumes de saison',
+  dessert: 'Charlotte aux fruits de la passion',
   extra: 'Sur place ou à emporter',
 };
 
@@ -87,7 +86,7 @@ const gastro = {
   prix: 45,
 };
 
-const imgs_menu_du_moment = [{ label: 'fraisier', imgPath: img_fraisier }];
+const imgs_menu_du_moment = [{ label: 'tournedos', imgPath: img_tournedos }];
 
 const imgs_terroir = [
   {
