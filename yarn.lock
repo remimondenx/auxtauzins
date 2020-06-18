@@ -10636,11 +10636,6 @@ typeface-josefin-sans@0.0.54:
   resolved "https://registry.yarnpkg.com/typeface-josefin-sans/-/typeface-josefin-sans-0.0.54.tgz#c7f1c88d9a01605762465139ef9f485b42c306ff"
   integrity sha512-wpApRq22rGuK82Atg4T5Bei/3Yrjc9rdtDOadW5pOJs1eoyDrbb6GZ3ovWizjq8Va0Ak4TMUAgkYyag65w5xJw==
 
-typeface-nunito@0.0.54:
-  version "0.0.54"
-  resolved "https://registry.yarnpkg.com/typeface-nunito/-/typeface-nunito-0.0.54.tgz#5046f24d8d1492ca8fd823896d6e1cdefbe63203"
-  integrity sha512-hxC+o6vc0vkXPDNGRWZ26ghXPTzVC2gJbUGSJEmoMByb02yM94PiVOLoBa0ChC+HgNbAGbHeQh7k6ok+59gjZw==
-
 typeface-quicksand@0.0.71:
   version "0.0.71"
   resolved "https://registry.yarnpkg.com/typeface-quicksand/-/typeface-quicksand-0.0.71.tgz#85157b7cc299b558dbeeea1a413217887685dd6b"
