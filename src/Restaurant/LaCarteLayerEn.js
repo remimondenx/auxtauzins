@@ -99,7 +99,6 @@ const styles = {
     textAlign: 'left',
   },
   price: {
-    fontFamily: 'Nunito',
     color: '#4CAF50',
     fontWeight: 'bold',
     fontSize: '0.9em',
