@@ -244,9 +244,10 @@ class FirstLayer extends Component {
                     stdTypingDelay={0}
                     onTypingDone={() => setTimeout(this.done, 3000)}
                   >
-                    Réouverture de notre établissement dès le 2 juin. Nous
-                    sommes ravis de vous revoir ! Retrouvez le menu spécial fête
-                    des pères ci-dessous
+                    À l’attention de notre clientèle cycliste : notre
+                    établissement classé Accueil Vélo vous offre conseils et
+                    parking vélos pour tous nos circuits régionaux.
+                    Renseignements sur place.
                   </Typist>
                 )}
               </Typography>
@@ -256,9 +257,10 @@ class FirstLayer extends Component {
               <div className={classes.infoEltMobile}>
                 <div class="marquee">
                   <span>
-                    Réouverture de notre établissement dès le 2 juin. Nous
-                    sommes ravis de vous revoir ! Retrouvez le menu spécial fête
-                    des pères ci-dessous
+                    À l’attention de notre clientèle cycliste : notre
+                    établissement classé Accueil Vélo vous offre conseils et
+                    parking vélos pour tous nos circuits régionaux.
+                    Renseignements sur place.
                   </span>
                 </div>
               </div>
