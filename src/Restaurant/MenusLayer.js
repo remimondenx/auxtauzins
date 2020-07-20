@@ -46,16 +46,6 @@ MenusLayer.propTypes = {
 
 export default withStyles(styles)(MenusLayer);
 
-const menuDuMoment = {
-  name: 'Menu fête des pères',
-  entree: 'Mises en bouche',
-  plat: 'Beignets de lotte et légumes au wok',
-  plat2:
-    'Tournedos de bœuf, sauce forestière accompagné de frites et légumes de saison',
-  dessert: 'Charlotte aux fruits de la passion',
-  extra: 'Sur place ou à emporter',
-};
-
 const terroir = {
   name: 'Menu du terroir',
   entree: 'Assiette du terroir',
@@ -85,8 +75,6 @@ const gastro = {
   dessert: "Coupe d'Artagnan",
   prix: 45,
 };
-
-const imgs_menu_du_moment = [{ label: 'tournedos', imgPath: img_tournedos }];
 
 const imgs_terroir = [
   {
@@ -130,10 +118,6 @@ const imgs_gastro = [
 ];
 
 const listMenus = [
-  {
-    content: menuDuMoment,
-    imgs: imgs_menu_du_moment,
-  },
   {
     content: terroir,
     imgs: imgs_terroir,
