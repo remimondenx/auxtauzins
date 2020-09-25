@@ -244,10 +244,9 @@ class FirstLayer extends Component {
                     stdTypingDelay={0}
                     onTypingDone={() => setTimeout(this.done, 3000)}
                   >
-                    À l’attention de notre clientèle cycliste : notre
-                    établissement classé Accueil Vélo vous offre conseils et
-                    parking vélos pour tous nos circuits régionaux.
-                    Renseignements sur place.
+                    Aux Tauzins informe sa clientèle de la fermeture automnale
+                    de l’établissement à compter du samedi 26 Septembre.
+                    Réouverture le dimanche 10 Octobre à midi. À très bientôt !
                   </Typist>
                 )}
               </Typography>
@@ -257,10 +256,9 @@ class FirstLayer extends Component {
               <div className={classes.infoEltMobile}>
                 <div class="marquee">
                   <span>
-                    À l’attention de notre clientèle cycliste : notre
-                    établissement classé Accueil Vélo vous offre conseils et
-                    parking vélos pour tous nos circuits régionaux.
-                    Renseignements sur place.
+                    Aux Tauzins informe sa clientèle de la fermeture automnale
+                    de l’établissement à compter du samedi 26 Septembre.
+                    Réouverture le dimanche 10 Octobre à midi. À très bientôt !
                   </span>
                 </div>
               </div>
