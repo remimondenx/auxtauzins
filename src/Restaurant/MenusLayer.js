@@ -49,7 +49,7 @@ export default withStyles(styles)(MenusLayer);
 const terroir = {
   name: 'Menu du terroir',
   entree: 'Assiette du terroir',
-  entree2: 'Entrée du jour',
+  entree2: 'Garbure Landaise',
   plat: 'Civet de gibier maison',
   plat2: 'Brochette de coeurs de canard grillés',
   dessert: 'Glace',
@@ -69,7 +69,7 @@ const gourmand = {
 
 const gastro = {
   name: 'Menu Gastronomique',
-  entree: 'Mise en bouche de saison',
+  entree: 'Salade de gésiers d\'oie',
   plat: 'Foie gras chaud aux raisins',
   apresPlat: 'Tournedos de boeuf sauce aux cèpes et légumes de saison',
   dessert: "Coupe d'Artagnan",

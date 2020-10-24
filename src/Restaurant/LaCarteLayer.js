@@ -283,6 +283,12 @@ const entrees = {
         "Salade verte, pointes d'asperges, gésiers, magret fumé, foie gras",
       price: 25,
     },
+    {
+      food: 'Garbure Landaise',
+      description:
+        "Potage avec viande de canard",
+      price: 15,
+    },
     false,
     { food: 'Pâté de chevreuil maison', price: 11 },
     { food: 'Pâté de foie de canard maison', price: 15 },
@@ -298,7 +304,7 @@ const poissons = {
   content: [
     { food: 'Coquilles Saint-Jacques à la Provençale', price: 26 },
     { food: 'Chipirons à la plancha', price: 26 },
-    { food: 'Sole meunière', price: 28 },
+    { food: 'Sole meunière', price: 30 },
     { food: 'Fricassée de lotte et Saint-Jacques aux cèpes', price: 30 },
   ],
 };
@@ -352,7 +358,7 @@ const viandes = {
     {
       food: 'Escalope de veau',
       description: 'grillée ou à la crème',
-      price: 18,
+      price: 20,
     },
     { food: 'Tournedos au poivre', price: 24 },
     { food: 'Tournedos Landais', description: 'foie gras et cèpes', price: 30 },
