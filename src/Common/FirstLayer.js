@@ -244,9 +244,7 @@ class FirstLayer extends Component {
                     stdTypingDelay={0}
                     onTypingDone={() => setTimeout(this.done, 3000)}
                   >
-                    Aux Tauzins informe sa clientèle de la fermeture automnale
-                    de l’établissement à compter du samedi 26 Septembre.
-                    Réouverture le dimanche 10 Octobre à midi. À très bientôt !
+                    Découvrez notre menu à emporter à l'occasion du 11 Novembre. Contactez nous au 05 58 98 60 22.
                   </Typist>
                 )}
               </Typography>
@@ -256,9 +254,7 @@ class FirstLayer extends Component {
               <div className={classes.infoEltMobile}>
                 <div class="marquee">
                   <span>
-                    Aux Tauzins informe sa clientèle de la fermeture automnale
-                    de l’établissement à compter du samedi 26 Septembre.
-                    Réouverture le dimanche 10 Octobre à midi. À très bientôt !
+                    Découvrez notre menu à emporter à l'occasion du 11 Novembre. Contactez nous au 05 58 98 60 22.
                   </span>
                 </div>
               </div>
