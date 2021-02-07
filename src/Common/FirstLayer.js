@@ -244,7 +244,7 @@ class FirstLayer extends Component {
                     stdTypingDelay={0}
                     onTypingDone={() => setTimeout(this.done, 3000)}
                   >
-                    Nos menus du 25 décembre et 1er janvier vous sont proposés à emporter ! N'hésitez pas à nous contacter au 05 58 98 60 22. A très vite nous l'espérons !
+                    Retrouvez le menu de la Saint Valentin que nous vous proposons à emporter le samedi 13 et dimanche 14 février. Réservations au 05.58.98.60.22
                   </Typist>
                 )}
               </Typography>
@@ -254,7 +254,7 @@ class FirstLayer extends Component {
               <div className={classes.infoEltMobile}>
                 <div class="marquee">
                   <span>
-                    Nos menus du 25 décembre et 1er janvier vous sont proposés à emporter ! N'hésitez pas à nous contacter au 05 58 98 60 22. A très vite nous l'espérons !
+                    Retrouvez le menu de la Saint Valentin que nous vous proposons à emporter le samedi 13 et dimanche 14 février. Réservations au 05.58.98.60.22
                   </span>
                 </div>
               </div>
