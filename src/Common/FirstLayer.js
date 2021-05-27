@@ -244,7 +244,7 @@ class FirstLayer extends Component {
                     stdTypingDelay={0}
                     onTypingDone={() => setTimeout(this.done, 3000)}
                   >
-                    Retrouvez le menu de la Saint Valentin que nous vous proposons à emporter le samedi 13 et dimanche 14 février. Réservations au 05.58.98.60.22
+                    À l'attention de notre clientèle : le service en terrasse restant trop dépendant de la météo, nous vous informons de la réouverture de notre établissement à partir du 09 juin prochain. Au plaisir de vous retrouver très vite.
                   </Typist>
                 )}
               </Typography>
@@ -254,7 +254,7 @@ class FirstLayer extends Component {
               <div className={classes.infoEltMobile}>
                 <div class="marquee">
                   <span>
-                    Retrouvez le menu de la Saint Valentin que nous vous proposons à emporter le samedi 13 et dimanche 14 février. Réservations au 05.58.98.60.22
+                    À l'attention de notre clientèle : le service en terrasse restant trop dépendant de la météo, nous vous informons de la réouverture de notre établissement à partir du 09 juin prochain. Au plaisir de vous retrouver très vite.
                   </span>
                 </div>
               </div>
