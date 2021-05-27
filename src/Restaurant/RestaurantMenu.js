@@ -8,7 +8,7 @@ import LazyLoad from 'react-lazyload';
 const styles = {
   root: {
     margin: '20px',
-    height: '500px',
+    height: '600px',
     backgroundColor: 'white',
     border: '1px grey solid',
     borderRadius: '20px',
@@ -126,6 +126,12 @@ class RestaurantMenu extends Component {
                 <Typography variant="body1">{content.entree2}</Typography>
               </div>
             )}
+            {content.entree3 && (
+              <div>
+                <Typography className={classes.or}>ou</Typography>
+                <Typography variant="body1">{content.entree3}</Typography>
+              </div>
+            )}
             <Typography className={classes.tilde} variant="body1">
               ~
             </Typography>
@@ -154,7 +160,14 @@ class RestaurantMenu extends Component {
                 </Typography>
               </div>
             )}
-            {(content.dessert2 && (
+            <Typography variant="body1">{content.dessert}</Typography>
+            <Typography className={classes.or}>ou</Typography>
+            <Typography variant="body1">{content.dessert2}</Typography>
+            <Typography className={classes.or}>ou</Typography>
+            <Typography variant="body1" gutterBottom>
+              {content.dessert3}
+            </Typography>
+            {/* {(content.dessert2 && (
               <div>
                 <Typography variant="body1">{content.dessert}</Typography>
                 <Typography className={classes.or}>ou</Typography>
@@ -166,7 +179,7 @@ class RestaurantMenu extends Component {
               <Typography variant="body1" gutterBottom>
                 {content.dessert}
               </Typography>
-            )}
+            )} */}
           </div>
           {content.prix && (
             <Typography className={classes.prix} variant="body1">

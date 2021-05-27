@@ -17,7 +17,9 @@ const styles = {
     padding: '30px',
     textAlign: 'center',
   },
-  gridList: {},
+  gridList: {
+    justifyContent: 'center',
+  },
 };
 
 class MenusLayer extends Component {
@@ -46,88 +48,124 @@ MenusLayer.propTypes = {
 
 export default withStyles(styles)(MenusLayer);
 
-const terroir = {
-  name: 'Menu du terroir',
-  entree: 'Assiette du terroir',
-  entree2: 'Garbure Landaise',
-  plat: 'Civet de gibier maison',
-  plat2: 'Brochette de coeurs de canard grillés',
-  dessert: 'Glace',
-  dessert2: 'Dessert maison',
-  prix: 26,
-};
+const moment = {
+  name: 'Menu du moment',
+  entree: 'Suggestion de saison',
+  entree2: 'Assiette du terroir',
+  entree3: 'Omelette aux cèpes (supp. 3€)',
+  plat: 'Civet de gibier',
+  plat2: 'Entrecôte de boeuf grillée',
+  plat3: 'Magret de canard sauce au poivre (supp. 5€)',
+  dessert: 'Pâtisserie',
+  dessert2: 'Glace',
+  dessert3: 'Coupe Melba',
+}
 
-const gourmand = {
-  name: 'Menu Gourmand',
-  entree: 'Omelette aux cèpes',
-  plat: 'Poisson de la marée',
-  plat2: 'Magret de canard grillé',
-  plat3: 'Confit de canard',
-  dessert: 'Coupe Melba',
-  prix: 36,
-};
-
-const gastro = {
-  name: 'Menu Gastronomique',
-  entree: 'Salade de gésiers d\'oie',
-  plat: 'Foie gras chaud aux raisins',
-  apresPlat: 'Tournedos de boeuf sauce aux cèpes et légumes de saison',
-  dessert: "Coupe d'Artagnan",
-  prix: 45,
-};
-
-const imgs_terroir = [
+const imgs_moment = [
+  {
+    label: 'magret',
+    imgPath: img_magret,
+  },
   {
     label: 'assiette_terroir',
     imgPath: img_assiette,
   },
   {
-    label: 'coeurs de canard',
-    imgPath: img_coeurs_canard,
+    label: 'omelette aux cèpes',
+    imgPath: img_omelette,
   },
   {
     label: 'patisseries',
     imgPath: img_patisseries,
   },
-];
+]
 
-const imgs_gourmand = [
-  {
-    label: 'omelette aux cèpes',
-    imgPath: img_omelette,
-  },
-  {
-    label: 'magret',
-    imgPath: img_magret,
-  },
-];
+// const terroir = {
+//   name: 'Menu du terroir',
+//   entree: 'Assiette du terroir',
+//   entree2: 'Garbure Landaise',
+//   plat: 'Civet de gibier maison',
+//   plat2: 'Brochette de coeurs de canard grillés',
+//   dessert: 'Glace',
+//   dessert2: 'Dessert maison',
+//   prix: 26,
+// };
 
-const imgs_gastro = [
-  {
-    label: 'foie gras chaud',
-    imgPath: img_foie_gras_chaud,
-  },
-  {
-    label: 'tournedos boeuf',
-    imgPath: img_tournedos,
-  },
-  {
-    label: "coupe d'artagnan",
-    imgPath: img_artagnan,
-  },
-];
+// const gourmand = {
+//   name: 'Menu Gourmand',
+//   entree: 'Omelette aux cèpes',
+//   plat: 'Poisson de la marée',
+//   plat2: 'Magret de canard grillé',
+//   plat3: 'Confit de canard',
+//   dessert: 'Coupe Melba',
+//   prix: 36,
+// };
+
+// const gastro = {
+//   name: 'Menu Gastronomique',
+//   entree: 'Salade de gésiers d\'oie',
+//   plat: 'Foie gras chaud aux raisins',
+//   apresPlat: 'Tournedos de boeuf sauce aux cèpes et légumes de saison',
+//   dessert: "Coupe d'Artagnan",
+//   prix: 45,
+// };
+
+// const imgs_terroir = [
+//   {
+//     label: 'assiette_terroir',
+//     imgPath: img_assiette,
+//   },
+//   {
+//     label: 'coeurs de canard',
+//     imgPath: img_coeurs_canard,
+//   },
+//   {
+//     label: 'patisseries',
+//     imgPath: img_patisseries,
+//   },
+// ];
+
+// const imgs_gourmand = [
+//   {
+//     label: 'omelette aux cèpes',
+//     imgPath: img_omelette,
+//   },
+//   {
+//     label: 'magret',
+//     imgPath: img_magret,
+//   },
+// ];
+
+// const imgs_gastro = [
+//   {
+//     label: 'foie gras chaud',
+//     imgPath: img_foie_gras_chaud,
+//   },
+//   {
+//     label: 'tournedos boeuf',
+//     imgPath: img_tournedos,
+//   },
+//   {
+//     label: "coupe d'artagnan",
+//     imgPath: img_artagnan,
+//   },
+// ];
 
 const listMenus = [
   {
-    content: terroir,
-    imgs: imgs_terroir,
-  },
-  {
-    content: gourmand,
-    imgs: imgs_gourmand,
-  },
-  {
-    content: gastro,
-    imgs: imgs_gastro,
-  },
+    content: moment,
+    imgs: imgs_moment
+  }
+  // {
+  //   content: terroir,
+  //   imgs: imgs_terroir,
+  // },
+  // {
+  //   content: gourmand,
+  //   imgs: imgs_gourmand,
+  // },
+  // {
+  //   content: gastro,
+  //   imgs: imgs_gastro,
+  // },
 ];
