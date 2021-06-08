@@ -28,7 +28,7 @@ class MenusLayer extends Component {
     return (
       <div className={classes.root}>
         <Typography variant="h3" gutterBottom>
-          Nos menus
+          Menu du moment
         </Typography>
         <Grid className={classes.gridList} container>
           {listMenus.map((it) => (
@@ -49,16 +49,16 @@ MenusLayer.propTypes = {
 export default withStyles(styles)(MenusLayer);
 
 const moment = {
-  name: 'Menu du moment',
+  name: "Menu d'été ~ 26€",
   entree: 'Suggestion de saison',
   entree2: 'Assiette du terroir',
-  entree3: 'Omelette aux cèpes (supp. 3€)',
+  entree3: 'Omelette aux cèpes (supp. 5€)',
   plat: 'Civet de gibier',
   plat2: 'Entrecôte de boeuf grillée',
   plat3: 'Magret de canard sauce au poivre (supp. 5€)',
   dessert: 'Pâtisserie',
   dessert2: 'Glace',
-  dessert3: 'Coupe Melba',
+  dessert3: 'Coupe Melba (supp. 3€)',
 }
 
 const imgs_moment = [

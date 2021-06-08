@@ -244,7 +244,7 @@ class FirstLayer extends Component {
                     stdTypingDelay={0}
                     onTypingDone={() => setTimeout(this.done, 3000)}
                   >
-                    À l'attention de notre clientèle : le service en terrasse restant trop dépendant de la météo, nous vous informons de la réouverture de notre établissement à partir du 09 juin prochain. Au plaisir de vous retrouver très vite.
+                    Réouverture de notre établissement dans le respect des conditions sanitaires en vigueur. Au plaisir de vous accueillir !
                   </Typist>
                 )}
               </Typography>
@@ -254,7 +254,7 @@ class FirstLayer extends Component {
               <div className={classes.infoEltMobile}>
                 <div class="marquee">
                   <span>
-                    À l'attention de notre clientèle : le service en terrasse restant trop dépendant de la météo, nous vous informons de la réouverture de notre établissement à partir du 09 juin prochain. Au plaisir de vous retrouver très vite.
+                    Réouverture de notre établissement dans le respect des conditions sanitaires en vigueur. Au plaisir de vous accueillir !
                   </span>
                 </div>
               </div>
