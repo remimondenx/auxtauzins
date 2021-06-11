@@ -63,7 +63,7 @@ export default withStyles(styles)(RoomsLayer);
 const saisonHaute = {
   name: 'High season,',
   date: 'May 15 - Sept. 30',
-  sans: '82/92€',
+  sans: '85/95€',
   avec: '95/120€',
 };
 
@@ -71,7 +71,7 @@ const horsSaison = {
   name: 'Off season,',
   date: 'October 1 - May 15',
   sans: '75€',
-  avec: '82€',
+  avec: '85€',
 };
 
 const imgsSaisonHaute = [
