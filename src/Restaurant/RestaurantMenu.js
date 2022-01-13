@@ -43,7 +43,6 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     flexGrow: 1,
-    justifyContent: 'space-around',
     margin: '10px 0 10px 0',
   },
   tilde: {
@@ -161,12 +160,15 @@ class RestaurantMenu extends Component {
               </div>
             )}
             <Typography variant="body1">{content.dessert}</Typography>
-            <Typography className={classes.or}>ou</Typography>
-            <Typography variant="body1">{content.dessert2}</Typography>
-            <Typography className={classes.or}>ou</Typography>
-            <Typography variant="body1" gutterBottom>
-              {content.dessert3}
-            </Typography>
+            {content.dessert2 && (<>
+              <Typography className={classes.or}>ou</Typography>
+              <Typography variant="body1">{content.dessert2}</Typography>
+              <Typography className={classes.or}>ou</Typography>
+              <Typography variant="body1" gutterBottom>
+                {content.dessert3}
+              </Typography>
+            </>
+            )}
             {/* {(content.dessert2 && (
               <div>
                 <Typography variant="body1">{content.dessert}</Typography>

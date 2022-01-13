@@ -28,7 +28,7 @@ class MenusLayer extends Component {
     return (
       <div className={classes.root}>
         <Typography variant="h3" gutterBottom>
-          Menu du moment
+          Nos menus du moment
         </Typography>
         <Grid className={classes.gridList} container>
           {listMenus.map((it) => (
@@ -49,7 +49,7 @@ MenusLayer.propTypes = {
 export default withStyles(styles)(MenusLayer);
 
 const moment = {
-  name: "Menu d'été ~ 26€",
+  name: "Menu de la semaine",
   entree: 'Suggestion de saison',
   entree2: 'Assiette du terroir',
   entree3: 'Omelette aux cèpes (supp. 5€)',
@@ -59,7 +59,8 @@ const moment = {
   dessert: 'Pâtisserie',
   dessert2: 'Glace',
   dessert3: 'Coupe Melba (supp. 3€)',
-}
+  prix: 26
+};
 
 const imgs_moment = [
   {
@@ -78,7 +79,7 @@ const imgs_moment = [
     label: 'patisseries',
     imgPath: img_patisseries,
   },
-]
+];
 
 // const terroir = {
 //   name: 'Menu du terroir',
@@ -91,25 +92,22 @@ const imgs_moment = [
 //   prix: 26,
 // };
 
-// const gourmand = {
-//   name: 'Menu Gourmand',
-//   entree: 'Omelette aux cèpes',
-//   plat: 'Poisson de la marée',
-//   plat2: 'Magret de canard grillé',
-//   plat3: 'Confit de canard',
-//   dessert: 'Coupe Melba',
-//   prix: 36,
-// };
+const gourmand = {
+  name: 'Menu du week-end, gourmand',
+  entree: 'Omelette aux cèpes',
+  plat: 'Magret de canard grillé, sauce au poivre',
+  dessert: 'Coupe Melba',
+  prix: 37,
+};
 
-// const gastro = {
-//   name: 'Menu Gastronomique',
-//   entree: 'Salade de gésiers d\'oie',
-//   plat: 'Foie gras chaud aux raisins',
-//   apresPlat: 'Tournedos de boeuf sauce aux cèpes et légumes de saison',
-//   dessert: "Coupe d'Artagnan",
-//   prix: 45,
-// };
-
+const gastro = {
+  name: 'Menu du week-end, gastronomique',
+  entree: 'Salade de gésiers d\'oie',
+  plat: 'Foie gras cuit en cocotte aux raisins',
+  apresPlat: 'Tournedos de boeuf sauce aux cèpes et légumes de saison',
+  dessert: "Coupe d'Artagnan",
+  prix: 46,
+};
 // const imgs_terroir = [
 //   {
 //     label: 'assiette_terroir',
@@ -125,47 +123,47 @@ const imgs_moment = [
 //   },
 // ];
 
-// const imgs_gourmand = [
-//   {
-//     label: 'omelette aux cèpes',
-//     imgPath: img_omelette,
-//   },
-//   {
-//     label: 'magret',
-//     imgPath: img_magret,
-//   },
-// ];
+const imgs_gourmand = [
+  {
+    label: 'omelette aux cèpes',
+    imgPath: img_omelette,
+  },
+  {
+    label: 'magret',
+    imgPath: img_magret,
+  },
+];
 
-// const imgs_gastro = [
-//   {
-//     label: 'foie gras chaud',
-//     imgPath: img_foie_gras_chaud,
-//   },
-//   {
-//     label: 'tournedos boeuf',
-//     imgPath: img_tournedos,
-//   },
-//   {
-//     label: "coupe d'artagnan",
-//     imgPath: img_artagnan,
-//   },
-// ];
+const imgs_gastro = [
+  {
+    label: 'foie gras chaud',
+    imgPath: img_foie_gras_chaud,
+  },
+  {
+    label: 'tournedos boeuf',
+    imgPath: img_tournedos,
+  },
+  {
+    label: "coupe d'artagnan",
+    imgPath: img_artagnan,
+  },
+];
 
 const listMenus = [
   {
     content: moment,
     imgs: imgs_moment
-  }
+  },
   // {
   //   content: terroir,
   //   imgs: imgs_terroir,
   // },
-  // {
-  //   content: gourmand,
-  //   imgs: imgs_gourmand,
-  // },
-  // {
-  //   content: gastro,
-  //   imgs: imgs_gastro,
-  // },
+  {
+    content: gourmand,
+    imgs: imgs_gourmand,
+  },
+  {
+    content: gastro,
+    imgs: imgs_gastro,
+  },
 ];
